@@ -4,50 +4,34 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Contact — PeakLogic Digital</title>
-  <meta name="description" content="Contact PeakLogic Digital — request a free audit or a pilot." />
+  <meta name="description" content="Contact PeakLogic Digital — request a free audit or pilot." />
   <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&amp;display=swap" rel="stylesheet">
 </head>
 <body>
   <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand" href="/"><svg class="logo" viewBox="0 0 100 24" xmlns="http://www.w3.org/2000/svg"><g fill="#0B4ED6"><rect x="0" y="4" width="8" height="16" rx="2"></rect><rect x="12" y="4" width="8" height="16" rx="2"></rect><rect x="24" y="4" width="8" height="16" rx="2"></rect></g></svg><span>PeakLogic Digital</span></a>
+    <div class="wrap">
+      <a class="brand" href="/"><span>PeakLogic Digital</span></a>
       <nav class="nav">
         <a href="/services.html">Services</a>
         <a href="/about.html">About</a>
-        <a href="/contact.html" class="cta">Contact</a>
+        <a href="/contact.html" class="btn-ghost">Contact</a>
       </nav>
     </div>
   </header>
 
   <main class="section">
-    <div class="container narrow">
+    <div class="wrap narrow">
       <h1>Contact</h1>
-      <p>If you'd like a free 30-minute audit, send a message or book a slot.</p>
+      <p>If you'd like a free 30-minute audit, send a message or request a slot below.</p>
 
-      <form action="https://formspree.io/f/mgvgnwrr" method="POST" class="contact-form">
-        <label>
-          <span>Your name</span>
-          <input type="text" name="name" required>
-        </label>
-
-        <label>
-          <span>Company</span>
-          <input type="text" name="company">
-        </label>
-
-        <label>
-          <span>Email</span>
-          <input type="email" name="email" required>
-        </label>
-
-        <label>
-          <span>Message</span>
-          <textarea name="message" rows="5" required></textarea>
-        </label>
-
-        <!-- Replace the FORM_ID above with your Formspree ID; or change action to mailto: if you prefer -->
-        <button type="submit" class="btn btn-primary">Send message</button>
-
+      <form action="https://formspree.io/f/{FORM_ID}" method="POST" class="contact-form">
+        <label><span>Your name</span><input type="text" name="name" required></label>
+        <label><span>Company</span><input type="text" name="company"></label>
+        <label><span>Email</span><input type="email" name="email" required></label>
+        <label><span>Message</span><textarea name="message" rows="5" required></textarea></label>
+        <button type="submit" class="btn-primary">Send message</button>
         <p class="muted small">Or email directly: <a href="mailto:contact@peaklogicdigital.com">contact@peaklogicdigital.com</a></p>
       </form>
 
@@ -55,11 +39,10 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
+    <div class="wrap footer-inner">
       <div><strong>PeakLogic Digital</strong><div class="muted">AI · Automation · Growth</div></div>
       <div class="footer-right"><div>contact@peaklogicdigital.com</div><div class="muted">Barcelona · Remote</div></div>
     </div>
   </footer>
 </body>
 </html>
- 
