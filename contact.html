@@ -6,6 +6,22 @@
   <title>Contact — PeakLogic Digital</title>
   <meta name="description" content="Contact PeakLogic Digital to request a free audit or learn more about our AI and automation services." />
   <link rel="stylesheet" href="style.css">
+  <style>
+    .form-message {
+      display: none;
+      margin-top: 15px;
+      padding: 12px;
+      border-radius: 5px;
+    }
+    .form-success {
+      background-color: #A35139;
+      color: white;
+    }
+    .form-error {
+      background-color: #FFB162;
+      color: #1B2632;
+    }
+  </style>
 </head>
 <body>
 
@@ -35,7 +51,7 @@
       <h2>Contact Us</h2>
       <p>We’d love to hear from you. Fill out the form below or email us directly at <a href="mailto:contact@peaklogicdigital.com">contact@peaklogicdigital.com</a>.</p>
 
-      <form action="https://formspree.io/f/mgvgnwrr" method="POST" class="contact-form">
+      <form id="contact-form" action="https://formspree.io/f/mgvgnwrr" method="POST" class="contact-form">
         <label for="name">Name</label>
         <input type="text" id="name" name="name" required placeholder="Your Name">
 
@@ -46,6 +62,9 @@
         <textarea id="message" name="message" required placeholder="Write your message here"></textarea>
 
         <button type="submit" class="cta">Send Message</button>
+
+        <div id="form-success" class="form-message form-success">Thank you! Your message has been sent.</div>
+        <div id="form-error" class="form-message form-error">Oops! Something went wrong. Please try again.</div>
       </form>
 
       <p class="muted" style="margin-top:20px;">Or reach us directly at <a href="mailto:contact@peaklogicdigital.com">contact@peaklogicdigital.com</a>.</p>
@@ -65,6 +84,30 @@
       </div>
     </div>
   </footer>
+
+  <script>
+    const form = document.getElementById('contact-form');
+    const successMsg = document.getElementById('form-success');
+    const errorMsg = document.getElementById('form-error');
+
+    form.addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const formData = new FormData(form);
+      const response = await fetch(form.action, {
+        method: form.method,
+        body: formData,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        successMsg.style.display = 'block';
+        errorMsg.style.display = 'none';
+        form.reset();
+      } else {
+        successMsg.style.display = 'none';
+        errorMsg.style.display = 'block';
+      }
+    });
+  </script>
 
 </body>
 </html>
