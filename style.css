@@ -1,66 +1,116 @@
-/* PeakLogic Digital — Dark theme (Subtle gradient hero) */
-/* Palette: #1B2632, #2C3B4D, #A35139, #FFB162 */
-:root{
-  --bg:#1B2632;
-  --panel:#2C3B4D;
-  --accent:#A35139;
-  --highlight:#FFB162;
-  --muted:#97A3B3;
-  --text:#E7EEF8;
-  --glass: rgba(255,255,255,0.03);
-  --radius:12px;
-  --max:1100px;
-  --container-padding:28px;
+/* ===== Global Reset ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-*{box-sizing:border-box}
-html,body{height:100%;margin:0;background:var(--bg);color:var(--text);font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial}
-a{color:var(--highlight);text-decoration:none}
-.wrap{max-width:var(--max);margin:0 auto;padding:var(--container-padding)}
-.site-header{position:sticky;top:0;z-index:40;background:linear-gradient(180deg, rgba(27,38,50,0.6), rgba(27,38,50,0.45));backdrop-filter: blur(6px);border-bottom:1px solid rgba(255,255,255,0.03)}
-.header .wrap{display:flex;align-items:center;justify-content:space-between}
-.brand{display:flex;align-items:center;gap:12px;font-weight:600;font-size:18px;color:var(--text);padding:12px 0}
-.nav{display:flex;align-items:center;gap:16px}
-.nav a{color:var(--muted);font-weight:500}
-.btn-ghost{padding:8px 12px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
-.hero{padding:56px 0 36px;background:linear-gradient(135deg, rgba(27,38,50,1) 0%, rgba(44,59,77,0.9) 50%, rgba(163,81,57,0.06) 85%);border-bottom:1px solid rgba(255,255,255,0.02)}
-.hero-grid{display:grid;grid-template-columns:1fr 380px;gap:28px;align-items:start}
-.hero-left h1{font-size:36px;line-height:1.02;margin:0 0 12px;font-weight:700;color:var(--text)}
-.lead{color:var(--muted);margin-bottom:18px;max-width:60ch}
-.hero-ctas{display:flex;gap:12px;margin-top:12px}
-.btn-primary{background:linear-gradient(90deg,var(--accent),var(--highlight));color:#071026;padding:10px 16px;border-radius:10px;font-weight:600;border:none;box-shadow:0 8px 30px rgba(163,81,57,0.08)}
-.btn-outline{padding:10px 16px;border-radius:10px;border:1px solid rgba(255,255,255,0.06);color:var(--text);background:transparent}
-.trust-list{display:flex;gap:18px;margin-top:20px;color:var(--muted);list-style:none;padding:0}
+/* ===== Global Colors ===== */
+:root {
+    --dark1: #1B2632;
+    --dark2: #2C3B4D;
+    --accent1: #A35139;
+    --accent2: #FFB162;
+}
 
-.hero-card .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03)}
-.quick-stats{display:flex;gap:12px;margin-top:18px}
-.stat{background:var(--glass);padding:10px;border-radius:10px;text-align:center;min-width:100px}
-.stat .num{font-weight:700;color:var(--highlight);font-size:18px}
+/* ===== Page Background (full subtle gradient) ===== */
+body {
+    font-family: "Segoe UI", sans-serif;
+    color: white;
+    background: linear-gradient(180deg,
+        var(--dark1) 0%,
+        var(--dark2) 30%,
+        var(--dark1) 60%,
+        var(--dark2) 100%
+    );
+    background-attachment: fixed;
+    line-height: 1.6;
+}
 
-.section{padding:42px 0}
-.services-preview h2{margin:0 0 8px}
-.section-lead{color:var(--muted);margin-bottom:16px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
-.svc-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);min-height:120px}
-.how .process{color:var(--muted);padding-left:16px}
+/* ===== Header ===== */
+header {
+    background-color: rgba(27, 38, 50, 0.9);
+    padding: 15px 30px;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    backdrop-filter: blur(6px);
+}
 
-.testimonials-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:16px}
-.quote{background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.00));padding:18px;border-radius:12px;border:1px solid rgba(255,255,255,0.03);color:var(--muted)}
+header nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1100px;
+    margin: auto;
+}
 
-.site-footer{border-top:1px solid rgba(255,255,255,0.02);padding:24px 0;margin-top:36px}
-.footer-inner{display:flex;justify-content:space-between;align-items:center}
-.footer-right{color:var(--muted);text-align:right}
-.muted{color:var(--muted)}
-.narrow{max-width:760px;margin:0 auto}
+header a {
+    color: #FFB162;
+    text-decoration: none;
+    font-size: 15px;
+    margin-left: 20px;
+}
 
-.contact-form{display:grid;gap:12px}
-.contact-form label{display:block}
-.contact-form input,.contact-form textarea{width:100%;padding:10px;border-radius:10px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:var(--text)}
-.small{font-size:13px;color:var(--muted);margin-top:8px}
+/* ===== Hero Section (Reduced Height) ===== */
+.hero {
+    text-align: center;
+    padding: 80px 20px; /* reduced from ~150+ */
+    background: linear-gradient(135deg, var(--dark1), var(--dark2));
+}
 
-/* Responsive */
-@media (max-width:920px){
-  .hero-grid{grid-template-columns:1fr;gap:18px}
-  .nav{gap:10px}
-  .wrap{padding:18px}
+.hero h1 {
+    font-size: 34px; /* reduced */
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 650px;
+    margin: auto;
+    opacity: 0.9;
+}
+
+/* ===== CTA Button ===== */
+.cta-btn {
+    display: inline-block;
+    margin-top: 25px;
+    padding: 12px 28px;
+    background: var(--accent1);
+    color: white;
+    border-radius: 6px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.cta-btn:hover {
+    background: var(--accent2);
+}
+
+/* ===== Sections (reduced spacing) ===== */
+section {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+section h2 {
+    font-size: 26px; /* reduced */
+    margin-bottom: 10px;
+}
+
+section p {
+    opacity: 0.9;
+    margin-bottom: 15px;
+}
+
+/* ===== Footer ===== */
+footer {
+    text-align: center;
+    padding: 25px;
+    background-color: rgba(27, 38, 50, 0.8);
+    margin-top: 40px;
+    font-size: 14px;
+    color: #FFB162;
 }
