@@ -1,116 +1,219 @@
-/* ===== Global Reset ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ------------------------------
+  PeakLogic Digital — style.css
+  Dark Theme | Gradient Accents
+------------------------------ */
 
-/* ===== Global Colors ===== */
+/* VARIABLES */
 :root {
-    --dark1: #1B2632;
-    --dark2: #2C3B4D;
-    --accent1: #A35139;
-    --accent2: #FFB162;
+  --color-bg: #1B2632;
+  --color-section: #2C3B4D;
+  --color-accent-start: #A35139;
+  --color-accent-end: #FFB162;
+  --color-text: #FFFFFF;
+  --color-muted: rgba(255, 255, 255, 0.6);
+  --font-heading: 'Montserrat', sans-serif;
+  --font-body: 'Open Sans', sans-serif;
 }
 
-/* ===== Page Background (full subtle gradient) ===== */
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: "Segoe UI", sans-serif;
-    color: white;
-    background: linear-gradient(180deg,
-        var(--dark1) 0%,
-        var(--dark2) 30%,
-        var(--dark1) 60%,
-        var(--dark2) 100%
-    );
-    background-attachment: fixed;
-    line-height: 1.6;
+  font-family: var(--font-body);
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  line-height: 1.7;
 }
 
-/* ===== Header ===== */
-header {
-    background-color: rgba(27, 38, 50, 0.9);
-    padding: 15px 30px;
-    position: sticky;
-    top: 0;
-    z-index: 10;
-    backdrop-filter: blur(6px);
+/* ------------------------------
+  CONTAINER
+------------------------------ */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-header nav {
-    display: flex;
-    justify-content: space-between;
-    max-width: 1100px;
-    margin: auto;
+/* ------------------------------
+  HEADER
+------------------------------ */
+.site-header {
+  background-color: var(--color-bg);
+  padding: 20px 0;
+  border-bottom: 2px solid var(--color-accent-start);
 }
 
-header a {
-    color: #FFB162;
-    text-decoration: none;
-    font-size: 15px;
-    margin-left: 20px;
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-/* ===== Hero Section (Reduced Height) ===== */
-.hero {
-    text-align: center;
-    padding: 80px 20px; /* reduced from ~150+ */
-    background: linear-gradient(135deg, var(--dark1), var(--dark2));
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text);
+  text-decoration: none;
 }
 
-.hero h1 {
-    font-size: 34px; /* reduced */
-    font-weight: 700;
-    margin-bottom: 15px;
+.nav a {
+  color: var(--color-text);
+  margin-left: 30px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.hero p {
-    font-size: 18px;
-    max-width: 650px;
-    margin: auto;
-    opacity: 0.9;
+.nav a:hover {
+  background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-/* ===== CTA Button ===== */
-.cta-btn {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 28px;
-    background: var(--accent1);
-    color: white;
-    border-radius: 6px;
-    font-size: 16px;
-    text-decoration: none;
-    transition: 0.3s ease;
+.nav .cta {
+  background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
+  color: var(--color-bg);
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 600;
 }
 
-.cta-btn:hover {
-    background: var(--accent2);
+.nav .cta:hover {
+  transform: scale(1.05);
+  transition: all 0.2s ease;
 }
 
-/* ===== Sections (reduced spacing) ===== */
-section {
-    padding: 40px 20px;
-    max-width: 1100px;
-    margin: auto;
+/* ------------------------------
+  MAIN SECTIONS
+------------------------------ */
+.section {
+  padding: 80px 0;
 }
 
-section h2 {
-    font-size: 26px; /* reduced */
-    margin-bottom: 10px;
+h1 {
+  font-family: var(--font-heading);
+  font-size: 3rem;
+  margin-bottom: 30px;
+  background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-section p {
-    opacity: 0.9;
-    margin-bottom: 15px;
+h2 {
+  font-family: var(--font-heading);
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: var(--color-text);
 }
 
-/* ===== Footer ===== */
-footer {
-    text-align: center;
-    padding: 25px;
-    background-color: rgba(27, 38, 50, 0.8);
-    margin-top: 40px;
-    font-size: 14px;
-    color: #FFB162;
+p {
+  font-size: 1.125rem;
+  margin-bottom: 15px;
+}
+
+p.muted {
+  color: var(--color-muted);
+  margin-top: 20px;
+}
+
+/* ------------------------------
+  SERVICE CARDS
+------------------------------ */
+.svc {
+  background: var(--color-section);
+  border-radius: 12px;
+  padding: 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.svc:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
+}
+
+/* ICONS */
+.svc .icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background: linear-gradient(45deg, var(--color-accent-start), var(--color-accent-end));
+  color: var(--color-bg);
+  font-size: 1.5rem;
+}
+
+/* ------------------------------
+  FOOTER
+------------------------------ */
+.site-footer {
+  background-color: var(--color-bg);
+  padding: 40px 0;
+  border-top: 2px solid var(--color-accent-start);
+  color: var(--color-muted);
+}
+
+.footer-inner {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.footer-inner strong {
+  color: var(--color-text);
+  font-family: var(--font-heading);
+}
+
+.footer-inner a {
+  color: var(--color-accent-end);
+  text-decoration: none;
+}
+
+.footer-inner a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
+  LINKS
+------------------------------ */
+a {
+  color: var(--color-accent-end);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ------------------------------
+  RESPONSIVE
+------------------------------ */
+@media screen and (max-width: 768px) {
+  .header-inner {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav a {
+    margin-left: 0;
+    display: block;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
