@@ -1,9 +1,9 @@
 /* ------------------------------
   PeakLogic Digital — style.css
-  Dark Theme | Gradient Accents
+  Brand variables & custom animations only
 ------------------------------ */
 
-/* VARIABLES */
+/* BRAND VARIABLES */
 :root {
   --color-bg: #1B2632;
   --color-section: #2C3B4D;
@@ -11,209 +11,30 @@
   --color-accent-end: #FFB162;
   --color-text: #FFFFFF;
   --color-muted: rgba(255, 255, 255, 0.6);
-  --font-heading: 'Montserrat', sans-serif;
-  --font-body: 'Open Sans', sans-serif;
 }
 
-/* RESET */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: var(--font-body);
-  background-color: var(--color-bg);
-  color: var(--color-text);
-  line-height: 1.7;
-}
-
-/* ------------------------------
-  CONTAINER
------------------------------- */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* ------------------------------
-  HEADER
------------------------------- */
-.site-header {
-  background-color: var(--color-bg);
-  padding: 20px 0;
-  border-bottom: 2px solid var(--color-accent-start);
-}
-
-.header-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  font-family: var(--font-heading);
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: var(--color-text);
-  text-decoration: none;
-}
-
-.nav a {
-  color: var(--color-text);
-  margin-left: 30px;
-  text-decoration: none;
-  font-weight: 500;
-  transition: all 0.3s ease;
-}
-
-.nav a:hover {
-  background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
+/* GRADIENT TEXT UTILITY (BRAND) */
+.gradient-text {
+  background-image: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.nav .cta {
-  background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
-  color: var(--color-bg);
-  padding: 8px 16px;
-  border-radius: 6px;
-  font-weight: 600;
-}
-
-.nav .cta:hover {
-  transform: scale(1.05);
-  transition: all 0.2s ease;
-}
-
-/* ------------------------------
-  MAIN SECTIONS
------------------------------- */
-.section {
-  padding: 80px 0;
-}
-
-h1 {
-  font-family: var(--font-heading);
-  font-size: 3rem;
-  margin-bottom: 30px;
-  background: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-h2 {
-  font-family: var(--font-heading);
-  font-size: 2rem;
-  margin-bottom: 15px;
-  color: var(--color-text);
-}
-
-p {
-  font-size: 1.125rem;
-  margin-bottom: 15px;
-}
-
-p.muted {
-  color: var(--color-muted);
-  margin-top: 20px;
-}
-
-/* ------------------------------
-  SERVICE CARDS
------------------------------- */
-.svc {
-  background: var(--color-section);
-  border-radius: 12px;
-  padding: 30px;
-  margin-bottom: 40px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.svc:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.4);
-}
-
-/* ICONS */
-.svc .icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 20px;
-  background: linear-gradient(45deg, var(--color-accent-start), var(--color-accent-end));
-  color: var(--color-bg);
-  font-size: 1.5rem;
-}
-
-/* ------------------------------
-  FOOTER
------------------------------- */
-.site-footer {
-  background-color: var(--color-bg);
-  padding: 40px 0;
-  border-top: 2px solid var(--color-accent-start);
-  color: var(--color-muted);
-}
-
-.footer-inner {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-
-.footer-inner strong {
-  color: var(--color-text);
-  font-family: var(--font-heading);
-}
-
-.footer-inner a {
-  color: var(--color-accent-end);
-  text-decoration: none;
-}
-
-.footer-inner a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------------------
-  LINKS
------------------------------- */
-a {
-  color: var(--color-accent-end);
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-/* ------------------------------
-  RESPONSIVE
------------------------------- */
-@media screen and (max-width: 768px) {
-  .header-inner {
-    flex-direction: column;
-    gap: 15px;
+/* CUSTOM GRADIENT ANIMATION (BRAND) */
+@keyframes gradient-shift-x {
+  0%,
+  100% {
+    background-position: 0% 50%;
   }
-
-  .nav a {
-    margin-left: 0;
-    display: block;
-  }
-
-  .footer-inner {
-    flex-direction: column;
-    gap: 10px;
+  50% {
+    background-position: 100% 50%;
   }
 }
+
+.animate-gradient-slow {
+  background-image: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
+  background-size: 200% 200%;
+  animation: gradient-shift-x 18s ease-in-out infinite;
+}
+
