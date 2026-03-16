@@ -97,12 +97,12 @@
   </nav>
 
   <!-- ABOUT HERO -->
-  <section class="border-b border-white/5 bg-[#1B2632]">
-    <div class="mx-auto max-w-6xl px-5 py-16">
-      <h1 class="gradient-text mb-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
+  <section class="reveal border-b border-white/5 bg-[#1B2632]">
+  <div class="mx-auto max-w-6xl px-5 py-16">
+      <h1 class="hero-intro gradient-text mb-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
         About PeakLogic Digital
       </h1>
-      <p class="max-w-2xl text-base text-white/80 md:text-lg">
+      <p class="hero-intro max-w-2xl text-base text-white/80 md:text-lg">
         We work with service businesses that want their operations to feel calm and predictable. Our focus is on how
         enquiries, leads, and client work move through your company day to day.
       </p>
@@ -112,7 +112,7 @@
   <!-- ABOUT CONTENT -->
   <main class="border-b border-white/5 bg-[#1B2632] py-16">
     <div class="mx-auto max-w-4xl px-5 space-y-10">
-      <section>
+      <section class="reveal">
         <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Our Mission</h2>
         <p class="text-base text-white/80 md:text-lg">
           PeakLogic Digital exists to bring clarity to operational systems. We help you see how work actually moves
@@ -121,7 +121,7 @@
         </p>
       </section>
 
-      <section>
+      <section class="reveal">
         <h2 class="mb-4 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Our Approach</h2>
         <ul class="space-y-3 text-sm text-white/85 md:text-base">
           <li><strong class="font-semibold">Operations first:</strong> We start by understanding your current system:
@@ -135,7 +135,7 @@
         </ul>
       </section>
 
-      <p class="text-sm text-white/60">
+      <p class="reveal text-sm text-white/60">
         If you’d like a clearer view of how work moves through your organisation,
         <a href="/contact.html" class="font-medium text-[#FFB162] underline-offset-2 hover:underline">get in touch for a short, no-pressure conversation</a>.
       </p>
@@ -171,6 +171,69 @@
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
+    })();
+
+    (function () {
+      const prefersReduced =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) {
+        document.querySelectorAll('.hero-intro').forEach((el) => {
+          el.classList.add('hero-intro-visible');
+        });
+        return;
+      }
+
+      window.addEventListener('load', function () {
+        const heroEls = document.querySelectorAll('.hero-intro');
+        heroEls.forEach((el, index) => {
+          const delay = 80 * index;
+          setTimeout(() => {
+            el.classList.add('hero-intro-visible');
+          }, delay);
+        });
+      });
+    })();
+
+    (function () {
+      const prefersReduced =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('.reveal');
+      const cardsSelector = '.reveal-card';
+
+      if (prefersReduced) {
+        sections.forEach((section) => {
+          section.classList.add('reveal-visible');
+          section.querySelectorAll(cardsSelector).forEach((card) => {
+            card.classList.add('reveal-visible');
+          });
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const section = entry.target;
+              section.classList.add('reveal-visible');
+
+              const cards = section.querySelectorAll(cardsSelector);
+              cards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 80}ms`;
+                card.classList.add('reveal-visible');
+              });
+
+              observer.unobserve(section);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: '0px 0px -10% 0px',
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
     })();
   </script>
 

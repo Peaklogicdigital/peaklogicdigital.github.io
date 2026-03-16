@@ -97,12 +97,12 @@
   </nav>
 
   <!-- CONTACT HERO -->
-  <section class="border-b border-white/5 bg-[#1B2632]">
+  <section class="reveal border-b border-white/5 bg-[#1B2632]">
     <div class="mx-auto max-w-6xl px-5 py-16">
-      <h1 class="gradient-text mb-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
+      <h1 class="hero-intro gradient-text mb-4 text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
         Get in Touch
       </h1>
-      <p class="max-w-2xl text-base text-white/80 md:text-lg">
+      <p class="hero-intro max-w-2xl text-base text-white/80 md:text-lg">
         Share how enquiries, leads, and client work move through your business today, and explore practical ways to make
         that system clearer and more reliable.
       </p>
@@ -111,7 +111,7 @@
 
   <!-- CONTACT FORM -->
   <main class="border-b border-white/5 bg-[#1B2632] py-16">
-    <div class="mx-auto max-w-3xl px-5">
+    <div class="reveal card mx-auto max-w-3xl px-5">
       <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Contact Us</h2>
       <p class="mb-4 text-base text-white/80">
         This form is for general enquiries, quick questions, or businesses that would like an initial conversation
@@ -236,6 +236,69 @@
           toggle.setAttribute('aria-expanded', 'false');
         }
       });
+    })();
+
+    (function () {
+      const prefersReduced =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) {
+        document.querySelectorAll('.hero-intro').forEach((el) => {
+          el.classList.add('hero-intro-visible');
+        });
+        return;
+      }
+
+      window.addEventListener('load', function () {
+        const heroEls = document.querySelectorAll('.hero-intro');
+        heroEls.forEach((el, index) => {
+          const delay = 80 * index;
+          setTimeout(() => {
+            el.classList.add('hero-intro-visible');
+          }, delay);
+        });
+      });
+    })();
+
+    (function () {
+      const prefersReduced =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('.reveal');
+      const cardsSelector = '.reveal-card';
+
+      if (prefersReduced) {
+        sections.forEach((section) => {
+          section.classList.add('reveal-visible');
+          section.querySelectorAll(cardsSelector).forEach((card) => {
+            card.classList.add('reveal-visible');
+          });
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const section = entry.target;
+              section.classList.add('reveal-visible');
+
+              const cards = section.querySelectorAll(cardsSelector);
+              cards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 80}ms`;
+                card.classList.add('reveal-visible');
+              });
+
+              observer.unobserve(section);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: '0px 0px -10% 0px',
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
     })();
   </script>
 

@@ -97,12 +97,12 @@
   </nav>
 
   <!-- HERO -->
-  <section class="border-b border-white/5 bg-[#1B2632]">
+  <section class="reveal border-b border-white/5 bg-[#1B2632]">
     <div class="mx-auto max-w-6xl px-5 py-16">
-      <h1 class="gradient-text mb-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
+      <h1 class="hero-intro gradient-text mb-4 max-w-3xl text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
         Operational Audit
       </h1>
-      <p class="max-w-2xl text-base text-white/80 md:text-lg">
+      <p class="hero-intro max-w-2xl text-base text-white/80 md:text-lg">
         A calm, structured review of how enquiries, leads, and client work move through your business today, and what
         makes that system harder than it needs to be.
       </p>
@@ -112,7 +112,7 @@
   <!-- PURPOSE -->
   <main class="border-b border-white/5 bg-[#1B2632] py-16">
     <div class="mx-auto max-w-5xl px-5 space-y-10">
-      <section>
+      <section class="reveal">
         <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">What the Operational Audit Is For</h2>
         <p class="text-sm text-white/80 md:text-base">
           The Operational Audit is designed for service businesses that want a clearer picture of how work moves through
@@ -122,7 +122,7 @@
       </section>
 
       <!-- REVIEW AREAS -->
-      <section>
+      <section class="reveal">
         <h2 class="mb-4 text-2xl font-semibold tracking-tight md:text-3xl font-heading">What the Audit Reviews</h2>
         <p class="mb-4 text-sm text-white/80 md:text-base">
           During the audit, we look closely at a few key parts of your operational system:
@@ -142,7 +142,7 @@
       </section>
 
       <!-- OUTPUT -->
-      <section>
+      <section class="reveal">
         <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">What You Receive Afterwards</h2>
         <p class="mb-4 text-sm text-white/80 md:text-base">
           After the audit, you receive a written summary that you can share with your team or keep for your own
@@ -161,7 +161,7 @@
       </section>
 
       <!-- FORM CTA -->
-      <section>
+      <section class="reveal">
         <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Begin the Audit</h2>
         <p class="mb-6 text-sm text-white/80 md:text-base">
           To start the Operational Audit, complete a short Google Form with a few details about your business and how
@@ -212,9 +212,72 @@
       if (!link) return;
       link.addEventListener('click', function () {
         if (typeof gtag === 'function') {
-          gtag('event', 'begin_operational_audit', { method: 'open_audit_form' });
+          gtag('event', 'begin_operational_audit', { method: 'open_operational_audit_form' });
         }
       });
+    })();
+
+    (function () {
+      const prefersReduced =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      if (prefersReduced) {
+        document.querySelectorAll('.hero-intro').forEach((el) => {
+          el.classList.add('hero-intro-visible');
+        });
+        return;
+      }
+
+      window.addEventListener('load', function () {
+        const heroEls = document.querySelectorAll('.hero-intro');
+        heroEls.forEach((el, index) => {
+          const delay = 80 * index;
+          setTimeout(() => {
+            el.classList.add('hero-intro-visible');
+          }, delay);
+        });
+      });
+    })();
+
+    (function () {
+      const prefersReduced =
+        window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const sections = document.querySelectorAll('.reveal');
+      const cardsSelector = '.reveal-card';
+
+      if (prefersReduced) {
+        sections.forEach((section) => {
+          section.classList.add('reveal-visible');
+          section.querySelectorAll(cardsSelector).forEach((card) => {
+            card.classList.add('reveal-visible');
+          });
+        });
+        return;
+      }
+
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const section = entry.target;
+              section.classList.add('reveal-visible');
+
+              const cards = section.querySelectorAll(cardsSelector);
+              cards.forEach((card, index) => {
+                card.style.transitionDelay = `${index * 80}ms`;
+                card.classList.add('reveal-visible');
+              });
+
+              observer.unobserve(section);
+            }
+          });
+        },
+        {
+          threshold: 0.15,
+          rootMargin: '0px 0px -10% 0px',
+        }
+      );
+
+      sections.forEach((section) => observer.observe(section));
     })();
   </script>
 
