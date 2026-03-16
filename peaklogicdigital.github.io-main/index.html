@@ -1,0 +1,526 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Operational Systems Consultancy | Lead Handling &amp; Workflow — PeakLogic Digital</title>
+  <meta name="description" content="Operational systems consultancy and operational workflow consulting for service businesses. Lead handling systems, clearer processes, and operations consulting from Barcelona. PeakLogic Digital." />
+
+  <!-- Preconnect to third-party origins for faster loads -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://www.googletagmanager.com">
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" crossorigin>
+
+  <!-- Critical brand CSS first (small, same-origin) -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Fonts (non-blocking load; display=swap in URL avoids invisible text) -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"
+    rel="stylesheet"
+    media="print"
+    onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@500;600;700&display=swap"></noscript>
+
+  <!-- Tailwind CSS via CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            heading: ['Sora', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Analytics (GA4) - non-blocking, replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){ dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+</head>
+<body class="min-h-screen bg-[#1B2632] text-white font-sans antialiased">
+
+  <!-- HEADER -->
+  <header class="border-b border-[#A35139]/70 bg-[#1B2632]/95 backdrop-blur">
+    <div class="mx-auto flex max-w-6xl items-center justify-between gap-4 px-5 py-4">
+      <a class="flex items-center gap-3 text-lg font-semibold tracking-tight" href="/">
+        <svg class="h-6 w-6" viewBox="0 0 100 24" xmlns="http://www.w3.org/2000/svg">
+          <g fill="#0B4ED6">
+            <rect x="0" y="4" width="8" height="16" rx="2"></rect>
+            <rect x="12" y="4" width="8" height="16" rx="2"></rect>
+            <rect x="24" y="4" width="8" height="16" rx="2"></rect>
+          </g>
+        </svg>
+        <span class="font-heading">PeakLogic Digital</span>
+      </a>
+      <!-- Desktop navigation -->
+      <nav class="hidden items-center gap-6 text-sm font-medium md:flex">
+        <a href="/" class="text-white hover:text-white transition-colors">Home</a>
+        <a href="/#approach" class="text-white/80 hover:text-white transition-colors">Approach</a>
+        <a href="/#services" class="text-white/80 hover:text-white transition-colors">Services</a>
+        <a href="/#industries" class="text-white/80 hover:text-white transition-colors">Industries</a>
+        <a href="/operational-audit.html" class="text-white/80 hover:text-white transition-colors">Operational Audit</a>
+        <a href="/about.html" class="text-white/80 hover:text-white transition-colors">About</a>
+        <a href="/contact.html"
+          class="rounded-full bg-gradient-to-r from-[#A35139] to-[#FFB162] px-4 py-2 text-sm font-semibold text-[#1B2632] shadow-md shadow-black/40 hover:shadow-lg hover:shadow-black/50 transition">
+          Contact
+        </a>
+      </nav>
+      <!-- Mobile menu button -->
+      <button id="mobile-nav-toggle" type="button"
+        class="inline-flex items-center justify-center rounded-md border border-white/20 p-2 text-white hover:border-white/40 hover:bg-white/5 md:hidden"
+        aria-label="Toggle navigation" aria-expanded="false">
+        <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <line x1="3" y1="12" x2="21" y2="12" />
+          <line x1="3" y1="18" x2="21" y2="18" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <!-- Mobile navigation -->
+  <nav id="mobile-nav" class="hidden border-b border-white/10 bg-[#1B2632] md:hidden">
+    <div class="mx-auto flex max-w-6xl flex-col gap-1 px-5 py-4 text-sm font-medium">
+      <a href="/" class="py-1 text-white">Home</a>
+      <a href="/#approach" class="py-1 text-white/80">Approach</a>
+      <a href="/#services" class="py-1 text-white/80">Services</a>
+      <a href="/#industries" class="py-1 text-white/80">Industries</a>
+      <a href="/operational-audit.html" class="py-1 text-[#FFB162] font-semibold">Operational Audit</a>
+      <a href="/about.html" class="py-1 text-white/80">About</a>
+      <a href="/contact.html" class="mt-2 inline-flex items-center justify-center rounded-full border border-white/20 px-4 py-2 text-white">
+        Contact
+      </a>
+    </div>
+  </nav>
+
+  <!-- HERO SECTION -->
+  <section class="border-b border-white/5 bg-[#1B2632]">
+    <div class="mx-auto max-w-6xl px-5 py-16">
+      <h1 class="gradient-text mb-6 max-w-3xl text-3xl font-bold leading-tight tracking-tight md:text-4xl lg:text-5xl font-heading">
+        Clear, Reliable Operational Systems for Service Businesses
+      </h1>
+      <p class="mb-8 max-w-2xl text-base text-white/80 md:text-lg">
+        PeakLogic Digital helps you understand how enquiries, leads, and client work move through your business, then
+        strengthens the underlying system with practical processes, tools, and, where useful, automation.
+      </p>
+      <a href="/operational-audit.html"
+        class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#A35139] to-[#FFB162] px-6 py-3 text-sm font-semibold text-[#1B2632] shadow-lg shadow-black/40 hover:shadow-xl hover:shadow-black/60 transition">
+        Request Your Operational Audit
+      </a>
+    </div>
+  </section>
+
+  <!-- COMMON OPERATIONAL PROBLEMS -->
+  <section class="border-b border-white/5 bg-[#1B2632] py-16">
+    <div class="mx-auto max-w-5xl px-5">
+      <h2 class="mb-4 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Common Operational Problems We See</h2>
+      <p class="mb-8 text-sm text-white/80 md:text-base">
+        Many service businesses grow on the back of a few key people holding everything in their heads. Over time, the
+        system becomes hard to see and harder to manage.
+      </p>
+      <ul class="grid gap-3 text-sm text-white/85 md:grid-cols-2">
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FFB162]"></span>
+          <span>Enquiries or leads getting delayed or lost.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FFB162]"></span>
+          <span>Follow-ups depending on memory instead of a clear system.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FFB162]"></span>
+          <span>Unclear ownership of enquiries and in-progress work.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FFB162]"></span>
+          <span>Teams overwhelmed with manual work and status chasing.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FFB162]"></span>
+          <span>Disconnected tools that don’t reflect how work actually flows.</span>
+        </li>
+        <li class="flex items-start gap-2">
+          <span class="mt-1 h-1.5 w-1.5 rounded-full bg-[#FFB162]"></span>
+          <span>Lack of visibility on what is pending, stuck, or at risk.</span>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- OPERATIONAL SYSTEM FLOW DIAGRAM -->
+  <section class="border-b border-white/5 bg-[#2C3B4D] py-16">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 class="mb-4 text-2xl font-semibold tracking-tight md:text-3xl font-heading">What an Organised System Looks Like</h2>
+      <p class="mb-8 max-w-2xl text-sm text-white/80 md:text-base">
+        A clear operational system makes it obvious what should happen next with every lead or enquiry. The simple flow
+        below is a common pattern we work towards.
+      </p>
+      <div class="flex flex-col items-stretch gap-4 md:flex-row md:items-center md:justify-between">
+        <div class="flex-1 rounded-2xl bg-[#1B2632] p-4 text-sm text-white/85 shadow-lg shadow-black/40 md:p-5">
+          <h3 class="mb-1 text-sm font-semibold uppercase tracking-wide text-white/80">Step 1</h3>
+          <p class="font-medium">Lead or enquiry enters</p>
+          <p class="mt-1 text-xs text-white/70">Web form, phone, email, or walk-in — captured in a single, visible place.</p>
+        </div>
+        <div class="flex items-center justify-center text-2xl text-[#FFB162] md:px-2">
+          →
+        </div>
+        <div class="flex-1 rounded-2xl bg-[#1B2632] p-4 text-sm text-white/85 shadow-lg shadow-black/40 md:p-5">
+          <h3 class="mb-1 text-sm font-semibold uppercase tracking-wide text-white/80">Step 2</h3>
+          <p class="font-medium">Assigned to the correct person</p>
+          <p class="mt-1 text-xs text-white/70">Clear owner from the start, so responsibility is not shared or vague.</p>
+        </div>
+        <div class="flex items-center justify-center text-2xl text-[#FFB162] md:px-2">
+          →
+        </div>
+        <div class="flex-1 rounded-2xl bg-[#1B2632] p-4 text-sm text-white/85 shadow-lg shadow-black/40 md:p-5">
+          <h3 class="mb-1 text-sm font-semibold uppercase tracking-wide text-white/80">Step 3</h3>
+          <p class="font-medium">Follow-up scheduled</p>
+          <p class="mt-1 text-xs text-white/70">Next action and timing are agreed, not left to memory.</p>
+        </div>
+      </div>
+      <div class="mt-4 flex flex-col items-stretch gap-4 md:mt-6 md:flex-row md:items-center md:justify-between">
+        <div class="flex-1 rounded-2xl bg-[#1B2632] p-4 text-sm text-white/85 shadow-lg shadow-black/40 md:p-5">
+          <h3 class="mb-1 text-sm font-semibold uppercase tracking-wide text-white/80">Step 4</h3>
+          <p class="font-medium">Status visible to the team</p>
+          <p class="mt-1 text-xs text-white/70">Everyone can see what is new, in progress, or waiting, without chasing updates.</p>
+        </div>
+        <div class="flex items-center justify-center text-2xl text-[#FFB162] md:px-2">
+          →
+        </div>
+        <div class="flex-1 rounded-2xl bg-[#1B2632] p-4 text-sm text-white/85 shadow-lg shadow-black/40 md:p-5">
+          <h3 class="mb-1 text-sm font-semibold uppercase tracking-wide text-white/80">Step 5</h3>
+          <p class="font-medium">Nothing gets lost</p>
+          <p class="mt-1 text-xs text-white/70">The system holds the work, so you rely less on individual memory and ad hoc checks.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT PEAKLOGIC DIGITAL DOES -->
+  <section class="border-b border-white/5 bg-[#2C3B4D] py-16">
+    <div class="mx-auto max-w-5xl px-5">
+      <h2 class="mb-4 text-2xl font-semibold tracking-tight md:text-3xl font-heading">What PeakLogic Digital Does</h2>
+      <p class="mb-6 text-sm text-white/80 md:text-base">
+        We are an operational systems consultancy. Our work starts with how enquiries, leads, and client work move
+        through your company today. We help you see the real system, simplify it, and make it easier for your team to
+        run every day.
+      </p>
+      <p class="text-sm text-white/80 md:text-base">
+        When the structure is clear, we then support you in choosing and configuring tools. Automation and AI can be
+        part of that, but only where they fit naturally into a process that already makes sense.
+      </p>
+    </div>
+  </section>
+
+  <!-- THREE STAGE APPROACH -->
+  <section id="approach" class="border-b border-white/5 bg-[#1B2632] py-16">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="mb-8 max-w-3xl">
+        <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Our Three-Stage Approach</h2>
+        <p class="text-sm text-white/80 md:text-base">
+          Every engagement follows a simple, structured path: Diagnosis, System Design, and Implementation.
+        </p>
+        <p class="mt-3 text-xs uppercase tracking-[0.18em] text-white/60">
+          Structure first, automation second.
+        </p>
+      </div>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-[#2C3B4D] p-6 shadow-lg shadow-black/40">
+          <h3 class="mb-2 text-lg font-semibold font-heading">1. Diagnosis</h3>
+          <p class="text-sm text-white/80">
+            We map how enquiries, leads, and work move through your business today, speak with key people, and identify
+            where work gets stuck or lost.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-[#2C3B4D] p-6 shadow-lg shadow-black/40">
+          <h3 class="mb-2 text-lg font-semibold font-heading">2. System Design</h3>
+          <p class="text-sm text-white/80">
+            Together we design a clearer, simpler operational system: stages, ownership, handovers, and basic
+            reporting. This lives in plain language your team can understand.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-[#2C3B4D] p-6 shadow-lg shadow-black/40">
+          <h3 class="mb-2 text-lg font-semibold font-heading">3. Implementation</h3>
+          <p class="text-sm text-white/80">
+            We help you put the new system into practice across tools and routines. Automation and AI are introduced
+            only where they clearly support the agreed structure.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES WE WORK WITH -->
+  <section id="industries" class="border-b border-white/5 bg-[#2C3B4D] py-16">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 class="mb-8 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Industries We Work With</h2>
+      <div class="grid gap-6 md:grid-cols-3">
+        <div class="rounded-2xl bg-[#1B2632] p-6 shadow-lg shadow-black/40">
+          <h3 class="mb-2 text-lg font-semibold font-heading">Real Estate Agencies</h3>
+          <p class="text-sm text-white/80">
+            Enquiry handling, viewing scheduling, and offer follow-up systems that reduce missed opportunities and
+            manual chasing.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-[#1B2632] p-6 shadow-lg shadow-black/40">
+          <h3 class="mb-2 text-lg font-semibold font-heading">Car Dealerships</h3>
+          <p class="text-sm text-white/80">
+            Lead and test drive flows, handovers between sales and service, and clearer visibility on what is pending
+            or delayed.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-[#1B2632] p-6 shadow-lg shadow-black/40">
+          <h3 class="mb-2 text-lg font-semibold font-heading">Local Service Businesses</h3>
+          <p class="text-sm text-white/80">
+            Booking, scheduling, and delivery systems for businesses such as clinics, agencies, and trades that rely on
+            consistent client work.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHO THIS IS FOR -->
+  <section class="border-b border-white/5 bg-[#1B2632] py-16">
+    <div class="mx-auto max-w-5xl px-5 space-y-8">
+      <div>
+        <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Who This Is For</h2>
+        <p class="mb-4 text-sm text-white/80 md:text-base">
+          PeakLogic Digital is a good fit when there is already regular activity in the business and the challenge is
+          keeping the operational system clear and reliable.
+        </p>
+        <ul class="space-y-2 text-sm text-white/85 md:text-base">
+          <li>Service businesses receiving enquiries on a regular basis.</li>
+          <li>Teams of roughly 5–100 people, where work passes between multiple roles.</li>
+          <li>Companies experiencing operational overload rather than a lack of demand.</li>
+          <li>Businesses where follow-ups and handovers still depend heavily on memory.</li>
+        </ul>
+      </div>
+
+      <div class="border-t border-white/10 pt-6">
+        <h3 class="mb-2 text-sm font-semibold uppercase tracking-[0.18em] text-white/70">Who This May Not Be For</h3>
+        <p class="mb-3 text-sm text-white/80 md:text-base">
+          The approach can be less helpful in situations where there is not yet a stable flow of work to organise.
+        </p>
+        <ul class="space-y-2 text-sm text-white/85 md:text-base">
+          <li>Very early startups still experimenting with their offering or market.</li>
+          <li>Businesses with very low enquiry volume, where the main priority is generating demand.</li>
+          <li>Companies only looking for software tools without changing how work is organised.</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CREDIBILITY & FOUNDER -->
+  <section class="border-b border-white/5 bg-[#2C3B4D] py-16">
+    <div class="mx-auto max-w-6xl px-5">
+      <div class="grid gap-10 md:grid-cols-3">
+        <div class="md:col-span-2 space-y-4">
+          <h2 class="text-2xl font-semibold tracking-tight md:text-3xl font-heading">Credibility</h2>
+          <p class="text-sm text-white/80 md:text-base">
+            PeakLogic Digital is a small, focused consultancy built around clear, workable operational systems for
+            service businesses.
+          </p>
+          <ul class="space-y-2 text-sm text-white/85 md:text-base">
+            <li>Based in Barcelona, working with clients remotely.</li>
+            <li>Focused on operational systems for service businesses rather than broad digital strategy.</li>
+            <li>Practical approach built around clarity, reliability, and steady improvement rather than one-off fixes.</li>
+          </ul>
+        </div>
+        <div class="rounded-2xl bg-[#1B2632] p-6 text-sm text-white/85 shadow-lg shadow-black/40">
+          <h3 class="mb-1 text-xs font-semibold uppercase tracking-[0.18em] text-white/70">Founder</h3>
+          <p class="mb-2 text-base font-semibold font-heading">Bogdan Otelea</p>
+          <p class="text-sm text-white/80">
+            Bogdan started PeakLogic Digital after seeing how often good service businesses were held back by unclear
+            systems rather than a lack of demand. The consultancy is built on a simple idea: when the way work flows is
+            calm and visible, teams make better decisions and deliver better service.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES OVERVIEW -->
+  <section id="services" class="border-b border-white/5 bg-[#1B2632] py-16">
+    <div class="mx-auto max-w-6xl px-5">
+      <h2 class="mb-8 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Services Overview</h2>
+      <div class="grid gap-6 md:grid-cols-2">
+        <div class="rounded-2xl bg-[#2C3B4D] p-6 shadow-lg shadow-black/40 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <div
+            class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-[#A35139] to-[#FFB162] text-[#1B2632] text-xl">
+            📥
+          </div>
+          <h3 class="mb-2 text-lg font-semibold font-heading">Enquiry &amp; Lead Handling Systems</h3>
+          <p class="text-sm text-white/80">
+            Map how enquiries and leads arrive, are qualified, and are followed up. Introduce clear steps, ownership,
+            and tools so nothing is missed and the right work moves forward at the right time.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-[#2C3B4D] p-6 shadow-lg shadow-black/40 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <div
+            class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-[#A35139] to-[#FFB162] text-[#1B2632] text-xl">
+            🧭
+          </div>
+          <h3 class="mb-2 text-lg font-semibold font-heading">Operational Workflow Design</h3>
+          <p class="text-sm text-white/80">
+            Clarify how work moves from enquiry to delivery. We document the current state, design a simpler future
+            state, and introduce practical changes that your team can follow every day.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-[#2C3B4D] p-6 shadow-lg shadow-black/40 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <div
+            class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-[#A35139] to-[#FFB162] text-[#1B2632] text-xl">
+            🛠
+          </div>
+          <h3 class="mb-2 text-lg font-semibold font-heading">Supporting Tools &amp; Automation</h3>
+          <p class="text-sm text-white/80">
+            Once your processes are clear, we help you choose and configure tools. This can include automation and AI,
+            but only where it supports a system that already works.
+          </p>
+        </div>
+        <div class="rounded-2xl bg-[#2C3B4D] p-6 shadow-lg shadow-black/40 transition-transform hover:-translate-y-1 hover:shadow-xl">
+          <div
+            class="mb-4 flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-tr from-[#A35139] to-[#FFB162] text-[#1B2632] text-xl">
+            📊
+          </div>
+          <h3 class="mb-2 text-lg font-semibold font-heading">Operational Reporting &amp; Review</h3>
+          <p class="text-sm text-white/80">
+            Establish simple, regular reporting on enquiries, pipeline, and delivery so you can see how the system is
+            performing and adjust calmly over time.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATIONAL AUDIT ENTRY POINT -->
+  <section class="border-b border-white/5 bg-[#2C3B4D] py-16">
+    <div class="mx-auto max-w-5xl px-5">
+      <div class="rounded-2xl bg-[#1B2632] p-8 shadow-lg shadow-black/40 md:p-10">
+        <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Start with an Operational Audit</h2>
+        <p class="mb-4 text-sm text-white/80 md:text-base">
+          The Operational Audit is a focused review of how enquiries, leads, and client work move through your business
+          today. We surface the key constraints and provide a clear set of next steps.
+        </p>
+        <p class="mb-6 text-sm text-white/80 md:text-base">
+          You receive a simple map of your current system, a recommended future state, and a short, prioritised action
+          list. From there, you can move forward with or without our help.
+        </p>
+        <a href="/operational-audit.html"
+          class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#A35139] to-[#FFB162] px-6 py-3 text-sm font-semibold text-[#1B2632] shadow-md shadow-black/40 hover:shadow-lg hover:shadow-black/60 transition">
+          Request an Operational Audit
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LEAD CAPTURE / CONTACT LIST -->
+  <section class="border-b border-white/5 bg-[#1B2632] py-12">
+    <div class="mx-auto max-w-4xl px-5">
+      <div class="rounded-2xl border border-white/10 bg-[#1B2632] p-6 shadow-lg shadow-black/30 md:p-8">
+        <h2 class="mb-3 text-xl font-semibold tracking-tight md:text-2xl font-heading">Stay in Touch</h2>
+        <p class="mb-6 text-sm text-white/80 md:text-base">
+          Occasionally I share practical ideas on improving operational systems, lead handling, and workflow clarity in
+          service businesses.
+        </p>
+        <form id="lead-capture-form" action="https://formspree.io/f/mgvgnwrr" method="POST"
+          class="flex flex-col gap-3 md:flex-row md:items-center">
+          <div class="flex-1 space-y-1">
+            <label for="lead-name" class="block text-xs font-medium text-white/70">Name</label>
+            <input
+              class="w-full rounded-lg border border-white/10 bg-[#1B2632] px-3 py-2 text-sm text-white placeholder-white/40 outline-none focus:border-[#FFB162] focus:ring-1 focus:ring-[#FFB162]"
+              type="text" id="lead-name" name="name" placeholder="Your name">
+          </div>
+          <div class="flex-1 space-y-1">
+            <label for="lead-email" class="block text-xs font-medium text-white/70">Email</label>
+            <input
+              class="w-full rounded-lg border border-white/10 bg-[#1B2632] px-3 py-2 text-sm text-white placeholder-white/40 outline-none focus:border-[#FFB162] focus:ring-1 focus:ring-[#FFB162]"
+              type="email" id="lead-email" name="email" required placeholder="you@example.com">
+          </div>
+          <div class="pt-1 md:pt-6">
+            <button type="submit"
+              class="inline-flex w-full items-center justify-center rounded-full bg-gradient-to-r from-[#A35139] to-[#FFB162] px-5 py-2.5 text-sm font-semibold text-[#1B2632] shadow-md shadow-black/40 hover:shadow-lg hover:shadow-black/60 transition md:w-auto">
+              Join the contact list
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CALL TO ACTION -->
+  <section class="border-b border-white/5 bg-[#1B2632] py-12">
+    <div class="mx-auto max-w-4xl px-5 text-center">
+      <h2 class="mb-3 text-2xl font-semibold tracking-tight md:text-3xl font-heading">Next Steps</h2>
+      <p class="mb-6 text-sm text-white/80 md:text-base">
+        The recommended starting point is the Operational Audit. If you prefer, you can also contact us directly with a
+        short description of your situation.
+      </p>
+      <div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:justify-center">
+        <a href="/operational-audit.html"
+          class="inline-flex items-center justify-center rounded-full bg-gradient-to-r from-[#A35139] to-[#FFB162] px-7 py-3 text-sm font-semibold text-[#1B2632] shadow-lg shadow-black/40 hover:shadow-xl hover:shadow-black/60 transition">
+          Request an Operational Audit
+        </a>
+        <a href="/contact.html"
+          class="inline-flex items-center justify-center rounded-full border border-white/20 px-7 py-3 text-sm font-semibold text-white hover:border-white/40 hover:bg-white/5 transition">
+          Contact Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-[#A35139]/70 bg-[#1B2632]">
+    <div class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-6 text-sm text-white/60">
+      <div class="space-y-1">
+        <strong class="block font-heading text-base text-white">PeakLogic Digital</strong>
+        <div class="text-xs text-white/60">Operational systems for service businesses</div>
+      </div>
+      <div class="text-right text-xs md:text-sm">
+        <div>contact@peaklogicdigital.com</div>
+        <div class="text-white/60">Barcelona · Remote</div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      const toggle = document.getElementById('mobile-nav-toggle');
+      const menu = document.getElementById('mobile-nav');
+      if (!toggle || !menu) return;
+
+      toggle.addEventListener('click', function () {
+        const isHidden = menu.classList.contains('hidden');
+        if (isHidden) {
+          menu.classList.remove('hidden');
+          toggle.setAttribute('aria-expanded', 'true');
+        } else {
+          menu.classList.add('hidden');
+          toggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    })();
+
+    (function () {
+      const form = document.getElementById('lead-capture-form');
+      if (!form) return;
+      form.addEventListener('submit', function () {
+        if (typeof gtag === 'function') {
+          gtag('event', 'sign_up', { method: 'contact_list' });
+        }
+      });
+    })();
+  </script>
+
+</body>
+</html>
