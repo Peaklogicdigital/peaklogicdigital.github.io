@@ -1,206 +1,30 @@
 /* ------------------------------
-   PeakLogic Digital — style.css
-   Premium Cinematic Design System
+  PeakLogic Digital — style.css
+  Brand variables & custom animations only
 ------------------------------ */
 
-/* ========================================
-   1. DESIGN SYSTEM VARIABLES
-   ======================================== */
-
+/* BRAND VARIABLES */
 :root {
-  /* COLORS - Premium Palette */
-  --color-bg-dark: #0F1419;
-  --color-bg-primary: #1B2632;
-  --color-bg-secondary: #2C3B4D;
-  --color-bg-tertiary: #3D4A5C;
-  
-  --color-accent-warm: #A35139;
-  --color-accent-warm-light: #D97E62;
-  --color-accent-warm-dark: #7A3B2A;
-  
-  --color-accent-gold: #FFB162;
-  --color-accent-gold-light: #FFC980;
-  --color-accent-gold-dark: #E09D46;
-  
-  --color-text-primary: #FFFFFF;
-  --color-text-secondary: rgba(255, 255, 255, 0.9);
-  --color-text-tertiary: rgba(255, 255, 255, 0.75);
-  --color-text-muted: rgba(255, 255, 255, 0.55);
-  --color-text-subtle: rgba(255, 255, 255, 0.35);
-  
-  /* TYPOGRAPHY SCALE - Premium */
-  --font-family-heading: 'Sora', system-ui, -apple-system, sans-serif;
-  --font-family-body: 'Inter', system-ui, -apple-system, sans-serif;
-  
-  --font-size-xs: 0.75rem;
-  --font-size-sm: 0.875rem;
-  --font-size-base: 1rem;
-  --font-size-lg: 1.125rem;
-  --font-size-xl: 1.25rem;
-  --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
-  --font-size-5xl: 3rem;
-  --font-size-6xl: 3.75rem;
-  
-  --line-height-tight: 1.2;
-  --line-height-snug: 1.375;
-  --line-height-normal: 1.5;
-  --line-height-relaxed: 1.625;
-  --line-height-loose: 1.75;
-  
-  --font-weight-normal: 400;
-  --font-weight-medium: 500;
-  --font-weight-semibold: 600;
-  --font-weight-bold: 700;
-  
-  /* SPACING - Premium Grid (8px base) */
-  --space-0: 0;
-  --space-1: 0.25rem;
-  --space-2: 0.5rem;
-  --space-3: 0.75rem;
-  --space-4: 1rem;
-  --space-5: 1.25rem;
-  --space-6: 1.5rem;
-  --space-7: 1.75rem;
-  --space-8: 2rem;
-  --space-10: 2.5rem;
-  --space-12: 3rem;
-  --space-16: 4rem;
-  --space-20: 5rem;
-  --space-24: 6rem;
-  --space-32: 8rem;
-  
-  /* SHADOWS - Cinematic Depth */
-  --shadow-xs: 0 1px 2px rgba(0, 0, 0, 0.3);
-  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.4);
-  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
-  --shadow-lg: 0 12px 32px rgba(0, 0, 0, 0.6);
-  --shadow-xl: 0 20px 48px rgba(0, 0, 0, 0.7);
-  --shadow-glow: 0 0 20px rgba(255, 177, 98, 0.15);
-  --shadow-glow-warm: 0 0 24px rgba(163, 81, 57, 0.12);
-  
-  /* BORDERS */
-  --border-radius-sm: 0.375rem;
-  --border-radius-md: 0.5rem;
-  --border-radius-lg: 0.75rem;
-  --border-radius-xl: 1rem;
-  --border-radius-2xl: 1.25rem;
-  --border-radius-3xl: 1.5rem;
-  
-  /* TRANSITIONS & ANIMATIONS */
-  --transition-fast: 200ms;
-  --transition-base: 300ms;
-  --transition-slow: 500ms;
-  --timing-ease: cubic-bezier(0.4, 0, 0.2, 1);
-  --timing-ease-out: cubic-bezier(0.0, 0, 0.2, 1);
-  --timing-ease-in: cubic-bezier(0.4, 0, 1, 1);
-  
-  /* BREAKPOINTS */
-  --breakpoint-sm: 640px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 1024px;
-  --breakpoint-xl: 1280px;
+  --color-bg: #1B2632;
+  --color-section: #2C3B4D;
+  --color-accent-start: #A35139;
+  --color-accent-end: #FFB162;
+  --color-text: #FFFFFF;
+  --color-muted: rgba(255, 255, 255, 0.6);
 }
 
-/* ========================================
-   2. GLOBAL STYLES & BASE ELEMENTS
-   ======================================== */
-
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-normal);
-  color: var(--color-text-primary);
-  background-color: var(--color-bg-primary);
-  min-height: 100vh;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-/* Typography Base */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-family-heading);
-  font-weight: var(--font-weight-bold);
-  line-height: var(--line-height-tight);
-  letter-spacing: -0.015em;
-}
-
-h1 {
-  font-size: var(--font-size-5xl);
-  margin-bottom: var(--space-8);
-}
-
-h2 {
-  font-size: var(--font-size-4xl);
-  margin-bottom: var(--space-6);
-  font-weight: var(--font-weight-semibold);
-}
-
-h3 {
-  font-size: var(--font-size-2xl);
-  margin-bottom: var(--space-4);
-}
-
-p {
-  margin-bottom: var(--space-4);
-  color: var(--color-text-tertiary);
-  line-height: var(--line-height-relaxed);
-}
-
-a {
-  color: var(--color-accent-gold);
-  text-decoration: none;
-  transition: color var(--transition-base) var(--timing-ease);
-}
-
-a:hover {
-  color: var(--color-accent-gold-light);
-}
-
-/* ========================================
-   3. GRADIENT & COLOR UTILITIES
-   ======================================== */
-
+/* GRADIENT TEXT UTILITY (BRAND) */
 .gradient-text {
-  background: linear-gradient(135deg, var(--color-accent-warm) 0%, var(--color-accent-gold) 100%);
+  background-image: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: gradient-subtle 8s ease-in-out infinite;
 }
 
-.gradient-accent {
-  background: linear-gradient(135deg, var(--color-accent-warm) 0%, var(--color-accent-gold) 100%);
-}
-
-.gradient-overlay {
-  position: relative;
-}
-
-.gradient-overlay::after {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.3) 100%);
-  pointer-events: none;
-}
-
-/* ========================================
-   4. CINEMATIC ANIMATIONS - Enhanced for Hero
-   ======================================== */
-
-/* Gradient Shift Animation */
-@keyframes gradient-subtle {
-  0%, 100% {
+/* CUSTOM GRADIENT ANIMATION (BRAND) */
+@keyframes gradient-shift-x {
+  0%,
+  100% {
     background-position: 0% 50%;
   }
   50% {
@@ -208,127 +32,18 @@ a:hover {
   }
 }
 
-/* Fade In & Slide Up */
-@keyframes fade-in-up {
-  from {
-    opacity: 0;
-    transform: translateY(24px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.animate-gradient-slow {
+  background-image: linear-gradient(90deg, var(--color-accent-start), var(--color-accent-end));
+  background-size: 200% 200%;
+  animation: gradient-shift-x 18s ease-in-out infinite;
 }
 
-/* Fade In */
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Scale & Fade */
-@keyframes scale-fade-in {
-  from {
-    opacity: 0;
-    transform: scale(0.92);
-  }
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* Subtle Glow Pulse */
-@keyframes glow-pulse {
-  0%, 100% {
-    box-shadow: 0 0 20px rgba(255, 177, 98, 0.1);
-  }
-  50% {
-    box-shadow: 0 0 32px rgba(255, 177, 98, 0.2);
-  }
-}
-
-/* Smooth Float - Slow continuous motion */
-@keyframes float {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-12px);
-  }
-}
-
-/* Float Slow - Even slower drift */
-@keyframes float-slow {
-  0%, 100% {
-    transform: translateY(0px);
-  }
-  50% {
-    transform: translateY(-8px);
-  }
-}
-
-/* Float Accent - Premium floating elements */
-@keyframes float-accent {
-  0%, 100% {
-    transform: translateY(0px) translateX(0px);
-  }
-  33% {
-    transform: translateY(-20px) translateX(15px);
-  }
-  66% {
-    transform: translateY(-10px) translateX(-15px);
-  }
-}
-
-/* ========================================
-   5. HERO SECTION - PARALLAX & DEPTH ANIMATIONS
-   ======================================== */
-
-.hero-section {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--color-bg-primary);
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.hero-parallax-container {
-  will-change: transform;
-  perspective: 1000px;
-}
-
-.hero-parallax-layer {
-  will-change: transform;
-  transform-origin: center;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-
-.animate-float {
-  animation: float 8s ease-in-out infinite;
-}
-
-.animate-float-slow {
-  animation: float-slow 12s ease-in-out infinite;
-}
-
-/* ========================================
-   6. SECTION REVEAL ANIMATIONS
-   ======================================== */
-
+/* SCROLL REVEAL ANIMATIONS */
 .reveal,
 .reveal-card {
   opacity: 0;
-  transform: translateY(32px);
-  transition: opacity var(--transition-base) var(--timing-ease),
-              transform var(--transition-base) var(--timing-ease);
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .reveal-visible {
@@ -345,15 +60,11 @@ a:hover {
   }
 }
 
-/* ========================================
-   7. HERO INTRO ANIMATIONS
-   ======================================== */
-
+/* HERO INTRO ANIMATION */
 .hero-intro {
   opacity: 0;
-  transform: translateY(20px);
-  transition: opacity var(--transition-base) var(--timing-ease),
-              transform var(--transition-base) var(--timing-ease);
+  transform: translateY(16px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 
 .hero-intro-visible {
@@ -369,261 +80,67 @@ a:hover {
   }
 }
 
-/* ========================================
-   8. CARD COMPONENTS - Premium Styling
-   ======================================== */
-
+/* CARD HOVER INTERACTION */
 .card {
-  position: relative;
-  border-radius: var(--border-radius-2xl);
-  background: linear-gradient(135deg, rgba(44, 59, 77, 0.8) 0%, rgba(44, 59, 77, 0.6) 100%);
-  backdrop-filter: blur(10px);
-  border: 1px solid rgba(255, 255, 255, 0.06);
-  transition: all var(--transition-base) var(--timing-ease);
-  overflow: hidden;
-}
-
-.card::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.02) 0%, transparent 100%);
-  pointer-events: none;
+  transition: transform 240ms ease-out, box-shadow 240ms ease-out;
 }
 
 .card:hover {
-  transform: translateY(-8px);
-  border-color: rgba(255, 177, 98, 0.15);
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5),
-              0 0 20px rgba(255, 177, 98, 0.1);
-  background: linear-gradient(135deg, rgba(44, 59, 77, 1) 0%, rgba(44, 59, 77, 0.8) 100%);
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
 }
 
 @media (prefers-reduced-motion: reduce) {
   .card {
     transition: none !important;
-  }
-  
-  .card:hover {
     transform: none !important;
   }
 }
 
-/* ========================================
-   9. BUTTON COMPONENTS - Premium
-   ======================================== */
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: var(--space-3) var(--space-6);
-  border-radius: 9999px;
-  font-weight: var(--font-weight-semibold);
-  font-size: var(--font-size-sm);
-  text-decoration: none;
-  cursor: pointer;
-  border: none;
-  transition: all var(--transition-base) var(--timing-ease);
+/* HERO BACKGROUND GRADIENT (SUBTLE, SLOW) */
+.hero-gradient {
   position: relative;
   overflow: hidden;
+  background-color: var(--color-bg);
 }
 
-.btn::before {
-  content: '';
+.hero-gradient::before {
+  content: "";
   position: absolute;
-  inset: 0;
-  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, transparent 100%);
-  opacity: 0;
-  transition: opacity var(--transition-base) var(--timing-ease);
+  inset: -40%;
+  background: radial-gradient(circle at 0% 0%, rgba(163, 81, 57, 0.5), transparent 55%),
+              radial-gradient(circle at 100% 30%, rgba(255, 177, 98, 0.4), transparent 55%),
+              radial-gradient(circle at 10% 100%, rgba(163, 81, 57, 0.45), transparent 55%);
+  opacity: 0.35;
+  transform: translate3d(0, 0, 0);
+  animation: hero-gradient-shift 48s linear infinite;
   pointer-events: none;
 }
 
-.btn-primary {
-  background: linear-gradient(135deg, var(--color-accent-warm) 0%, var(--color-accent-gold) 100%);
-  color: var(--color-bg-dark);
-  box-shadow: 0 8px 20px rgba(163, 81, 57, 0.3);
+.hero-gradient > * {
+  position: relative;
+  z-index: 1;
 }
 
-.btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(163, 81, 57, 0.4);
-}
-
-.btn-primary:active {
-  transform: translateY(0);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--color-text-primary);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn-secondary:hover {
-  background: rgba(255, 255, 255, 0.05);
-  border-color: rgba(255, 255, 255, 0.4);
+@keyframes hero-gradient-shift {
+  0% {
+    transform: translate3d(0, 0, 0);
+  }
+  50% {
+    transform: translate3d(-6%, -4%, 0);
+  }
+  100% {
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .btn {
-    transition: none !important;
-  }
-  
-  .btn:hover {
-    transform: none !important;
+  .hero-gradient::before {
+    animation: none;
   }
 }
 
-/* ========================================
-   10. DIVIDERS & BORDERS - Premium
-   ======================================== */
 
-.border-divider {
-  border-color: rgba(255, 255, 255, 0.05);
-}
 
-.border-divider-subtle {
-  border-color: rgba(255, 255, 255, 0.02);
-}
 
-/* ========================================
-   11. FOCUS STATES - Accessibility
-   ======================================== */
 
-button:focus-visible,
-a:focus-visible {
-  outline: 2px solid var(--color-accent-gold);
-  outline-offset: 2px;
-}
-
-/* ========================================
-   12. RESPONSIVE ADJUSTMENTS
-   ======================================== */
-
-@media (max-width: 768px) {
-  h1 {
-    font-size: var(--font-size-3xl);
-    margin-bottom: var(--space-6);
-  }
-  
-  h2 {
-    font-size: var(--font-size-2xl);
-    margin-bottom: var(--space-5);
-  }
-  
-  h3 {
-    font-size: var(--font-size-xl);
-  }
-  
-  .hero-section {
-    min-height: auto;
-    padding: var(--space-16) 0;
-  }
-}
-
-/* ========================================
-   13. UTILITY CLASSES
-   ======================================== */
-
-.text-muted {
-  color: var(--color-text-muted);
-}
-
-.text-subtle {
-  color: var(--color-text-subtle);
-}
-
-.bg-glow {
-  box-shadow: var(--shadow-glow);
-}
-
-.bg-glow-warm {
-  box-shadow: var(--shadow-glow-warm);
-}
-
-.space-lg {
-  gap: var(--space-12);
-}
-
-.space-xl {
-  gap: var(--space-16);
-}
-
-/* ========================================
-   14. SMOOTH SCROLL & SCROLLBAR
-   ======================================== */
-
-::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-::-webkit-scrollbar-track {
-  background: transparent;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 177, 98, 0.3);
-  border-radius: 4px;
-  transition: background var(--transition-base);
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 177, 98, 0.5);
-}
-
-/* ========================================
-   15. FORM ELEMENTS - Premium Styling
-   ======================================== */
-
-input, textarea, select {
-  font-family: var(--font-family-body);
-  font-size: var(--font-size-base);
-}
-
-input[type="text"],
-input[type="email"],
-textarea {
-  background: rgba(27, 38, 50, 0.8);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: var(--color-text-primary);
-  padding: var(--space-3) var(--space-4);
-  border-radius: var(--border-radius-lg);
-  transition: all var(--transition-base) var(--timing-ease);
-  backdrop-filter: blur(4px);
-}
-
-input[type="text"]::placeholder,
-input[type="email"]::placeholder,
-textarea::placeholder {
-  color: var(--color-text-subtle);
-}
-
-input[type="text"]:focus,
-input[type="email"]:focus,
-textarea:focus {
-  outline: none;
-  border-color: var(--color-accent-gold);
-  background: rgba(27, 38, 50, 1);
-  box-shadow: 0 0 16px rgba(255, 177, 98, 0.1);
-}
-
-/* ========================================
-   16. PREFERS-REDUCED-MOTION OVERRIDES
-   ======================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  .animate-float,
-  .animate-float-slow {
-    animation: none !important;
-  }
-
-  .hero-parallax-layer {
-    transform: none !important;
-  }
-
-  .hero-accent-float {
-    animation: none !important;
-  }
-}
