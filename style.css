@@ -195,7 +195,7 @@ a:hover {
 }
 
 /* ========================================
-   4. CINEMATIC ANIMATIONS
+   4. CINEMATIC ANIMATIONS - Enhanced for Hero
    ======================================== */
 
 /* Gradient Shift Animation */
@@ -252,8 +252,18 @@ a:hover {
   }
 }
 
-/* Smooth Float (Parallax-like) */
+/* Smooth Float - Slow continuous motion */
 @keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+/* Float Slow - Even slower drift */
+@keyframes float-slow {
   0%, 100% {
     transform: translateY(0px);
   }
@@ -262,27 +272,55 @@ a:hover {
   }
 }
 
-/* Hero Gradient Background Shift */
-@keyframes hero-gradient-shift {
-  0% {
-    transform: translate3d(0, 0, 0);
+/* Float Accent - Premium floating elements */
+@keyframes float-accent {
+  0%, 100% {
+    transform: translateY(0px) translateX(0px);
   }
-  25% {
-    transform: translate3d(-2%, -1%, 0);
+  33% {
+    transform: translateY(-20px) translateX(15px);
   }
-  50% {
-    transform: translate3d(-4%, -2%, 0);
-  }
-  75% {
-    transform: translate3d(-2%, -1%, 0);
-  }
-  100% {
-    transform: translate3d(0, 0, 0);
+  66% {
+    transform: translateY(-10px) translateX(-15px);
   }
 }
 
 /* ========================================
-   5. SECTION REVEAL ANIMATIONS
+   5. HERO SECTION - PARALLAX & DEPTH ANIMATIONS
+   ======================================== */
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-bg-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-parallax-container {
+  will-change: transform;
+  perspective: 1000px;
+}
+
+.hero-parallax-layer {
+  will-change: transform;
+  transform-origin: center;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float-slow 12s ease-in-out infinite;
+}
+
+/* ========================================
+   6. SECTION REVEAL ANIMATIONS
    ======================================== */
 
 .reveal,
@@ -308,7 +346,7 @@ a:hover {
 }
 
 /* ========================================
-   6. HERO SECTION ANIMATIONS
+   7. HERO INTRO ANIMATIONS
    ======================================== */
 
 .hero-intro {
@@ -328,42 +366,6 @@ a:hover {
     opacity: 1 !important;
     transform: none !important;
     transition: none !important;
-  }
-}
-
-/* ========================================
-   7. HERO BACKGROUND EFFECT
-   ======================================== */
-
-.hero-gradient {
-  position: relative;
-  overflow: hidden;
-  background-color: var(--color-bg-primary);
-  padding: var(--space-20) 0;
-}
-
-.hero-gradient::before {
-  content: '';
-  position: absolute;
-  inset: -50%;
-  background: 
-    radial-gradient(circle at 20% 10%, rgba(163, 81, 57, 0.25) 0%, transparent 50%),
-    radial-gradient(circle at 80% 40%, rgba(255, 177, 98, 0.2) 0%, transparent 50%),
-    radial-gradient(circle at 10% 90%, rgba(163, 81, 57, 0.15) 0%, transparent 50%);
-  opacity: 0.6;
-  animation: hero-gradient-shift 60s linear infinite;
-  pointer-events: none;
-}
-
-.hero-gradient > * {
-  position: relative;
-  z-index: 1;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .hero-gradient::before {
-    animation: none;
-    opacity: 0.3;
   }
 }
 
@@ -514,7 +516,8 @@ a:focus-visible {
     font-size: var(--font-size-xl);
   }
   
-  .hero-gradient {
+  .hero-section {
+    min-height: auto;
     padding: var(--space-16) 0;
   }
 }
@@ -604,4 +607,23 @@ textarea:focus {
   border-color: var(--color-accent-gold);
   background: rgba(27, 38, 50, 1);
   box-shadow: 0 0 16px rgba(255, 177, 98, 0.1);
+}
+
+/* ========================================
+   16. PREFERS-REDUCED-MOTION OVERRIDES
+   ======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-float,
+  .animate-float-slow {
+    animation: none !important;
+  }
+
+  .hero-parallax-layer {
+    transform: none !important;
+  }
+
+  .hero-accent-float {
+    animation: none !important;
+  }
 }
