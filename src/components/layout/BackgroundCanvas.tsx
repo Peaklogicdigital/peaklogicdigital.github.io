@@ -5,6 +5,7 @@ import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import type { ThreeElement } from "@react-three/fiber";
 import { shaderMaterial, useTexture } from "@react-three/drei";
 import * as THREE from "three";
+import { MathUtils } from "three";
 
 const PulseGridMaterial = shaderMaterial(
   { uTime: 0, uTexture: null as unknown as THREE.Texture },
@@ -65,12 +66,76 @@ function GridLayer() {
   );
 }
 
+const FluidMaterial = shaderMaterial(
+  {
+    u_tex: null as unknown as THREE.Texture,
+    u_mouse: new THREE.Vector2(0.5, 0.5),
+    u_time: 0,
+  },
+  /* glsl vertex */ `
+    varying vec2 vUv;
+
+    void main() {
+      vUv = uv;
+      gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0);
+    }
+  `,
+  /* glsl fragment */ `
+    uniform sampler2D u_tex;
+    uniform vec2 u_mouse;
+    uniform float u_time;
+    varying vec2 vUv;
+
+    void main() {
+      float dist = distance(vUv, u_mouse);
+      float ripple = sin(dist * 40.0 - u_time * 2.0) * 0.02 * smoothstep(0.35, 0.0, dist);
+      vec2 distortedUv = vUv + ripple;
+
+      vec4 texColor = texture2D(u_tex, distortedUv);
+      gl_FragColor = vec4(texColor.rgb, 0.65);
+    }
+  `
+);
+
+extend({ FluidMaterial });
+
+declare module "@react-three/fiber" {
+  interface ThreeElements {
+    fluidMaterial: ThreeElement<typeof FluidMaterial>;
+  }
+}
+
+function FluidLayer() {
+  const texture = useTexture("/assets/image_0.png");
+  const materialRef = useRef<InstanceType<typeof FluidMaterial>>(null);
+  const { viewport } = useThree();
+
+  useFrame((state) => {
+    const material = materialRef.current;
+    if (!material) return;
+
+    const targetX = state.pointer.x * 0.5 + 0.5;
+    const targetY = state.pointer.y * 0.5 + 0.5;
+    material.u_mouse.x = MathUtils.lerp(material.u_mouse.x, targetX, 0.05);
+    material.u_mouse.y = MathUtils.lerp(material.u_mouse.y, targetY, 0.05);
+    material.u_time = state.clock.elapsedTime;
+  });
+
+  return (
+    <mesh position={[0, 0, 0.1]} scale={[viewport.width, viewport.height, 1]}>
+      <planeGeometry args={[1, 1]} />
+      <fluidMaterial ref={materialRef} u_tex={texture} transparent />
+    </mesh>
+  );
+}
+
 export default function BackgroundCanvas() {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen z-[-1]">
       <Canvas camera={{ position: [0, 0, 1] }}>
         <Suspense fallback={null}>
           <GridLayer />
+          <FluidLayer />
         </Suspense>
       </Canvas>
     </div>
