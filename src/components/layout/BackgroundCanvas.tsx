@@ -1,6 +1,6 @@
 "use client";
 
-import { Suspense, useRef } from "react";
+import { Suspense, useEffect, useRef } from "react";
 import { Canvas, extend, useFrame, useThree } from "@react-three/fiber";
 import type { ThreeElement } from "@react-three/fiber";
 import { shaderMaterial, useTexture } from "@react-three/drei";
@@ -110,12 +110,36 @@ function FluidLayer() {
   const materialRef = useRef<InstanceType<typeof FluidMaterial>>(null);
   const { viewport } = useThree();
 
+  const touchTarget = useRef({ x: 0.5, y: 0.5 });
+  const lastTouchAt = useRef(0);
+
+  useEffect(() => {
+    function handleTouchMove(event: TouchEvent) {
+      const touch = event.touches[0];
+      if (!touch) return;
+      touchTarget.current = {
+        x: touch.clientX / window.innerWidth,
+        y: 1 - touch.clientY / window.innerHeight,
+      };
+      lastTouchAt.current = performance.now();
+    }
+
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
+    return () => window.removeEventListener("touchmove", handleTouchMove);
+  }, []);
+
   useFrame((state) => {
     const material = materialRef.current;
     if (!material) return;
 
-    const targetX = state.pointer.x * 0.5 + 0.5;
-    const targetY = state.pointer.y * 0.5 + 0.5;
+    const recentTouch = performance.now() - lastTouchAt.current < 200;
+    const targetX = recentTouch
+      ? touchTarget.current.x
+      : state.pointer.x * 0.5 + 0.5;
+    const targetY = recentTouch
+      ? touchTarget.current.y
+      : state.pointer.y * 0.5 + 0.5;
+
     material.u_mouse.x = MathUtils.lerp(material.u_mouse.x, targetX, 0.05);
     material.u_mouse.y = MathUtils.lerp(material.u_mouse.y, targetY, 0.05);
     material.u_time = state.clock.elapsedTime;
@@ -132,7 +156,7 @@ function FluidLayer() {
 export default function BackgroundCanvas() {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen z-[-1]">
-      <Canvas camera={{ position: [0, 0, 1] }}>
+      <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]}>
         <Suspense fallback={null}>
           <GridLayer />
           <FluidLayer />
