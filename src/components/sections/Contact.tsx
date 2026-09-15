@@ -77,6 +77,7 @@ export default function Contact() {
 
   return (
     <div
+      id="contact"
       ref={sectionRef}
       className="min-h-screen flex items-center justify-center px-6 py-24"
     >

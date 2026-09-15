@@ -38,9 +38,6 @@ export const metadata: Metadata = {
     "Next.js development",
   ],
   authors: [{ name: "PeakLogic Digital" }],
-  icons: {
-    icon: "/favicon.ico",
-  },
   openGraph: {
     title: SITE_TITLE,
     description: SITE_DESCRIPTION,
