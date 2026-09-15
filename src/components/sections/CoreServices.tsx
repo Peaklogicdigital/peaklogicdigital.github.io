@@ -8,21 +8,21 @@ import GlassTiltCard from "@/components/ui/GlassTiltCard";
 const CORE_SERVICES = [
   {
     number: "01",
-    title: "Enquiry & Lead Handling Systems",
+    title: "Web Design & Build",
     description:
-      "Every inbound enquiry, call, form, message, or walk-in, gets logged, tagged, and routed to the right person automatically. Nothing sits in an inbox waiting to be noticed.",
+      "Custom, high-end websites designed and built in-house, mobile-first from the first pixel. Fast to launch, built to last, and yours to own outright, not a rented template with your logo on it.",
   },
   {
     number: "02",
-    title: "Workflow Design",
+    title: "Enquiry & Lead Handling Systems",
     description:
-      "We map how work actually moves through the business, then build the automations and checklists that keep it moving the same way every time, regardless of who's on shift.",
+      "Once the site is live, every inbound enquiry, call, form, message, or walk-in, gets logged, tagged, and routed to the right person automatically. Nothing sits in an inbox waiting to be noticed.",
   },
   {
     number: "03",
-    title: "Tool & AI Integration",
+    title: "Workflow & Tool Integration",
     description:
-      "Existing tools stay. We connect calendars, POS systems, and messaging platforms, and layer in AI where it removes real manual work, not where it looks impressive.",
+      "We connect the calendars, POS systems, and messaging platforms already in use, and layer in automation and AI only where it removes real manual work, not where it looks impressive.",
   },
 ];
 
@@ -65,16 +65,18 @@ export default function CoreServices() {
     >
       <div className="max-w-2xl text-center mb-16">
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
-          THE OPERATIONAL LAYER
+          WHAT WE DO
         </span>
         <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-4">
-          What Actually Keeps It Running
+          Websites First. Systems That Keep Them Working.
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-stretch">
         {CORE_SERVICES.map((service) => (
-          <div key={service.number} className="core-service-card">
+          <div key={service.number} className="core-service-card h-full">
             <GlassTiltCard className="h-full p-8 flex flex-col">
+              {/* Placeholder: image path pending, see /assets/ handoff */}
+              <div className="w-full aspect-video rounded-xl border border-white/10 bg-white/[0.03] mb-6" />
               <span className="font-mono text-xs text-white/40 tracking-widest">
                 {service.number}
               </span>

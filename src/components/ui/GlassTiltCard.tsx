@@ -51,7 +51,7 @@ export default function GlassTiltCard({
   }
 
   return (
-    <div className="[perspective:1000px]">
+    <div className="h-full [perspective:1000px]">
       <div
         ref={cardRef}
         onMouseMove={handleMouseMove}

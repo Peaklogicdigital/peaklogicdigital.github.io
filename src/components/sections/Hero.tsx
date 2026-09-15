@@ -71,8 +71,9 @@ export default function Hero() {
           </span>
         ))}
       </h1>
-      <p className="font-body text-white/70 text-lg md:text-2xl mt-6 text-center">
-        Digital Ascendance through Precision Code.
+      <p className="font-body text-white/70 text-lg md:text-2xl mt-6 text-center max-w-2xl px-6">
+        High-End Web Design &amp; Development. Built fast, built to convert,
+        backed by the systems that keep it running.
       </p>
       <div className="pointer-events-auto flex flex-wrap justify-center gap-3 mt-10 px-6">
         {INDEX_CHIPS.map((chip) => (
