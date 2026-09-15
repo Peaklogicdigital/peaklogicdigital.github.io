@@ -5,7 +5,6 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
-import SplitHeading from "@/components/ui/SplitHeading";
 import ServicePrism from "@/components/three/ServicePrism";
 import DataCore from "@/components/three/DataCore";
 import Lattice from "@/components/three/Lattice";
@@ -60,7 +59,7 @@ export default function CoreServices() {
             stagger: 0.15,
             scrollTrigger: {
               trigger: sectionRef.current,
-              start: "top 75%",
+              start: "top 55%",
               toggleActions: "play none none reverse",
             },
           }
@@ -81,14 +80,9 @@ export default function CoreServices() {
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
           WHAT WE DO
         </span>
-        <div className="mt-4">
-          <SplitHeading
-            text="Websites First. Systems That Keep Them Working."
-            as="h2"
-            start="top 75%"
-            className="font-display font-bold text-3xl md:text-5xl text-white"
-          />
-        </div>
+        <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-4">
+          Websites First. Systems That Keep Them Working.
+        </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-stretch">
         {CORE_SERVICES.map((service) => (
