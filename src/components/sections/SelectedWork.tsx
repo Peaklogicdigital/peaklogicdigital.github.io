@@ -3,6 +3,9 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Magnetic from "@/components/ui/Magnetic";
+import ShowcaseGrid from "@/components/three/ShowcaseGrid";
+import ShowcaseParallax from "@/components/three/ShowcaseParallax";
 
 export default function SelectedWork() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -50,9 +53,20 @@ export default function SelectedWork() {
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
-        {/* Placeholder: image paths pending, see /assets/ handoff */}
-        <div className="work-panel w-full aspect-[4/3] rounded-2xl border border-white/10 bg-white/[0.03]" />
-        <div className="work-panel w-full aspect-[4/3] rounded-2xl border border-white/10 bg-white/[0.03]" />
+        <div className="work-panel">
+          <Magnetic className="block" radius={40} strength={10}>
+            <div className="w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
+              <ShowcaseGrid />
+            </div>
+          </Magnetic>
+        </div>
+        <div className="work-panel">
+          <Magnetic className="block" radius={40} strength={10}>
+            <div className="w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
+              <ShowcaseParallax />
+            </div>
+          </Magnetic>
+        </div>
       </div>
     </div>
   );

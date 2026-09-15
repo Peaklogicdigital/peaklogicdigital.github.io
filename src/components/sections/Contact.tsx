@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Magnetic from "@/components/ui/Magnetic";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -119,13 +120,15 @@ export default function Contact() {
               className={inputClasses}
             />
 
-            <button
-              type="submit"
-              disabled={status === "loading"}
-              className="font-body text-white border border-white/20 rounded-full px-8 py-3 mt-4 transition-colors hover:bg-white/10 disabled:opacity-50"
-            >
-              {status === "loading" ? "Sending..." : "Send"}
-            </button>
+            <Magnetic className="self-center block" radius={50} strength={10}>
+              <button
+                type="submit"
+                disabled={status === "loading"}
+                className="font-body text-white border border-white/20 rounded-full px-8 py-3 mt-4 transition-colors hover:bg-white/10 disabled:opacity-50"
+              >
+                {status === "loading" ? "Sending..." : "Send"}
+              </button>
+            </Magnetic>
 
             {status === "error" && (
               <p className="font-body text-red-400 text-sm text-center">

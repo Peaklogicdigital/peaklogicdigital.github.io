@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Magnetic from "@/components/ui/Magnetic";
 
 const SECTIONS = [
   {
@@ -166,7 +167,9 @@ function ServiceSection({
         </p>
       </div>
       <div ref={panelWrapperRef} className="w-full md:w-1/2 flex justify-center">
-        <TiltPanel number={number} />
+        <Magnetic className="block" radius={40} strength={10}>
+          <TiltPanel number={number} />
+        </Magnetic>
       </div>
     </div>
   );

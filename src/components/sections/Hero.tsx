@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scrollToSection } from "@/lib/lenis";
+import Magnetic from "@/components/ui/Magnetic";
 
 const HEADLINE = "PEAKLOGIC";
 
@@ -77,17 +78,18 @@ export default function Hero() {
       </p>
       <div className="pointer-events-auto flex flex-wrap justify-center gap-3 mt-10 px-6">
         {INDEX_CHIPS.map((chip) => (
-          <a
-            key={chip.href}
-            href={chip.href}
-            onClick={(event) => {
-              event.preventDefault();
-              scrollToSection(chip.href);
-            }}
-            className="font-body text-sm text-white/80 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 transition-colors hover:bg-white/10 hover:border-white/25 hover:text-white"
-          >
-            {chip.label}
-          </a>
+          <Magnetic key={chip.href} className="block" radius={30} strength={8}>
+            <a
+              href={chip.href}
+              onClick={(event) => {
+                event.preventDefault();
+                scrollToSection(chip.href);
+              }}
+              className="font-body text-sm text-white/80 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 transition-colors hover:bg-white/10 hover:border-white/25 hover:text-white"
+            >
+              {chip.label}
+            </a>
+          </Magnetic>
         ))}
       </div>
     </div>
