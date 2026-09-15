@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Magnetic from "@/components/ui/Magnetic";
-import Lattice from "@/components/three/Lattice";
 
 const FLOW_STEPS = [
   {
@@ -73,12 +72,12 @@ export default function OperationalFlow() {
         </h2>
       </div>
 
-      <div className="w-full max-w-6xl flex flex-col md:flex-row gap-10 items-start">
-        <div className="w-full md:w-1/2 flex flex-col gap-3">
+      <div className="w-full max-w-4xl">
+        <div className="flex flex-col md:flex-row gap-3 md:gap-2">
           {FLOW_STEPS.map((step, index) => {
             const isActive = index === activeIndex;
             return (
-              <Magnetic key={step.label} className="block" radius={30} strength={8}>
+              <Magnetic key={step.label} className="flex-1 block" radius={30} strength={8}>
                 <button
                   type="button"
                   onClick={() => setActiveIndex(index)}
@@ -103,19 +102,15 @@ export default function OperationalFlow() {
               </Magnetic>
             );
           })}
-
-          <div className="mt-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-8 py-10 min-h-[9rem] flex items-center">
-            <p
-              key={activeIndex}
-              className="font-body text-white/70 text-lg md:text-xl leading-relaxed"
-            >
-              {FLOW_STEPS[activeIndex].detail}
-            </p>
-          </div>
         </div>
 
-        <div className="w-full md:w-1/2 h-[450px] rounded-2xl border border-white/10 overflow-hidden">
-          <Lattice cameraZ={3.4} />
+        <div className="mt-10 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-md px-8 py-10 min-h-[9rem] flex items-center">
+          <p
+            key={activeIndex}
+            className="font-body text-white/70 text-lg md:text-xl leading-relaxed"
+          >
+            {FLOW_STEPS[activeIndex].detail}
+          </p>
         </div>
       </div>
     </div>
