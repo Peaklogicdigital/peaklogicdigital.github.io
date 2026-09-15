@@ -5,7 +5,6 @@ import { useFrame } from "@react-three/fiber";
 import { MathUtils } from "three";
 import type { Group } from "three";
 import MiniCanvas from "./MiniCanvas";
-import "./FrostedGlassMaterial";
 
 function Prism() {
   const groupRef = useRef<Group>(null);
@@ -29,15 +28,31 @@ function Prism() {
     <group ref={groupRef}>
       <mesh scale={1.3}>
         <icosahedronGeometry args={[1, 0]} />
-        <frostedGlassMaterial transparent uOpacity={0.2} />
+        <meshPhysicalMaterial
+          color="#e8fbff"
+          transmission={1}
+          thickness={0.6}
+          roughness={0.1}
+          ior={1.5}
+          clearcoat={1}
+          clearcoatRoughness={0.1}
+          envMapIntensity={1.4}
+        />
       </mesh>
-      <mesh scale={1.3}>
+      <mesh scale={1.302}>
         <icosahedronGeometry args={[1, 0]} />
-        <meshBasicMaterial color="#22d3ee" wireframe transparent opacity={0.35} />
+        <meshBasicMaterial color="#22d3ee" wireframe transparent opacity={0.4} />
       </mesh>
       <mesh scale={0.55}>
         <icosahedronGeometry args={[1, 1]} />
-        <meshStandardMaterial color="#0a0b0e" metalness={0.9} roughness={0.25} />
+        <meshPhysicalMaterial
+          color="#0a0b0e"
+          metalness={1}
+          roughness={0.25}
+          clearcoat={0.6}
+          clearcoatRoughness={0.2}
+          envMapIntensity={1.2}
+        />
       </mesh>
     </group>
   );

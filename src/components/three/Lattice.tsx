@@ -6,7 +6,6 @@ import { Line } from "@react-three/drei";
 import { MathUtils, Vector3 } from "three";
 import type { Group, Mesh } from "three";
 import MiniCanvas from "./MiniCanvas";
-import "./FrostedGlassMaterial";
 
 const NODES: [number, number, number][] = [
   [-1.1, 0.6, 0.2],
@@ -73,7 +72,15 @@ function LatticeScene() {
       {NODES.map((pos, i) => (
         <mesh key={i} position={pos} scale={0.16}>
           <icosahedronGeometry args={[1, 0]} />
-          <frostedGlassMaterial transparent uOpacity={0.3} />
+          <meshPhysicalMaterial
+            color="#e8fbff"
+            transmission={1}
+            thickness={0.4}
+            roughness={0.1}
+            ior={1.5}
+            clearcoat={1}
+            envMapIntensity={1.4}
+          />
         </mesh>
       ))}
 
@@ -104,9 +111,9 @@ function LatticeScene() {
   );
 }
 
-export default function Lattice() {
+export default function Lattice({ cameraZ = 4.2 }: { cameraZ?: number }) {
   return (
-    <MiniCanvas cameraZ={4.2}>
+    <MiniCanvas cameraZ={cameraZ}>
       <LatticeScene />
     </MiniCanvas>
   );

@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
+import { scrollToSection } from "@/lib/lenis";
 
 const TIERS = [
   {
@@ -129,6 +130,16 @@ export default function Pricing() {
           </div>
         ))}
       </div>
+
+      <Magnetic className="block mt-16" radius={50} strength={10}>
+        <button
+          type="button"
+          onClick={() => scrollToSection("#contact")}
+          className="font-display font-bold text-white bg-cyan-400/10 border border-cyan-400/50 rounded-full px-10 py-4 text-lg transition-colors hover:bg-cyan-400/20 hover:border-cyan-400"
+        >
+          Interested?
+        </button>
+      </Magnetic>
     </div>
   );
 }

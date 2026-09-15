@@ -4,8 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Magnetic from "@/components/ui/Magnetic";
-import ShowcaseGrid from "@/components/three/ShowcaseGrid";
-import ShowcaseParallax from "@/components/three/ShowcaseParallax";
+import MinimalGlassPanel from "@/components/three/MinimalGlassPanel";
 
 export default function SelectedWork() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -55,15 +54,25 @@ export default function SelectedWork() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
         <div className="work-panel">
           <Magnetic className="block" radius={40} strength={10}>
-            <div className="w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
-              <ShowcaseGrid />
+            <div className="relative w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
+              <MinimalGlassPanel />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span className="font-display font-bold tracking-[0.3em] text-white/50 text-sm md:text-base">
+                  COMING SOON
+                </span>
+              </div>
             </div>
           </Magnetic>
         </div>
         <div className="work-panel">
           <Magnetic className="block" radius={40} strength={10}>
-            <div className="w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
-              <ShowcaseParallax />
+            <div className="relative w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
+              <MinimalGlassPanel />
+              <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
+                <span className="font-display font-bold tracking-[0.3em] text-white/50 text-sm md:text-base">
+                  COMING SOON
+                </span>
+              </div>
             </div>
           </Magnetic>
         </div>
