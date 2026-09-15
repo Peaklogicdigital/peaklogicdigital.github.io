@@ -182,8 +182,8 @@ const DustMaterial = shaderMaterial(
 
       gl_Position = projectionMatrix * mvPosition;
 
-      gl_PointSize = aSize * uPixelRatio * (1.1 / dist);
-      vAlpha = 0.3 + 0.25 * sin(uTime * 0.4 + aSeed * 6.2831);
+      gl_PointSize = aSize * uPixelRatio * (2.2 / dist);
+      vAlpha = 0.55 + 0.3 * sin(uTime * 0.4 + aSeed * 6.2831);
     }
   `,
   /* glsl fragment */ `
@@ -193,8 +193,8 @@ const DustMaterial = shaderMaterial(
       vec2 uv = gl_PointCoord - 0.5;
       float dist = length(uv);
       float alpha = smoothstep(0.5, 0.0, dist) * vAlpha;
-      vec3 color = vec3(0.13, 0.83, 0.93);
-      gl_FragColor = vec4(color, alpha * 0.45);
+      vec3 color = vec3(0.35, 0.9, 1.0);
+      gl_FragColor = vec4(color, alpha * 0.85);
     }
   `
 );
@@ -235,7 +235,7 @@ const ShardMaterial = shaderMaterial(
 
       gl_Position = projectionMatrix * mvPosition;
 
-      gl_PointSize = aSize * uPixelRatio * (1.1 / dist);
+      gl_PointSize = aSize * uPixelRatio * (2.2 / dist);
       vSeed = aSeed;
     }
   `,
@@ -251,8 +251,8 @@ const ShardMaterial = shaderMaterial(
       uv = mat2(c, -s, s, c) * uv;
 
       float diamond = abs(uv.x) + abs(uv.y);
-      float alpha = smoothstep(0.5, 0.15, diamond) * 0.18;
-      vec3 color = vec3(0.7, 0.95, 1.0);
+      float alpha = smoothstep(0.5, 0.15, diamond) * 0.4;
+      vec3 color = vec3(0.75, 0.97, 1.0);
       gl_FragColor = vec4(color, alpha);
     }
   `
@@ -323,8 +323,8 @@ function DustField() {
   const mouseTarget = useRef({ x: 0, y: 0 });
   const scroll = useScrollVelocity();
 
-  const dust = useMemo(() => makeParticleAttributes(320, [0.5, 1.3]), []);
-  const shards = useMemo(() => makeParticleAttributes(28, [1.4, 2.6]), []);
+  const dust = useMemo(() => makeParticleAttributes(320, [1.4, 3.2]), []);
+  const shards = useMemo(() => makeParticleAttributes(28, [3.2, 5.5]), []);
 
   useFrame((state) => {
     const scrollValue = scroll.sample();
