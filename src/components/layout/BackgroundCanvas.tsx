@@ -173,7 +173,7 @@ function useScrollVelocity() {
   };
 }
 
-const AuroraMaterial = shaderMaterial(
+const RibbonMaterial = shaderMaterial(
   { uTime: 0, uMouse: new THREE.Vector2(0, 0), uScroll: 0, uAspect: 1.6 },
   /* glsl vertex */ `
     varying vec2 vUv;
@@ -190,57 +190,78 @@ const AuroraMaterial = shaderMaterial(
     uniform float uAspect;
     varying vec2 vUv;
 
-    // Two layered sine fields, cheap enough to stay at 60fps on a single
-    // full-screen quad, combined into slow drifting aurora-like bands.
-    float flow(vec2 uv, float t) {
-      float a = sin(uv.x * 2.2 + t * 1.15 + sin(uv.y * 3.0 - t * 0.7) * 1.4);
-      float b = sin(uv.y * 1.8 - t * 0.85 + sin(uv.x * 2.6 + t * 0.5) * 1.2);
-      return (a + b) * 0.5;
+    // Distance-to-curve glow for one fiber-optic ribbon: a tight hot core
+    // plus a soft halo (cheap fake bloom, no post-processing pass needed).
+    // uScroll stretches the amplitude/width and speeds up the phase so the
+    // ribbons visibly react as the page scrolls.
+    float ribbon(
+      vec2 uv, float freq, float speed, float phase,
+      float amp, float yOffset, float width,
+      float time, vec2 mouse, float scrollAmt
+    ) {
+      float stretch = 1.0 + abs(scrollAmt) * 0.8;
+      float t = time * speed + phase + scrollAmt * 2.5;
+
+      float y = yOffset
+        + sin(uv.x * freq + t) * amp * stretch
+        + sin(uv.x * freq * 2.3 - t * 1.3) * amp * 0.3;
+
+      // Bend gently toward the mouse near its x position.
+      float mx = mouse.x * 0.5 + 0.5;
+      float my = mouse.y * 0.5 + 0.5;
+      float bend = exp(-pow(uv.x - mx, 2.0) * 16.0) * 0.16;
+      y += (my - y) * bend;
+
+      float d = abs(uv.y - y);
+      float core = exp(-d * d / (width * width));
+      float halo = exp(-d * d / (width * width * 20.0)) * 0.45;
+      return core + halo;
     }
 
     void main() {
       vec2 uv = vUv;
-      uv.x = (uv.x - 0.5) * uAspect + 0.5;
+      uv.x *= uAspect;
+      vec2 mouseUv = uMouse;
 
-      vec2 driftUv = uv + uMouse * 0.05 + vec2(0.0, uScroll * 0.18);
-      float t = uTime * 0.07;
+      float s = clamp(uScroll * 3.5, -1.0, 1.0);
 
-      float f1 = flow(driftUv * 1.3, t);
-      float f2 = flow(driftUv * 2.1 + 5.2, -t * 0.7);
-      float band = f1 * 0.6 + f2 * 0.4;
-      band = band * 0.5 + 0.5;
+      float r1 = ribbon(uv, 1.5, 0.05, 0.0, 0.14, 0.64, 0.010, uTime, mouseUv, s);
+      float r2 = ribbon(uv, 1.1, -0.045, 2.4, 0.16, 0.46, 0.009, uTime, mouseUv, s);
+      float r3 = ribbon(uv, 1.9, 0.06, 4.6, 0.11, 0.30, 0.008, uTime, mouseUv, s);
+      float r4 = ribbon(uv, 1.3, -0.038, 1.2, 0.15, 0.74, 0.0095, uTime, mouseUv, s);
 
-      vec3 colorDeep = vec3(0.03, 0.07, 0.1);
-      vec3 colorCyan = vec3(0.15, 0.85, 0.95);
-      vec3 colorViolet = vec3(0.5, 0.3, 0.9);
+      float total = r1 + r2 + r3 + r4;
 
-      vec3 color = mix(colorDeep, colorCyan, smoothstep(0.32, 0.8, band));
-      color = mix(color, colorViolet, smoothstep(0.68, 0.98, f2 * 0.5 + 0.5) * 0.55);
+      vec3 cyan = vec3(0.12, 0.85, 1.0);
+      vec3 color = cyan * total;
+      // Where ribbons overlap, the combined intensity is high - push that
+      // toward bright white instead of just a brighter cyan.
+      color = mix(color, vec3(1.0), clamp((total - 0.85) * 1.1, 0.0, 1.0));
 
-      float alpha = smoothstep(0.1, 0.85, band) * 0.5;
+      float alpha = clamp(total * 1.4, 0.0, 1.0);
       gl_FragColor = vec4(color, alpha);
     }
   `
 );
 
-extend({ AuroraMaterial });
+extend({ RibbonMaterial });
 
 declare module "@react-three/fiber" {
   interface ThreeElements {
-    auroraMaterial: ThreeElement<typeof AuroraMaterial>;
+    ribbonMaterial: ThreeElement<typeof RibbonMaterial>;
   }
 }
 
-function AuroraLayer() {
-  const materialRef = useRef<InstanceType<typeof AuroraMaterial>>(null);
+function RibbonField() {
+  const materialRef = useRef<InstanceType<typeof RibbonMaterial>>(null);
   const mouseTarget = useRef({ x: 0, y: 0 });
   const scroll = useScrollVelocity();
   const { viewport, size } = useThree();
 
   useFrame((state) => {
     const scrollValue = scroll.sample();
-    mouseTarget.current.x = MathUtils.lerp(mouseTarget.current.x, state.pointer.x, 0.04);
-    mouseTarget.current.y = MathUtils.lerp(mouseTarget.current.y, state.pointer.y, 0.04);
+    mouseTarget.current.x = MathUtils.lerp(mouseTarget.current.x, state.pointer.x, 0.06);
+    mouseTarget.current.y = MathUtils.lerp(mouseTarget.current.y, state.pointer.y, 0.06);
 
     const material = materialRef.current;
     if (!material) return;
@@ -254,7 +275,12 @@ function AuroraLayer() {
   return (
     <mesh position={[0, 0, 0.5]} scale={[viewport.width, viewport.height, 1]}>
       <planeGeometry args={[1, 1]} />
-      <auroraMaterial ref={materialRef} transparent depthWrite={false} />
+      <ribbonMaterial
+        ref={materialRef}
+        transparent
+        depthWrite={false}
+        blending={THREE.AdditiveBlending}
+      />
     </mesh>
   );
 }
@@ -266,7 +292,7 @@ export default function BackgroundCanvas() {
         <Suspense fallback={null}>
           <GridLayer />
           <FluidLayer />
-          <AuroraLayer />
+          <RibbonField />
         </Suspense>
       </Canvas>
     </div>
