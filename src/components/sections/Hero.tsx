@@ -3,8 +3,16 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { scrollToSection } from "@/lib/lenis";
 
 const HEADLINE = "PEAKLOGIC";
+
+const INDEX_CHIPS = [
+  { label: "Digital Presence", href: "#digital-presence" },
+  { label: "Booking Systems", href: "#booking-systems" },
+  { label: "Brand & Print", href: "#brand-print" },
+  { label: "Lead Automation", href: "#lead-automation" },
+];
 
 export default function Hero() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -66,6 +74,21 @@ export default function Hero() {
       <p className="font-body text-white/70 text-lg md:text-2xl mt-6 text-center">
         Digital Ascendance through Precision Code.
       </p>
+      <div className="pointer-events-auto flex flex-wrap justify-center gap-3 mt-10 px-6">
+        {INDEX_CHIPS.map((chip) => (
+          <a
+            key={chip.href}
+            href={chip.href}
+            onClick={(event) => {
+              event.preventDefault();
+              scrollToSection(chip.href);
+            }}
+            className="font-body text-sm text-white/80 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 transition-colors hover:bg-white/10 hover:border-white/25 hover:text-white"
+          >
+            {chip.label}
+          </a>
+        ))}
+      </div>
     </div>
   );
 }
