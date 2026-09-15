@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
+import SplitHeading from "@/components/ui/SplitHeading";
 import { scrollToSection } from "@/lib/lenis";
 
 const TIERS = [
@@ -87,9 +88,14 @@ export default function Pricing() {
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
           PRICING
         </span>
-        <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-4">
-          Three Ways In
-        </h2>
+        <div className="mt-4">
+          <SplitHeading
+            text="Three Ways In"
+            as="h2"
+            start="top 75%"
+            className="font-display font-bold text-3xl md:text-5xl text-white"
+          />
+        </div>
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-stretch">
