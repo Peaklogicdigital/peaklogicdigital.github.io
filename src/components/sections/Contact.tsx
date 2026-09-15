@@ -95,7 +95,7 @@ export default function Contact() {
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-8">
             <h3 className="font-display font-bold text-3xl md:text-4xl text-white text-center mb-4">
-              Start the Conversation
+              Project Inquiry
             </h3>
 
             <input

@@ -44,24 +44,41 @@ function Core() {
       </mesh>
       <mesh ref={coreRef}>
         <icosahedronGeometry args={[0.55, 2]} />
-        <meshStandardMaterial
+        <meshPhysicalMaterial
           color="#22d3ee"
           emissive="#22d3ee"
           emissiveIntensity={1}
-          metalness={0.3}
-          roughness={0.2}
+          metalness={0.2}
+          roughness={0.15}
+          clearcoat={1}
+          clearcoatRoughness={0.1}
+          envMapIntensity={1.5}
         />
       </mesh>
       <group ref={ringARef} rotation={[0.4, 0, 0]}>
         <mesh>
           <torusGeometry args={[1.15, 0.05, 16, 64]} />
-          <meshStandardMaterial color="#0a0b0e" metalness={0.9} roughness={0.2} />
+          <meshPhysicalMaterial
+            color="#0a0b0e"
+            metalness={1}
+            roughness={0.15}
+            clearcoat={1}
+            clearcoatRoughness={0.15}
+            envMapIntensity={1.4}
+          />
         </mesh>
       </group>
       <group ref={ringBRef} rotation={[1.1, 0.6, 0]}>
         <mesh>
           <torusGeometry args={[1.4, 0.04, 16, 64]} />
-          <meshStandardMaterial color="#12151a" metalness={0.85} roughness={0.25} />
+          <meshPhysicalMaterial
+            color="#12151a"
+            metalness={0.95}
+            roughness={0.2}
+            clearcoat={1}
+            clearcoatRoughness={0.2}
+            envMapIntensity={1.4}
+          />
         </mesh>
       </group>
     </group>
