@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Magnetic from "@/components/ui/Magnetic";
-import SplitHeading from "@/components/ui/SplitHeading";
 
 const FLOW_STEPS = [
   {
@@ -40,14 +39,15 @@ export default function OperationalFlow() {
     const ctx = gsap.context(() => {
       gsap.fromTo(
         sectionRef.current,
-        { y: 40 },
+        { opacity: 0, y: 40 },
         {
+          opacity: 1,
           y: 0,
           duration: 1,
           ease: "power3.out",
           scrollTrigger: {
             trigger: sectionRef.current,
-            start: "top 75%",
+            start: "top 55%",
             toggleActions: "play none none reverse",
           },
         }
@@ -67,14 +67,9 @@ export default function OperationalFlow() {
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
           OPERATIONAL FLOW
         </span>
-        <div className="mt-4">
-          <SplitHeading
-            text="How a Signal Becomes a Booked Customer"
-            as="h2"
-            start="top 75%"
-            className="font-display font-bold text-3xl md:text-5xl text-white"
-          />
-        </div>
+        <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-4">
+          How a Signal Becomes a Booked Customer
+        </h2>
       </div>
 
       <div className="w-full max-w-4xl">
