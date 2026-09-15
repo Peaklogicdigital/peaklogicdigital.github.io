@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
+import Magnetic from "@/components/ui/Magnetic";
 
 const TIERS = [
   {
@@ -93,6 +94,7 @@ export default function Pricing() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-stretch">
         {TIERS.map((tier) => (
           <div key={tier.name} className="pricing-card h-full">
+            <Magnetic className="block h-full" radius={40} strength={10}>
             <GlassTiltCard className="h-full p-8 flex flex-col">
               <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
                 {tier.name}
@@ -123,6 +125,7 @@ export default function Pricing() {
                 {tier.context}
               </p>
             </GlassTiltCard>
+            </Magnetic>
           </div>
         ))}
       </div>

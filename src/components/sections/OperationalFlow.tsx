@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Magnetic from "@/components/ui/Magnetic";
 
 const FLOW_STEPS = [
   {
@@ -75,28 +76,29 @@ export default function OperationalFlow() {
           {FLOW_STEPS.map((step, index) => {
             const isActive = index === activeIndex;
             return (
-              <button
-                key={step.label}
-                type="button"
-                onClick={() => setActiveIndex(index)}
-                onMouseEnter={() => setActiveIndex(index)}
-                className={`flex-1 text-left rounded-xl border px-5 py-4 transition-colors ${
-                  isActive
-                    ? "border-cyan-400/60 bg-cyan-400/10"
-                    : "border-white/10 bg-white/5 hover:border-white/25"
-                }`}
-              >
-                <span className="font-mono text-xs text-white/40">
-                  0{index + 1}
-                </span>
-                <p
-                  className={`font-display font-bold mt-1 transition-colors ${
-                    isActive ? "text-cyan-400" : "text-white"
+              <Magnetic key={step.label} className="flex-1 block" radius={30} strength={8}>
+                <button
+                  type="button"
+                  onClick={() => setActiveIndex(index)}
+                  onMouseEnter={() => setActiveIndex(index)}
+                  className={`w-full text-left rounded-xl border px-5 py-4 transition-colors ${
+                    isActive
+                      ? "border-cyan-400/60 bg-cyan-400/10"
+                      : "border-white/10 bg-white/5 hover:border-white/25"
                   }`}
                 >
-                  {step.label}
-                </p>
-              </button>
+                  <span className="font-mono text-xs text-white/40">
+                    0{index + 1}
+                  </span>
+                  <p
+                    className={`font-display font-bold mt-1 transition-colors ${
+                      isActive ? "text-cyan-400" : "text-white"
+                    }`}
+                  >
+                    {step.label}
+                  </p>
+                </button>
+              </Magnetic>
             );
           })}
         </div>
