@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Space_Grotesk, Inter } from "next/font/google";
 import SmoothScroll from "@/components/layout/SmoothScroll";
-import BackgroundCanvas from "@/components/layout/BackgroundCanvas";
+import MouseGlowOverlay from "@/components/layout/MouseGlowOverlay";
+import GrainOverlay from "@/components/layout/GrainOverlay";
 import CustomCursor from "@/components/ui/CustomCursor";
 import "./globals.css";
 
@@ -75,7 +76,8 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <BackgroundCanvas />
+        <GrainOverlay />
+        <MouseGlowOverlay />
         <CustomCursor />
         <SmoothScroll>{children}</SmoothScroll>
       </body>
