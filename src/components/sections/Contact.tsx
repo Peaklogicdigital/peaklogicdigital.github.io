@@ -51,7 +51,7 @@ export default function Contact() {
     const form = event.currentTarget;
     const formData = new FormData(form);
     const payload = {
-      access_key: "YOUR_WEB3FORMS_KEY_HERE",
+      access_key: "dcc9b9ba-62ba-4efc-bbbd-0ca175ea2e3f",
       name: formData.get("name"),
       email: formData.get("email"),
       message: formData.get("message"),
