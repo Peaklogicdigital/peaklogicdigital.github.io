@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, type CSSProperties } from "react";
 
 export default function MouseGlowOverlay() {
   const glowRef = useRef<HTMLDivElement>(null);
@@ -35,15 +35,24 @@ export default function MouseGlowOverlay() {
     };
   }, []);
 
+  // No z-index: this relies on being an early child in layout.tsx's <body>
+  // so real content (rendered after it) naturally paints on top. z-index:-1
+  // is deliberately avoided - it's unreliable in some rendering contexts.
   return (
     <div
       ref={glowRef}
       aria-hidden="true"
-      className="fixed inset-0 z-[-1] pointer-events-none"
-      style={{
-        background:
-          "radial-gradient(600px circle at var(--glow-x, 50%) var(--glow-y, 50%), rgba(34, 211, 238, 0.13), transparent 70%)",
-      }}
+      className="fixed inset-0 pointer-events-none"
+      style={
+        {
+          // Explicit 50%/50% seed so the glow is visible centered on first
+          // paint, before any client JS has run - not just a var() fallback.
+          "--glow-x": "50%",
+          "--glow-y": "50%",
+          background:
+            "radial-gradient(900px circle at var(--glow-x) var(--glow-y), rgba(34, 211, 238, 0.28), transparent 75%)",
+        } as CSSProperties
+      }
     />
   );
 }

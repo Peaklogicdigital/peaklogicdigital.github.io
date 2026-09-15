@@ -6,10 +6,13 @@ const GRAIN_SVG = `<svg xmlns='http://www.w3.org/2000/svg' width='200' height='2
 </svg>`;
 
 export default function GrainOverlay() {
+  // No z-index: this relies on being the first child in layout.tsx's <body>
+  // so real content (rendered after it) naturally paints on top. z-index:-1
+  // is deliberately avoided - it's unreliable in some rendering contexts.
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-0 z-[-1] pointer-events-none opacity-[0.025]"
+      className="fixed inset-0 pointer-events-none opacity-[0.025]"
       style={{
         backgroundImage: `url("data:image/svg+xml,${encodeURIComponent(GRAIN_SVG)}")`,
         backgroundRepeat: "repeat",
