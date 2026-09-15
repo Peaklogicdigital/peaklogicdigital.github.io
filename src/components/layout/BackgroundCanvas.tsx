@@ -225,20 +225,21 @@ const RibbonMaterial = shaderMaterial(
 
       float s = clamp(uScroll * 3.5, -1.0, 1.0);
 
-      float r1 = ribbon(uv, 1.5, 0.05, 0.0, 0.14, 0.64, 0.010, uTime, mouseUv, s);
-      float r2 = ribbon(uv, 1.1, -0.045, 2.4, 0.16, 0.46, 0.009, uTime, mouseUv, s);
-      float r3 = ribbon(uv, 1.9, 0.06, 4.6, 0.11, 0.30, 0.008, uTime, mouseUv, s);
-      float r4 = ribbon(uv, 1.3, -0.038, 1.2, 0.15, 0.74, 0.0095, uTime, mouseUv, s);
+      // Widths bumped up for thicker, more immediately visible ribbons.
+      float r1 = ribbon(uv, 1.5, 0.05, 0.0, 0.14, 0.64, 0.016, uTime, mouseUv, s);
+      float r2 = ribbon(uv, 1.1, -0.045, 2.4, 0.16, 0.46, 0.0145, uTime, mouseUv, s);
+      float r3 = ribbon(uv, 1.9, 0.06, 4.6, 0.11, 0.30, 0.013, uTime, mouseUv, s);
+      float r4 = ribbon(uv, 1.3, -0.038, 1.2, 0.15, 0.74, 0.015, uTime, mouseUv, s);
 
-      float total = r1 + r2 + r3 + r4;
+      float total = (r1 + r2 + r3 + r4) * 1.35;
 
       vec3 cyan = vec3(0.12, 0.85, 1.0);
       vec3 color = cyan * total;
       // Where ribbons overlap, the combined intensity is high - push that
       // toward bright white instead of just a brighter cyan.
-      color = mix(color, vec3(1.0), clamp((total - 0.85) * 1.1, 0.0, 1.0));
+      color = mix(color, vec3(1.0), clamp((total - 0.7) * 1.1, 0.0, 1.0));
 
-      float alpha = clamp(total * 1.4, 0.0, 1.0);
+      float alpha = clamp(total * 1.6, 0.0, 1.0);
       gl_FragColor = vec4(color, alpha);
     }
   `
@@ -288,7 +289,7 @@ function RibbonField() {
 export default function BackgroundCanvas() {
   return (
     <div className="fixed top-0 left-0 w-screen h-screen z-[-1]">
-      <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]}>
+      <Canvas camera={{ position: [0, 0, 1] }} dpr={[1, 1.5]} gl={{ alpha: true }}>
         <Suspense fallback={null}>
           <GridLayer />
           <FluidLayer />
