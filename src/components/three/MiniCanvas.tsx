@@ -19,7 +19,7 @@ export default function MiniCanvas({
         className="w-full h-full"
         dpr={[1, 1.5]}
         camera={{ position: [0, 0, cameraZ], fov: 40 }}
-        gl={{ antialias: true, alpha: true }}
+        gl={{ powerPreference: "high-performance", antialias: false, alpha: true }}
       >
         <ambientLight intensity={0.35} />
         <pointLight position={[2.5, 2, 3]} intensity={1.4} color="#22d3ee" />

@@ -1,12 +1,13 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { useEarlyMount } from "@/lib/useEarlyMount";
 
 // Same reasoning as CoreServices.tsx: statically importing this would pull
 // the entire three.js/@react-three dependency graph into the initial
@@ -23,28 +24,11 @@ const MinimalGlassPanel = dynamic(() => import("@/components/three/MinimalGlassP
 export default function SelectedWork() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
-  // Same viewport-gating as CoreServices.tsx: code-splitting the Three.js
-  // chunk isn't enough on its own, since this section still renders (and
-  // thus mounts/shader-compiles) unconditionally on first paint. Only start
-  // loading the WebGL panels once this section is about to scroll into view.
-  const [shouldLoadVisuals, setShouldLoadVisuals] = useState(false);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]?.isIntersecting) {
-          setShouldLoadVisuals(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "600px 0px" }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  // Same early-mount strategy as CoreServices.tsx: mount on idle, within
+  // 1000px of the viewport, or within 800ms regardless (see useEarlyMount) -
+  // so shader compilation finishes off-screen instead of causing a hitch
+  // the moment the user scrolls these panels into view.
+  const shouldLoadVisuals = useEarlyMount(sectionRef, "0px 0px 1000px 0px");
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);

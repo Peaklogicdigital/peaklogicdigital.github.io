@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -8,6 +8,7 @@ import { deferToNextFrame } from "@/lib/deferredEffect";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
+import { useEarlyMount } from "@/lib/useEarlyMount";
 import type { ComponentType } from "react";
 
 // Three.js/@react-three are heavy to parse and compile; loading these client-
@@ -42,30 +43,14 @@ export default function CoreServices() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
   // The dynamic() calls above already code-split the Three.js bundles into
-  // separate chunks, but that alone doesn't stop them from being fetched and
-  // mounted (shader compilation and all) the instant this section renders,
-  // which happens unconditionally on first paint since it's not behind any
-  // route. Gating the actual mount on viewport proximity keeps that entire
-  // WebGL cost off the cold-load critical path - it only starts once the
-  // user is about to scroll this section into view.
-  const [shouldLoadVisuals, setShouldLoadVisuals] = useState(false);
-
-  useEffect(() => {
-    const el = sectionRef.current;
-    if (!el) return;
-
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0]?.isIntersecting) {
-          setShouldLoadVisuals(true);
-          observer.disconnect();
-        }
-      },
-      { rootMargin: "600px 0px" }
-    );
-    observer.observe(el);
-    return () => observer.disconnect();
-  }, []);
+  // separate chunks (further warmed in the background by ThreePreloader),
+  // but the mount itself - WebGL context creation and shader compilation -
+  // is still real GPU/main-thread work that must happen sometime. Mounting
+  // on idle, within 1000px of the viewport, or within 800ms regardless
+  // (see useEarlyMount) gives that compile time to finish off-screen well
+  // before the user scrolls here, so scrolling into view never has to pay
+  // for it in the moment.
+  const shouldLoadVisuals = useEarlyMount(sectionRef, "0px 0px 1000px 0px");
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
