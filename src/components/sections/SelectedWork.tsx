@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -23,6 +23,28 @@ const MinimalGlassPanel = dynamic(() => import("@/components/three/MinimalGlassP
 export default function SelectedWork() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
+  // Same viewport-gating as CoreServices.tsx: code-splitting the Three.js
+  // chunk isn't enough on its own, since this section still renders (and
+  // thus mounts/shader-compiles) unconditionally on first paint. Only start
+  // loading the WebGL panels once this section is about to scroll into view.
+  const [shouldLoadVisuals, setShouldLoadVisuals] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setShouldLoadVisuals(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +98,7 @@ export default function SelectedWork() {
         <div className="work-panel">
           <Magnetic className="block" radius={40} strength={10}>
             <div className="relative w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
-              <MinimalGlassPanel />
+              {shouldLoadVisuals ? <MinimalGlassPanel /> : <PanelSkeleton />}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <span className="font-display font-bold tracking-[0.3em] text-white/50 text-sm md:text-base">
                   {t("selectedWork.comingSoon")}
@@ -88,7 +110,7 @@ export default function SelectedWork() {
         <div className="work-panel">
           <Magnetic className="block" radius={40} strength={10}>
             <div className="relative w-full aspect-[4/3] rounded-2xl border border-white/10 overflow-hidden">
-              <MinimalGlassPanel />
+              {shouldLoadVisuals ? <MinimalGlassPanel /> : <PanelSkeleton />}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <span className="font-display font-bold tracking-[0.3em] text-white/50 text-sm md:text-base">
                   {t("selectedWork.comingSoon")}
