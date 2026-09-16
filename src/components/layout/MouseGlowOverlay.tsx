@@ -3,10 +3,10 @@
 import { useEffect, useRef, type CSSProperties } from "react";
 import { useActiveSection } from "@/lib/useActiveSection";
 
-const DESKTOP_RADIUS = 380;
-const MOBILE_RADIUS = 350;
-const DESKTOP_ALPHA = 0.35;
-const MOBILE_ALPHA = 0.28;
+const DESKTOP_RADIUS = 260;
+const MOBILE_RADIUS = 240;
+const DESKTOP_ALPHA = 0.15;
+const MOBILE_ALPHA = 0.12;
 const COLOR_LERP_EASE = 0.08;
 
 const SECTION_COLORS: Record<string, { r: number; g: number; b: number }> = {

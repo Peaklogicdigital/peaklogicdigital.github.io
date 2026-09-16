@@ -1,15 +1,22 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { setSoundEnabled, playTone } from "@/lib/sound";
+import { setSoundEnabled, playTone, bootstrapAudioOnFirstInteraction } from "@/lib/sound";
 import { useActiveSection } from "@/lib/useActiveSection";
 import { FOCUS_RING } from "@/lib/focusRing";
 
 const SECTION_IDS = ["hero", "core-services", "selected-work", "contact"];
 
 export default function SoundToggle() {
-  const [enabled, setEnabled] = useState(false);
+  // Sound defaults to on; the AudioContext itself is still only created on
+  // the user's first real interaction (see bootstrapAudioOnFirstInteraction),
+  // so this doesn't cost anything during cold load.
+  const [enabled, setEnabled] = useState(true);
   const activeSection = useActiveSection(SECTION_IDS);
+
+  useEffect(() => {
+    bootstrapAudioOnFirstInteraction();
+  }, []);
 
   // A quiet pop on every section change - only ever audible once sound is
   // on, since playTone() itself no-ops while disabled.

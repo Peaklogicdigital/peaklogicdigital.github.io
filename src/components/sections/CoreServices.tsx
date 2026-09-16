@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -41,6 +41,31 @@ const CORE_SERVICES: {
 export default function CoreServices() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { t } = useLanguage();
+  // The dynamic() calls above already code-split the Three.js bundles into
+  // separate chunks, but that alone doesn't stop them from being fetched and
+  // mounted (shader compilation and all) the instant this section renders,
+  // which happens unconditionally on first paint since it's not behind any
+  // route. Gating the actual mount on viewport proximity keeps that entire
+  // WebGL cost off the cold-load critical path - it only starts once the
+  // user is about to scroll this section into view.
+  const [shouldLoadVisuals, setShouldLoadVisuals] = useState(false);
+
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0]?.isIntersecting) {
+          setShouldLoadVisuals(true);
+          observer.disconnect();
+        }
+      },
+      { rootMargin: "600px 0px" }
+    );
+    observer.observe(el);
+    return () => observer.disconnect();
+  }, []);
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -96,7 +121,7 @@ export default function CoreServices() {
             <Magnetic className="block h-full" radius={40} strength={10}>
               <GlassTiltCard className="h-full p-8 flex flex-col">
                 <div className="w-full aspect-video rounded-xl border border-white/10 overflow-hidden mb-6">
-                  <service.Visual />
+                  {shouldLoadVisuals ? <service.Visual /> : <CardSkeleton />}
                 </div>
                 <span className="font-mono text-xs text-white/40 tracking-widest">
                   {service.number}
