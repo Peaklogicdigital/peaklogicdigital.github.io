@@ -7,6 +7,7 @@ import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
 import { scrollToSection } from "@/lib/lenis";
 import { deferToNextFrame } from "@/lib/deferredEffect";
+import { playTone } from "@/lib/sound";
 
 const TIERS = [
   {
@@ -142,6 +143,7 @@ export default function Pricing() {
         <button
           type="button"
           onClick={() => scrollToSection("#contact")}
+          onMouseEnter={() => playTone(1100)}
           className="font-display font-bold text-white bg-cyan-400/10 border border-cyan-400/50 rounded-full px-10 py-4 text-lg transition-colors hover:bg-cyan-400/20 hover:border-cyan-400"
         >
           Interested?

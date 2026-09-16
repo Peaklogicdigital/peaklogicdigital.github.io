@@ -5,6 +5,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scrollToSection } from "@/lib/lenis";
 import { deferToNextFrame } from "@/lib/deferredEffect";
+import { playTone } from "@/lib/sound";
 import Magnetic from "@/components/ui/Magnetic";
 
 const HEADLINE = "PEAKLOGIC";
@@ -96,6 +97,7 @@ export default function Hero() {
 
   return (
     <div
+      id="hero"
       ref={sectionRef}
       className="h-screen flex flex-col items-center justify-center pointer-events-none"
     >
@@ -127,6 +129,7 @@ export default function Hero() {
                 event.preventDefault();
                 scrollToSection(chip.href);
               }}
+              onMouseEnter={() => playTone(1100)}
               className="font-body text-sm text-white/80 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 transition-colors hover:bg-white/10 hover:border-white/25 hover:text-white"
             >
               {chip.label}
