@@ -37,7 +37,7 @@ export default function Bridge() {
     <div
       id="bridge"
       ref={sectionRef}
-      className="min-h-screen flex items-center justify-center px-6"
+      className="min-h-screen flex items-center justify-center px-4 md:px-6"
     >
       <div
         id="bridge-content"

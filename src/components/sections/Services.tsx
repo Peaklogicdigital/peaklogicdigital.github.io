@@ -99,7 +99,7 @@ function ServiceRow({
 
 export default function Services() {
   return (
-    <div className="py-24 px-6 md:px-16">
+    <div className="py-16 px-4 md:py-24 md:px-16">
       <div className="max-w-4xl mx-auto">
         {SECTIONS.map((section) => (
           <ServiceRow key={section.id} {...section} />
