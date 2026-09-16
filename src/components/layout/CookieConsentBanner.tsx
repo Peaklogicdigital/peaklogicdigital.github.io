@@ -5,6 +5,7 @@ import Link from "next/link";
 import { getStoredConsent, storeConsent, type ConsentChoice } from "@/lib/consent";
 import { deferToNextFrame } from "@/lib/deferredEffect";
 import { FOCUS_RING } from "@/lib/focusRing";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 export default function CookieConsentBanner() {
   // Starts false on both server and client so there's nothing for hydration
@@ -14,6 +15,7 @@ export default function CookieConsentBanner() {
   const [entered, setEntered] = useState(false);
   const [showPreferences, setShowPreferences] = useState(false);
   const [analyticsEnabled, setAnalyticsEnabled] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     if (getStoredConsent()) return;
@@ -44,7 +46,7 @@ export default function CookieConsentBanner() {
     <div
       role="dialog"
       aria-live="polite"
-      aria-label="Cookie consent"
+      aria-label={t("cookieBanner.ariaLabel")}
       className={`fixed inset-x-0 bottom-0 z-50 flex justify-center px-4 pb-4 md:pb-6 pointer-events-none transition-all duration-300 ease-out ${
         entered ? "translate-y-0 opacity-100" : "translate-y-4 opacity-0"
       }`}
@@ -53,16 +55,14 @@ export default function CookieConsentBanner() {
         {!showPreferences ? (
           <>
             <p className="font-body text-sm text-zinc-300 leading-relaxed">
-              We use essential local storage to run this site, and would like
-              your permission for optional analytics to help us improve it.
-              Read our{" "}
+              {t("cookieBanner.messagePrefix")}
               <Link
                 href="/cookies"
                 className={`text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors rounded ${FOCUS_RING}`}
               >
-                Cookie Policy
+                {t("cookieBanner.messageLink")}
               </Link>
-              .
+              {t("cookieBanner.messageSuffix")}
             </p>
             <div className="flex flex-wrap gap-3 mt-5">
               <button
@@ -70,14 +70,14 @@ export default function CookieConsentBanner() {
                 onClick={() => dismiss("all")}
                 className={primaryButtonClasses}
               >
-                Accept All
+                {t("cookieBanner.acceptAll")}
               </button>
               <button
                 type="button"
                 onClick={() => dismiss("essential")}
                 className={secondaryButtonClasses}
               >
-                Essential Only
+                {t("cookieBanner.essentialOnly")}
               </button>
               <button
                 type="button"
@@ -85,21 +85,21 @@ export default function CookieConsentBanner() {
                 aria-expanded={showPreferences}
                 className={tertiaryButtonClasses}
               >
-                Preferences
+                {t("cookieBanner.preferences")}
               </button>
             </div>
           </>
         ) : (
           <>
             <p className="font-body text-sm text-zinc-300 leading-relaxed mb-5">
-              Choose which non-essential storage you&apos;re comfortable with.
+              {t("cookieBanner.preferencesIntro")}
             </p>
             <div className="space-y-3">
               <label className="flex items-center justify-between gap-4 rounded-lg border border-white/10 px-4 py-3">
                 <span className="font-body text-sm text-zinc-300">
-                  Essential
+                  {t("cookieBanner.essential")}
                   <span className="block text-xs text-zinc-500">
-                    Required to remember this choice. Always on.
+                    {t("cookieBanner.essentialDesc")}
                   </span>
                 </span>
                 <input
@@ -107,15 +107,15 @@ export default function CookieConsentBanner() {
                   checked
                   disabled
                   aria-checked="true"
-                  aria-label="Essential storage, always on"
+                  aria-label={t("cookieBanner.essential")}
                   className={`h-4 w-4 rounded accent-cyan-500 ${FOCUS_RING}`}
                 />
               </label>
               <label className="flex items-center justify-between gap-4 rounded-lg border border-white/10 px-4 py-3 cursor-pointer">
                 <span className="font-body text-sm text-zinc-300">
-                  Analytics
+                  {t("cookieBanner.analytics")}
                   <span className="block text-xs text-zinc-500">
-                    Helps us understand how the site is used.
+                    {t("cookieBanner.analyticsDesc")}
                   </span>
                 </span>
                 <input
@@ -123,7 +123,7 @@ export default function CookieConsentBanner() {
                   checked={analyticsEnabled}
                   onChange={(event) => setAnalyticsEnabled(event.target.checked)}
                   aria-checked={analyticsEnabled}
-                  aria-label="Allow analytics storage"
+                  aria-label={t("cookieBanner.analytics")}
                   className={`h-4 w-4 rounded accent-cyan-500 ${FOCUS_RING}`}
                 />
               </label>
@@ -134,14 +134,14 @@ export default function CookieConsentBanner() {
                 onClick={() => dismiss(analyticsEnabled ? "all" : "essential")}
                 className={primaryButtonClasses}
               >
-                Save Preferences
+                {t("cookieBanner.savePreferences")}
               </button>
               <button
                 type="button"
                 onClick={() => setShowPreferences(false)}
                 className={tertiaryButtonClasses}
               >
-                Back
+                {t("cookieBanner.back")}
               </button>
             </div>
           </>

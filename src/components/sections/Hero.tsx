@@ -7,6 +7,8 @@ import { scrollToSection } from "@/lib/lenis";
 import { deferToNextFrame } from "@/lib/deferredEffect";
 import { playTone } from "@/lib/sound";
 import Magnetic from "@/components/ui/Magnetic";
+import LanguageSwitcher from "@/components/layout/LanguageSwitcher";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const HEADLINE = "PEAKLOGIC";
 const TYPE_SPEED_MS = 45;
@@ -14,10 +16,10 @@ const CURSOR_FADE_DELAY_S = 0.4;
 const CURSOR_FADE_DURATION_S = 0.6;
 
 const INDEX_CHIPS = [
-  { label: "Digital Presence", href: "#digital-presence" },
-  { label: "Booking Systems", href: "#booking-systems" },
-  { label: "Brand & Print", href: "#brand-print" },
-  { label: "Lead Automation", href: "#lead-automation" },
+  { key: "digitalPresence", href: "#digital-presence" },
+  { key: "bookingSystems", href: "#booking-systems" },
+  { key: "brandPrint", href: "#brand-print" },
+  { key: "leadAutomation", href: "#lead-automation" },
 ];
 
 export default function Hero() {
@@ -26,6 +28,7 @@ export default function Hero() {
   const cursorRef = useRef<HTMLSpanElement>(null);
   const [typedCount, setTypedCount] = useState(0);
   const [isTypingDone, setIsTypingDone] = useState(false);
+  const { t } = useLanguage();
 
   // Character-by-character typing reveal, deferred so it doesn't compete
   // with first paint.
@@ -117,8 +120,7 @@ export default function Hero() {
         <span className="sr-only">{HEADLINE}</span>
       </h1>
       <p className="font-body text-white/70 text-lg md:text-2xl mt-6 text-center max-w-2xl px-4 md:px-6">
-        High-End Web Design &amp; Development. Built fast, built to convert,
-        backed by the systems that keep it running.
+        {t("hero.subtitle")}
       </p>
       <div className="pointer-events-auto flex flex-wrap justify-center gap-3 mt-10 px-4 md:px-6">
         {INDEX_CHIPS.map((chip) => (
@@ -132,10 +134,13 @@ export default function Hero() {
               onMouseEnter={() => playTone(1100)}
               className="font-body text-sm text-white/80 rounded-full border border-white/10 bg-white/5 backdrop-blur-md px-5 py-2 transition-colors hover:bg-white/10 hover:border-white/25 hover:text-white"
             >
-              {chip.label}
+              {t(`hero.chips.${chip.key}`)}
             </a>
           </Magnetic>
         ))}
+      </div>
+      <div className="pointer-events-auto mt-4">
+        <LanguageSwitcher />
       </div>
     </div>
   );

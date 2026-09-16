@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/layout/CookieConsentBanner";
 import CustomCursor from "@/components/ui/CustomCursor";
 import SoundToggle from "@/components/layout/SoundToggle";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -79,15 +80,17 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
       className={`${spaceGrotesk.variable} ${inter.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">
-        <GrainOverlay />
-        <MouseGlowOverlay />
-        <CustomCursor />
-        <SoundToggle />
-        <SmoothScroll>
-          {children}
-          <Footer />
-        </SmoothScroll>
-        <CookieConsentBanner />
+        <LanguageProvider>
+          <GrainOverlay />
+          <MouseGlowOverlay />
+          <CustomCursor />
+          <SoundToggle />
+          <SmoothScroll>
+            {children}
+            <Footer />
+          </SmoothScroll>
+          <CookieConsentBanner />
+        </LanguageProvider>
       </body>
     </html>
   );

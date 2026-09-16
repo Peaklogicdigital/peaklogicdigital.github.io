@@ -8,6 +8,7 @@ import { deferToNextFrame } from "@/lib/deferredEffect";
 import { FOCUS_RING } from "@/lib/focusRing";
 import Magnetic from "@/components/ui/Magnetic";
 import { playTone } from "@/lib/sound";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -18,6 +19,7 @@ export default function Contact() {
   const formWrapperRef = useRef<HTMLDivElement>(null);
   const [status, setStatus] = useState<Status>("idle");
   const [consentChecked, setConsentChecked] = useState(false);
+  const { t } = useLanguage();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -96,41 +98,41 @@ export default function Contact() {
         {status === "success" ? (
           <div className="text-center">
             <h3 className="font-display font-bold text-3xl md:text-4xl text-white">
-              Transmission Received
+              {t("contact.successHeading")}
             </h3>
             <p className="font-body text-white/60 mt-4">
-              We&apos;ll be in touch shortly.
+              {t("contact.successBody")}
             </p>
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex flex-col gap-8">
             <h3 className="font-display font-bold text-3xl md:text-4xl text-white text-center mb-4">
-              Project Inquiry
+              {t("contact.heading")}
             </h3>
 
             <input
               type="text"
               name="name"
-              placeholder="Name"
+              placeholder={t("contact.namePlaceholder")}
               required
-              aria-label="Name"
+              aria-label={t("contact.namePlaceholder")}
               aria-required="true"
               className={inputClasses}
             />
             <input
               type="email"
               name="email"
-              placeholder="Email"
+              placeholder={t("contact.emailPlaceholder")}
               required
-              aria-label="Email"
+              aria-label={t("contact.emailPlaceholder")}
               aria-required="true"
               className={inputClasses}
             />
             <textarea
               name="message"
-              placeholder="The Problem to Solve"
+              placeholder={t("contact.messagePlaceholder")}
               required
-              aria-label="Message"
+              aria-label={t("contact.messagePlaceholder")}
               aria-required="true"
               rows={4}
               className={inputClasses}
@@ -148,14 +150,14 @@ export default function Contact() {
                 className={`mt-1 h-4 w-4 shrink-0 rounded accent-cyan-500 ${FOCUS_RING}`}
               />
               <span className="font-body text-sm text-white/60 leading-relaxed">
-                I agree to the processing of my data in accordance with the{" "}
+                {t("contact.consentPrefix")}
                 <Link
                   href="/privacy"
                   className={`text-cyan-400 hover:text-cyan-300 underline underline-offset-2 transition-colors rounded ${FOCUS_RING}`}
                 >
-                  Privacy Policy
+                  {t("contact.consentLink")}
                 </Link>
-                .
+                {t("contact.consentSuffix")}
               </span>
             </label>
 
@@ -169,13 +171,13 @@ export default function Contact() {
                 }}
                 className={`font-body text-white border border-white/20 rounded-full px-8 py-3 mt-4 transition-colors hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent ${FOCUS_RING}`}
               >
-                {status === "loading" ? "Sending..." : "Send"}
+                {status === "loading" ? t("contact.submitting") : t("contact.submit")}
               </button>
             </Magnetic>
 
             {status === "error" && (
               <p className="font-body text-red-400 text-sm text-center">
-                Something went wrong. Please try again.
+                {t("contact.error")}
               </p>
             )}
           </form>

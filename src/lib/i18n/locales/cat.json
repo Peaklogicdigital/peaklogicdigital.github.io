@@ -1,0 +1,239 @@
+{
+  "meta": { "name": "Català", "short": "CAT" },
+  "hero": {
+    "subtitle": "Disseny i desenvolupament web d'alta gamma. Construït per ser ràpid, per convertir, i recolzat pels sistemes que el mantenen en marxa.",
+    "chips": {
+      "digitalPresence": "Presència Digital",
+      "bookingSystems": "Sistemes de Reserva",
+      "brandPrint": "Marca i Impressió",
+      "leadAutomation": "Automatització de Leads"
+    }
+  },
+  "servicesIndex": {
+    "webDesignBuilding": {
+      "heading": "Disseny i Desenvolupament Web",
+      "body": "Dissenyem i construïm el lloc web, fet a mida, mobile-first, i publicat al teu propi domini. Tota la resta d'aquesta llista existeix per donar suport al que es construeix aquí primer."
+    },
+    "leadAutomation": {
+      "heading": "Seguiment i Resposta a Leads",
+      "body": "Una trucada perduda és un client perdut. Configurem respostes automàtiques perquè cada trucada, missatge o formulari rebi resposta en pocs minuts, fins i tot fora de l'horari comercial."
+    },
+    "digitalPresence": {
+      "heading": "Presència Digital i Reputació",
+      "body": "Configurem i gestionem el Perfil d'Empresa de Google perquè el negoci aparegui correctament a les cerques locals i al mapa. Després de cada visita, un missatge automàtic breu demana una ressenya al client. El propietari mai ha de recordar demanar-la."
+    },
+    "bookingSystems": {
+      "heading": "Reserves i Cites",
+      "body": "Connectem el mètode de reserva que realment s'adapta al negoci, una línia de WhatsApp senzilla, una plataforma dedicada, o alguna cosa intermèdia, perquè les cites i les taules arribin a un sol lloc en comptes de tres aplicacions diferents."
+    },
+    "brandPrint": {
+      "heading": "Marca i Impressió",
+      "body": "Per als negocis que volen una imatge completa, dissenyem la carta, la senyalització i el material imprès juntament amb el lloc web, perquè tot el que veu el client sigui coherent."
+    }
+  },
+  "coreServices": {
+    "eyebrow": "QUÈ FEM",
+    "heading": "Primer la Web. Després els Sistemes que la Mantenen Funcionant.",
+    "items": [
+      {
+        "title": "Disseny i Desenvolupament Web",
+        "description": "Llocs web a mida i d'alta gamma, dissenyats i construïts internament, mobile-first des del primer píxel. Ràpids de llançar, fets per durar, i de la teva propietat total, no una plantilla llogada amb el teu logotip a sobre."
+      },
+      {
+        "title": "Sistemes de Gestió de Consultes i Leads",
+        "description": "Un cop el lloc està publicat, cada consulta entrant, trucada, formulari, missatge o visita presencial, queda registrada, etiquetada i enviada automàticament a la persona correcta. Res no es queda esperant en una safata d'entrada."
+      },
+      {
+        "title": "Integració de Fluxos i Eines",
+        "description": "Connectem els calendaris, sistemes de punt de venda i plataformes de missatgeria que ja s'utilitzen, i incorporem automatització i IA només on elimina feina manual real, no on simplement queda vistós."
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "TREBALLS DESTACATS",
+    "heading": "Projectes Recents",
+    "comingSoon": "PROPERAMENT"
+  },
+  "operationalFlow": {
+    "eyebrow": "FLUX OPERATIU",
+    "heading": "Com un Senyal es Converteix en un Client amb Reserva",
+    "steps": [
+      {
+        "label": "Disseny i Construcció",
+        "detail": "El lloc web es publica primer, dissenyat i construït de principi a fi, abans que s'incorpori cap automatització."
+      },
+      {
+        "label": "Senyal",
+        "detail": "Arriba una trucada, un missatge, una sol·licitud de reserva o un formulari."
+      },
+      {
+        "label": "Encaminament",
+        "detail": "El sistema identifica el tipus de sol·licitud i l'envia al canal o persona correcta."
+      },
+      {
+        "label": "Acció",
+        "detail": "S'envia una resposta, es reserva una plaça, o es crea una tasca, en qüestió de minuts."
+      },
+      {
+        "label": "Registre",
+        "detail": "Cada interacció queda registrada, perquè res no depengui de la memòria."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "TARIFES",
+    "heading": "Tres Maneres de Començar",
+    "cta": "T'interessa?",
+    "toLaunch": "de llançament, després {price}",
+    "tiers": [
+      {
+        "name": "STANDARD",
+        "tagline": "Lloc Web",
+        "launchPrice": "€249",
+        "monthlyPrice": "€35/mes",
+        "whatYouGet": "Un lloc a mida, publicat al teu propi domini, mobile-first des del primer píxel. Hosting, SSL i les pàgines legals obligatòries, tot inclòs, tot gestionat.",
+        "howItWorks": "El construïm, tu l'aproves, i es publica en pocs dies. A partir d'aquí, el manteniment mensual el manté ràpid, segur i actualitzat, perquè mai quedi obsolet com la majoria de webs de petits negocis.",
+        "context": "Un desenvolupament independent com aquest sol costar entre 399 € i 999 € abans d'afegir-hi el manteniment continuat, que normalment suma entre 30 € i 150 € més al mes."
+      },
+      {
+        "name": "PLUS",
+        "tagline": "Web + Presència",
+        "launchPrice": "€329",
+        "monthlyPrice": "€59/mes",
+        "whatYouGet": "Tot el que inclou Standard, més un Perfil d'Empresa de Google correctament optimitzat i un sistema automàtic que demana una ressenya a cada client just després de la seva visita, perquè la teva valoració pugi sense moure un dit.",
+        "howItWorks": "Configurem el mètode de reserva que triïs, ja sigui una línia de WhatsApp o una plataforma dedicada, connectem la teva presència a Google, i en gestionem tots dos cada mes juntament amb el mateix lloc web.",
+        "context": "Contractar per separat un pla de manteniment web i un servei de gestió de Google Business sol costar entre 60 € i més de 130 € al mes combinats. Aquí és un sol pla, un sol preu, una sola persona a qui trucar."
+      },
+      {
+        "name": "PREMIUM",
+        "tagline": "Identitat Completa",
+        "launchPrice": "€449",
+        "monthlyPrice": "€79/mes",
+        "whatYouGet": "Tot el que inclou Plus, més una identitat visual completa, la teva carta, la teva senyalització, el teu material imprès, tot dissenyat perquè encaixi amb el lloc i entre si, amb prioritat en cada actualització després del llançament.",
+        "howItWorks": "La teva feina de disseny avança en paral·lel amb la construcció del lloc, perquè tota la identitat es llanci junta en comptes d'arribar en peces soltes i factures separades.",
+        "context": "Encarregat per separat, un disseny de carta professional sol costar entre 80 € i 250 €, a més del lloc web i el seu manteniment. Aquí, agrupat, forma part d'un sol llançament, a un preu per sota del que costarien les peces per separat."
+      }
+    ]
+  },
+  "bridge": {
+    "heading": "Una web bonica que no contesta el telèfon és només art digital.",
+    "body": "Nosaltres creem l'art, però dissenyem la infraestructura. Captem el lead, reservem la taula, assegurem la ressenya. Automàticament."
+  },
+  "contact": {
+    "heading": "Consulta de Projecte",
+    "namePlaceholder": "Nom",
+    "emailPlaceholder": "Correu electrònic",
+    "messagePlaceholder": "El Problema a Resoldre",
+    "consentPrefix": "Accepto el tractament de les meves dades d'acord amb la ",
+    "consentLink": "Política de Privacitat",
+    "consentSuffix": ".",
+    "submit": "Enviar",
+    "submitting": "Enviant...",
+    "successHeading": "Transmissió Rebuda",
+    "successBody": "Ens posarem en contacte amb tu ben aviat.",
+    "error": "Alguna cosa ha fallat. Torna-ho a provar, si us plau."
+  },
+  "footer": {
+    "legalNavLabel": "Legal",
+    "links": {
+      "privacy": "Política de Privacitat",
+      "terms": "Termes de Servei",
+      "cookies": "Política de Cookies"
+    },
+    "copyright": "© {year} PeakLogic Digital"
+  },
+  "cookieBanner": {
+    "ariaLabel": "Consentiment de cookies",
+    "messagePrefix": "Utilitzem emmagatzematge local essencial per fer funcionar aquest lloc, i ens agradaria el teu permís per a analítiques opcionals que ens ajudin a millorar-lo. Consulta la nostra ",
+    "messageLink": "Política de Cookies",
+    "messageSuffix": ".",
+    "acceptAll": "Acceptar-ho Tot",
+    "essentialOnly": "Només l'Essencial",
+    "preferences": "Preferències",
+    "preferencesIntro": "Tria amb quin emmagatzematge no essencial et sents còmode.",
+    "essential": "Essencial",
+    "essentialDesc": "Necessari per recordar aquesta elecció. Sempre actiu.",
+    "analytics": "Analítiques",
+    "analyticsDesc": "Ens ajuda a entendre com s'utilitza el lloc.",
+    "savePreferences": "Desar Preferències",
+    "back": "Enrere"
+  },
+  "legal": {
+    "backLink": "← TORNAR A PEAKLOGIC",
+    "lastUpdatedLabel": "Darrera actualització: {date}",
+    "privacy": {
+      "title": "Política de Privacitat",
+      "date": "setembre de 2026",
+      "intro": "Aquesta política explica quina informació recull PeakLogic Digital (\"nosaltres\") a través de peaklogicdigital.com, per què la recollim i quines opcions tens. Recollim el mínim possible.",
+      "collectHeading": "Què recollim",
+      "collectFormStrong": "Enviaments del formulari de contacte.",
+      "collectFormText": " Quan envies el formulari de consulta de projecte, recollim el nom, el correu electrònic i el missatge que proporciones. Això se'ns envia directament mitjançant Web3Forms, un servei extern de processament de formularis, i s'utilitza només per respondre la teva consulta.",
+      "collectCookieStrong": "Preferència de cookies.",
+      "collectCookieText": " Si fas una elecció al bàner de consentiment de cookies, desem aquesta elecció a l'emmagatzematge local del teu navegador perquè no t'ho tornem a preguntar. Això no se'ns envia ni s'envia a tercers.",
+      "noAnalyticsPre": "Actualment no fem servir analítiques, publicitat ni scripts de seguiment en aquest lloc. Si això canvia, només s'activarà després del teu consentiment explícit mitjançant el bàner de cookies, i aquesta política i la nostra ",
+      "noAnalyticsLink": "Política de Cookies",
+      "noAnalyticsPost": " s'actualitzaran per descriure-ho.",
+      "thirdPartyHeading": "Tercers que processen dades",
+      "thirdPartyPre": "Els enviaments del formulari de contacte són processats per ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", que ens lliura l'enviament i està subjecte a la seva pròpia política de privacitat. No controlem, ni som responsables de, com Web3Forms gestiona les dades en trànsit.",
+      "retentionHeading": "Quant de temps ho conservem",
+      "retentionText": "Conservem les dades de la consulta durant el temps raonablement necessari per respondre't i, si el projecte tira endavant, durant la durada d'aquest projecte més un període raonable addicional per als nostres propis registres. Pots demanar-nos que ho eliminem abans en qualsevol moment.",
+      "rightsHeading": "Els teus drets",
+      "rightsIntro": "Pots demanar-nos en qualsevol moment que:",
+      "rightsList": [
+        "et diguem quines dades tenim sobre tu,",
+        "corregim qualsevol dada inexacta,",
+        "eliminem dades que ja no tinguem motiu per conservar, i",
+        "deixem d'utilitzar les teves dades per a una finalitat concreta."
+      ],
+      "rightsOutro": "Envia aquesta sol·licitud mitjançant el formulari de contacte a la pàgina d'inici, incloent-hi prou informació (com el correu electrònic que vas fer servir) perquè puguem localitzar el teu registre.",
+      "securityHeading": "Seguretat",
+      "securityText": "Aquest lloc es serveix íntegrament mitjançant HTTPS. No operem la nostra pròpia base de dades de visitants: l'únic lloc on es troben les dades de les consultes és a la safata d'entrada on s'envien i, breument, als sistemes de Web3Forms mentre s'hi lliuren.",
+      "changesHeading": "Canvis en aquesta política",
+      "changesText": "Si canviem de manera significativa què recollim o per què, actualitzarem la data a la part superior d'aquesta pàgina.",
+      "contactHeading": "Contacte",
+      "contactPre": "Les preguntes sobre aquesta política, o una sol·licitud segons l'apartat \"Els teus drets\" anterior, es poden enviar mitjançant el formulari de contacte a la ",
+      "contactLink": "pàgina d'inici",
+      "contactPost": "."
+    },
+    "terms": {
+      "title": "Termes de Servei",
+      "date": "setembre de 2026",
+      "intro": "Aquests termes cobreixen dues coses: l'ús d'aquest lloc web i, a grans trets, la contractació de PeakLogic Digital per a una feina. Els detalls de qualsevol projecte concret —abast, preu, terminis— s'acorden per separat i per escrit abans de començar la feina; res del que hi ha aquí substitueix aquest acord.",
+      "usingHeading": "Ús d'aquest lloc web",
+      "usingText": "Ets benvingut a navegar, llegir i posar-te en contacte mitjançant el formulari. Et compromets a no utilitzar el lloc per a res il·lícit, a no intentar interrompre'l ni accedir-hi sense autorització ni als sistemes que el sustenten, i a no extreure'l ni recopilar-lo massivament sense el nostre permís.",
+      "offerHeading": "Què oferim",
+      "offerText": "PeakLogic Digital dissenya i construeix llocs web, i hi afegeix sistemes de suport, gestió de presència digital, integracions de reserva, feina de marca i impressió, i automatització de resposta a leads, tal com es descriu en altres parts d'aquest lloc. Els preus mostrats al lloc són orientatius i poden canviar; el preu de la feina real és el que es confirmi per escrit abans de començar.",
+      "ipHeading": "Propietat intel·lectual",
+      "ipText": "El disseny, el codi i el contingut d'aquest lloc web pertanyen a PeakLogic Digital llevat que s'indiqui el contrari. Els lliurables produïts per a un projecte de client —el propi lloc del client, els seus actius de marca i similars— es regeixen pels termes de propietat de l'acord d'aquell projecte, no per aquesta pàgina.",
+      "warrantyHeading": "Sense garantia",
+      "warrantyText": "Aquest lloc web s'ofereix tal com és. Intentem mantenir-lo precís i disponible, però no garantim que estigui lliure d'interrupcions, sense errors, o adequat per a una finalitat concreta, i no som responsables dels problemes derivats del teu ús, en la mesura que la llei ens permeti limitar aquesta responsabilitat.",
+      "changesHeading": "Canvis en aquests termes",
+      "changesText": "Podem actualitzar aquests termes a mesura que el lloc o els serveis canviïn. Continuar utilitzant el lloc després d'una actualització implica que acceptes la versió vigent.",
+      "contactHeading": "Contacte",
+      "contactPre": "Les preguntes sobre aquests termes es poden enviar mitjançant el formulari de contacte a la ",
+      "contactLink": "pàgina d'inici",
+      "contactPost": "."
+    },
+    "cookies": {
+      "title": "Política de Cookies",
+      "date": "setembre de 2026",
+      "intro": "Aquest lloc no instal·la actualment cap cookie de seguiment o publicitat. Això és exactament el que emmagatzema i les opcions que tens.",
+      "useHeading": "Què fem servir realment",
+      "useStrong": "Preferència de consentiment de cookies.",
+      "useText": " Quan tries \"Acceptar-ho Tot\", \"Només l'Essencial\", o desa preferències al bàner de cookies, aquesta elecció es desa a l'emmagatzematge local del teu navegador —no una cookie— únicament perquè no t'ho tornem a preguntar a la teva pròxima visita. Mai no surt del teu navegador.",
+      "useOnly": "Això és l'única cosa que aquest lloc emmagatzema al teu navegador ara mateix. No hi ha cap script d'analítiques, publicitat o seguiment de tercers en funcionament.",
+      "changeHeading": "Si això canvia",
+      "changeText": "Les opcions \"Acceptar-ho Tot\" i \"Preferències\" del bàner existeixen perquè, si en el futur afegim una eina d'analítiques (per entendre el trànsit i millorar el lloc), aquesta només s'activarà per als visitants que hi hagin consentit, mai per defecte. Aquesta pàgina s'actualitzarà per anomenar l'eina i el que emmagatzema abans que això passi.",
+      "thirdPartyHeading": "Cookies de tercers",
+      "thirdPartyPre": "En enviar el formulari de contacte, les teves dades s'envien a ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", un processador de formularis extern, que pot instal·lar les seves pròpies cookies com a part de la gestió d'aquesta sol·licitud. Això es regeix per la seva política, no per aquesta.",
+      "controlHeading": "Controlar l'emmagatzematge tu mateix",
+      "controlText": "Pots esborrar la teva elecció de consentiment de cookies en qualsevol moment eliminant l'emmagatzematge local d'aquest lloc a la configuració del teu navegador, o utilitzant una finestra privada/d'incògnit. La majoria de navegadors també permeten bloquejar l'emmagatzematge local i les cookies completament, lloc per lloc.",
+      "changesHeading": "Canvis en aquesta política",
+      "changesText": "Si el que emmagatzemem canvia, actualitzarem la data a la part superior d'aquesta pàgina i, per a qualsevol element no essencial, tornarem a preguntar mitjançant el bàner."
+    }
+  }
+}

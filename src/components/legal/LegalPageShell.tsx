@@ -1,22 +1,25 @@
+"use client";
+
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { FOCUS_RING } from "@/lib/focusRing";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const LEGAL_LINKS = [
-  { href: "/privacy", label: "Privacy Policy" },
-  { href: "/terms", label: "Terms of Service" },
-  { href: "/cookies", label: "Cookie Policy" },
+  { href: "/privacy", key: "privacy" },
+  { href: "/terms", key: "terms" },
+  { href: "/cookies", key: "cookies" },
 ];
 
 export default function LegalPageShell({
-  title,
-  lastUpdated,
+  page,
   children,
 }: {
-  title: string;
-  lastUpdated: string;
+  page: "privacy" | "terms" | "cookies";
   children: ReactNode;
 }) {
+  const { t } = useLanguage();
+
   return (
     <div className="px-6 md:px-16 py-24">
       <div className="max-w-3xl mx-auto">
@@ -24,14 +27,14 @@ export default function LegalPageShell({
           href="/"
           className={`inline-flex items-center gap-2 font-mono text-xs text-cyan-400/80 tracking-widest hover:text-cyan-300 transition-colors rounded ${FOCUS_RING}`}
         >
-          ← BACK TO PEAKLOGIC
+          {t("legal.backLink")}
         </Link>
 
         <h1 className="font-display font-black text-4xl md:text-6xl text-zinc-100 mt-8 mb-2 tracking-tight">
-          {title}
+          {t(`legal.${page}.title`)}
         </h1>
         <p className="font-body text-zinc-500 text-sm mb-12">
-          Last updated {lastUpdated}
+          {t("legal.lastUpdatedLabel", { date: t(`legal.${page}.date`) })}
         </p>
 
         <div
@@ -51,7 +54,7 @@ export default function LegalPageShell({
               href={link.href}
               className={`font-body text-sm text-zinc-500 hover:text-cyan-400 transition-colors rounded ${FOCUS_RING}`}
             >
-              {link.label}
+              {t(`footer.links.${link.key}`)}
             </Link>
           ))}
         </nav>

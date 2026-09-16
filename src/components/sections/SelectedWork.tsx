@@ -6,6 +6,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 // Same reasoning as CoreServices.tsx: statically importing this would pull
 // the entire three.js/@react-three dependency graph into the initial
@@ -21,6 +22,7 @@ const MinimalGlassPanel = dynamic(() => import("@/components/three/MinimalGlassP
 
 export default function SelectedWork() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -64,10 +66,10 @@ export default function SelectedWork() {
     >
       <div className="max-w-2xl text-center mb-16">
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
-          SELECTED WORK
+          {t("selectedWork.eyebrow")}
         </span>
         <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-4">
-          Recent Builds
+          {t("selectedWork.heading")}
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-6xl">
@@ -77,7 +79,7 @@ export default function SelectedWork() {
               <MinimalGlassPanel />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <span className="font-display font-bold tracking-[0.3em] text-white/50 text-sm md:text-base">
-                  COMING SOON
+                  {t("selectedWork.comingSoon")}
                 </span>
               </div>
             </div>
@@ -89,7 +91,7 @@ export default function SelectedWork() {
               <MinimalGlassPanel />
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                 <span className="font-display font-bold tracking-[0.3em] text-white/50 text-sm md:text-base">
-                  COMING SOON
+                  {t("selectedWork.comingSoon")}
                 </span>
               </div>
             </div>

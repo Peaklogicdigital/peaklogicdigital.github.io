@@ -5,34 +5,14 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-const FLOW_STEPS = [
-  {
-    label: "Design & Build",
-    detail:
-      "The website goes live first, designed and built end to end, before any of the automation gets layered on top of it.",
-  },
-  {
-    label: "Signal",
-    detail: "A call, message, booking request, or form submission comes in.",
-  },
-  {
-    label: "Route",
-    detail: "The system identifies the type and sends it to the right channel or person.",
-  },
-  {
-    label: "Action",
-    detail: "A reply goes out, a slot gets booked, or a task gets created, within minutes.",
-  },
-  {
-    label: "Record",
-    detail: "Every interaction is logged, so nothing depends on memory.",
-  },
-];
+const FLOW_STEP_COUNT = 5;
 
 export default function OperationalFlow() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const [activeIndex, setActiveIndex] = useState(0);
+  const { t } = useLanguage();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -72,19 +52,19 @@ export default function OperationalFlow() {
     >
       <div className="max-w-2xl text-center mb-16">
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
-          OPERATIONAL FLOW
+          {t("operationalFlow.eyebrow")}
         </span>
         <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-4">
-          How a Signal Becomes a Booked Customer
+          {t("operationalFlow.heading")}
         </h2>
       </div>
 
       <div className="w-full max-w-4xl">
         <div className="flex flex-col md:flex-row gap-3 md:gap-2">
-          {FLOW_STEPS.map((step, index) => {
+          {Array.from({ length: FLOW_STEP_COUNT }, (_, index) => {
             const isActive = index === activeIndex;
             return (
-              <Magnetic key={step.label} className="flex-1 block" radius={30} strength={8}>
+              <Magnetic key={index} className="flex-1 block" radius={30} strength={8}>
                 <button
                   type="button"
                   onClick={() => setActiveIndex(index)}
@@ -103,7 +83,7 @@ export default function OperationalFlow() {
                       isActive ? "text-cyan-400" : "text-white"
                     }`}
                   >
-                    {step.label}
+                    {t(`operationalFlow.steps.${index}.label`)}
                   </p>
                 </button>
               </Magnetic>
@@ -116,7 +96,7 @@ export default function OperationalFlow() {
             key={activeIndex}
             className="font-body text-white/70 text-lg md:text-xl leading-relaxed"
           >
-            {FLOW_STEPS[activeIndex].detail}
+            {t(`operationalFlow.steps.${activeIndex}.detail`)}
           </p>
         </div>
       </div>

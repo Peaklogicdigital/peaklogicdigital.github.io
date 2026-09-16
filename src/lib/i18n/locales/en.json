@@ -1,0 +1,239 @@
+{
+  "meta": { "name": "English", "short": "EN" },
+  "hero": {
+    "subtitle": "High-End Web Design & Development. Built fast, built to convert, backed by the systems that keep it running.",
+    "chips": {
+      "digitalPresence": "Digital Presence",
+      "bookingSystems": "Booking Systems",
+      "brandPrint": "Brand & Print",
+      "leadAutomation": "Lead Automation"
+    }
+  },
+  "servicesIndex": {
+    "webDesignBuilding": {
+      "heading": "Web Design and Building",
+      "body": "We design and build the site itself, custom, mobile-first, and live on your own domain. Everything else on this list exists to support what gets built here first."
+    },
+    "leadAutomation": {
+      "heading": "Follow Up and Lead Response",
+      "body": "A missed call is a missed customer. We set up automatic replies so every call, message, or form submission gets a response within minutes, even outside business hours."
+    },
+    "digitalPresence": {
+      "heading": "Digital Presence and Reputation",
+      "body": "We set up and manage the Google Business Profile so the business shows up correctly in local search and maps. After each visit, a short automatic message asks the customer for a review. The owner never has to remember to ask."
+    },
+    "bookingSystems": {
+      "heading": "Booking and Reservations",
+      "body": "We connect whichever booking method actually fits the business, a simple WhatsApp line, a dedicated platform, or something in between, so appointments and tables land in one place instead of three different apps."
+    },
+    "brandPrint": {
+      "heading": "Brand and Print",
+      "body": "For businesses that want a complete look, we design the menu, the signage, and the printed materials alongside the site, so everything a customer sees matches."
+    }
+  },
+  "coreServices": {
+    "eyebrow": "WHAT WE DO",
+    "heading": "Websites First. Systems That Keep Them Working.",
+    "items": [
+      {
+        "title": "Web Design & Build",
+        "description": "Custom, high-end websites designed and built in-house, mobile-first from the first pixel. Fast to launch, built to last, and yours to own outright, not a rented template with your logo on it."
+      },
+      {
+        "title": "Enquiry & Lead Handling Systems",
+        "description": "Once the site is live, every inbound enquiry, call, form, message, or walk-in, gets logged, tagged, and routed to the right person automatically. Nothing sits in an inbox waiting to be noticed."
+      },
+      {
+        "title": "Workflow & Tool Integration",
+        "description": "We connect the calendars, POS systems, and messaging platforms already in use, and layer in automation and AI only where it removes real manual work, not where it looks impressive."
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "SELECTED WORK",
+    "heading": "Recent Builds",
+    "comingSoon": "COMING SOON"
+  },
+  "operationalFlow": {
+    "eyebrow": "OPERATIONAL FLOW",
+    "heading": "How a Signal Becomes a Booked Customer",
+    "steps": [
+      {
+        "label": "Design & Build",
+        "detail": "The website goes live first, designed and built end to end, before any of the automation gets layered on top of it."
+      },
+      {
+        "label": "Signal",
+        "detail": "A call, message, booking request, or form submission comes in."
+      },
+      {
+        "label": "Route",
+        "detail": "The system identifies the type and sends it to the right channel or person."
+      },
+      {
+        "label": "Action",
+        "detail": "A reply goes out, a slot gets booked, or a task gets created, within minutes."
+      },
+      {
+        "label": "Record",
+        "detail": "Every interaction is logged, so nothing depends on memory."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "PRICING",
+    "heading": "Three Ways In",
+    "cta": "Interested?",
+    "toLaunch": "to launch, then {price}",
+    "tiers": [
+      {
+        "name": "STANDARD",
+        "tagline": "Website",
+        "launchPrice": "€249",
+        "monthlyPrice": "€35/month",
+        "whatYouGet": "A custom-built site, live on your own domain, mobile-first from the first pixel. Hosting, SSL, and the legal pages you're required to have, all included, all handled.",
+        "howItWorks": "We build it, you approve it, it goes live within days. After that, monthly upkeep keeps it fast, secure, and current, so it never quietly goes stale the way most small business sites do.",
+        "context": "A standalone build like this typically runs €399 to €999 before you've even added ongoing maintenance, which usually adds another €30 to €150 a month on its own."
+      },
+      {
+        "name": "PLUS",
+        "tagline": "Website + Presence",
+        "launchPrice": "€329",
+        "monthlyPrice": "€59/month",
+        "whatYouGet": "Everything in Standard, plus a properly optimized Google Business Profile and an automatic system that asks every customer for a review right after their visit, so your rating climbs without you lifting a finger.",
+        "howItWorks": "We set up your booking method of choice, whether that's a WhatsApp line or a dedicated platform, connect your Google presence, and manage both every month alongside the site itself.",
+        "context": "Buying a website maintenance plan and a Google Business management service separately typically costs €60 to over €130 a month combined. Here it's one plan, one price, one person to call."
+      },
+      {
+        "name": "PREMIUM",
+        "tagline": "Full Identity",
+        "launchPrice": "€449",
+        "monthlyPrice": "€79/month",
+        "whatYouGet": "Everything in Plus, plus a complete visual identity, your menu, your signage, your printed materials, all designed to match the site and each other, with priority turnaround on every update after launch.",
+        "howItWorks": "Your design work runs in parallel with the build, so the whole identity launches together instead of arriving in pieces over separate invoices.",
+        "context": "Commissioned separately, a professional menu design alone typically runs €80 to €250, on top of the website and its maintenance. Bundled here, it's part of one launch, at a price below what the pieces would cost apart."
+      }
+    ]
+  },
+  "bridge": {
+    "heading": "A beautiful website that doesn't answer the phone is just digital art.",
+    "body": "We build the art, but we engineer the infrastructure. Capture the lead, book the table, secure the review. Automatically."
+  },
+  "contact": {
+    "heading": "Project Inquiry",
+    "namePlaceholder": "Name",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "The Problem to Solve",
+    "consentPrefix": "I agree to the processing of my data in accordance with the ",
+    "consentLink": "Privacy Policy",
+    "consentSuffix": ".",
+    "submit": "Send",
+    "submitting": "Sending...",
+    "successHeading": "Transmission Received",
+    "successBody": "We'll be in touch shortly.",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "legalNavLabel": "Legal",
+    "links": {
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service",
+      "cookies": "Cookie Policy"
+    },
+    "copyright": "© {year} PeakLogic Digital"
+  },
+  "cookieBanner": {
+    "ariaLabel": "Cookie consent",
+    "messagePrefix": "We use essential local storage to run this site, and would like your permission for optional analytics to help us improve it. Read our ",
+    "messageLink": "Cookie Policy",
+    "messageSuffix": ".",
+    "acceptAll": "Accept All",
+    "essentialOnly": "Essential Only",
+    "preferences": "Preferences",
+    "preferencesIntro": "Choose which non-essential storage you're comfortable with.",
+    "essential": "Essential",
+    "essentialDesc": "Required to remember this choice. Always on.",
+    "analytics": "Analytics",
+    "analyticsDesc": "Helps us understand how the site is used.",
+    "savePreferences": "Save Preferences",
+    "back": "Back"
+  },
+  "legal": {
+    "backLink": "← BACK TO PEAKLOGIC",
+    "lastUpdatedLabel": "Last updated {date}",
+    "privacy": {
+      "title": "Privacy Policy",
+      "date": "September 2026",
+      "intro": "This policy explains what information PeakLogic Digital (\"we\", \"us\") collects through peaklogicdigital.com, why we collect it, and the choices you have. We collect as little as we can get away with.",
+      "collectHeading": "What we collect",
+      "collectFormStrong": "Contact form submissions.",
+      "collectFormText": " When you submit the project inquiry form, we collect the name, email address, and message you provide. This is sent directly to us through Web3Forms, a third-party form-processing service, and used only to respond to your inquiry.",
+      "collectCookieStrong": "Cookie preference.",
+      "collectCookieText": " If you make a choice in the cookie consent banner, we store that choice in your browser's local storage so we don't ask again. This is not sent to us or to any third party.",
+      "noAnalyticsPre": "We do not run analytics, advertising, or tracking scripts on this site today. If that changes, it will only run after you explicitly opt in through the cookie consent banner, and this policy and our ",
+      "noAnalyticsLink": "Cookie Policy",
+      "noAnalyticsPost": " will be updated to describe it.",
+      "thirdPartyHeading": "Third-party processors",
+      "thirdPartyPre": "Contact form submissions are processed by ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", which delivers the submission to us and is bound by its own privacy policy. We don't control, and aren't responsible for, how Web3Forms itself handles data in transit.",
+      "retentionHeading": "How long we keep it",
+      "retentionText": "We keep inquiry details for as long as reasonably necessary to respond to you and, where a project goes ahead, for the duration of that engagement plus a reasonable period afterward for our own records. You can ask us to delete it sooner at any time.",
+      "rightsHeading": "Your rights",
+      "rightsIntro": "You can ask us at any time to:",
+      "rightsList": [
+        "tell you what data we hold about you,",
+        "correct anything that's inaccurate,",
+        "delete data we no longer need a reason to keep, and",
+        "stop using your data for a particular purpose."
+      ],
+      "rightsOutro": "Send that request through the contact form on the homepage, including enough detail (like the email address you used) for us to find your record.",
+      "securityHeading": "Security",
+      "securityText": "This site is served entirely over HTTPS. We don't operate our own database of visitor data — the only place inquiry details live is in the inbox they're delivered to and, briefly, in Web3Forms' systems while delivering them.",
+      "changesHeading": "Changes to this policy",
+      "changesText": "If we materially change what we collect or why, we'll update the date at the top of this page.",
+      "contactHeading": "Contact",
+      "contactPre": "Questions about this policy, or a request under \"Your rights\" above, can be sent through the contact form on the ",
+      "contactLink": "homepage",
+      "contactPost": "."
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "date": "September 2026",
+      "intro": "These terms cover two things: using this website, and, at a high level, engaging PeakLogic Digital for work. The specifics of any actual project — scope, price, timeline — are agreed separately in writing before work begins; nothing here overrides that agreement.",
+      "usingHeading": "Using this website",
+      "usingText": "You're welcome to browse, read, and reach out through the contact form. You agree not to use the site to do anything unlawful, to attempt to disrupt or gain unauthorized access to it or the systems behind it, or to scrape or harvest it at scale without our permission.",
+      "offerHeading": "What we offer",
+      "offerText": "PeakLogic Digital designs and builds websites, and layers on supporting systems, digital presence management, booking integrations, brand and print work, and lead-response automation, as described elsewhere on this site. Pricing shown on the site is indicative and can change; the price for actual work is whatever is confirmed in writing before that work starts.",
+      "ipHeading": "Intellectual property",
+      "ipText": "The design, code, and content of this website belong to PeakLogic Digital unless stated otherwise. Deliverables produced for a client project — the client's own site, brand assets, and similar — are governed by the ownership terms in that project's agreement, not by this page.",
+      "warrantyHeading": "No warranty",
+      "warrantyText": "This website is provided as-is. We try to keep it accurate and available, but we don't guarantee it will be uninterrupted, error-free, or fit for a particular purpose, and we're not liable for issues arising from your use of it, to the extent the law allows us to limit that liability.",
+      "changesHeading": "Changes to these terms",
+      "changesText": "We may update these terms as the site or services change. Continuing to use the site after an update means you accept the current version.",
+      "contactHeading": "Contact",
+      "contactPre": "Questions about these terms can be sent through the contact form on the ",
+      "contactLink": "homepage",
+      "contactPost": "."
+    },
+    "cookies": {
+      "title": "Cookie Policy",
+      "date": "September 2026",
+      "intro": "This site doesn't set any tracking or advertising cookies today. Here's exactly what it does store, and the choices you have.",
+      "useHeading": "What we actually use",
+      "useStrong": "Cookie consent preference.",
+      "useText": " When you choose \"Accept All\", \"Essential Only\", or save preferences in the cookie banner, that choice is saved in your browser's local storage — not a cookie — purely so we don't ask again on your next visit. It never leaves your browser.",
+      "useOnly": "That's the only thing this site stores in your browser right now. There is no analytics, advertising, or third-party tracking script running.",
+      "changeHeading": "If that changes",
+      "changeText": "The \"Accept All\" and \"Preferences\" options in the banner exist so that if we add an analytics tool in the future (to understand traffic and improve the site), it will only run for visitors who've opted in — never by default. This page will be updated to name the tool and what it stores before that happens.",
+      "thirdPartyHeading": "Third-party cookies",
+      "thirdPartyPre": "Submitting the contact form sends your details to ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", a third-party form processor, which may set its own cookies as part of handling that request. That's governed by their policy, not this one.",
+      "controlHeading": "Controlling storage yourself",
+      "controlText": "You can clear your cookie consent choice at any time by clearing this site's local storage in your browser's settings, or by using a private/incognito window. Most browsers also let you block local storage and cookies entirely on a per-site basis.",
+      "changesHeading": "Changes to this policy",
+      "changesText": "If what we store changes, we'll update the date at the top of this page and, for anything non-essential, ask again through the banner."
+    }
+  }
+}
