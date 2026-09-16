@@ -7,10 +7,12 @@ import Pricing from "@/components/sections/Pricing";
 import Bridge from "@/components/sections/Bridge";
 import Contact from "@/components/sections/Contact";
 import ScrollSkewWrapper from "@/components/layout/ScrollSkewWrapper";
+import ThreePreloader from "@/components/layout/ThreePreloader";
 
 export default function Home() {
   return (
     <main className="relative bg-transparent">
+      <ThreePreloader />
       <ScrollSkewWrapper>
         <Hero />
         <Services />
