@@ -4,52 +4,27 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { deferToNextFrame } from "@/lib/deferredEffect";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const SECTIONS = [
-  {
-    id: "web-design-building",
-    number: "01",
-    heading: "Web Design and Building",
-    body: "We design and build the site itself, custom, mobile-first, and live on your own domain. Everything else on this list exists to support what gets built here first.",
-  },
-  {
-    id: "lead-automation",
-    number: "02",
-    heading: "Follow Up and Lead Response",
-    body: "A missed call is a missed customer. We set up automatic replies so every call, message, or form submission gets a response within minutes, even outside business hours.",
-  },
-  {
-    id: "digital-presence",
-    number: "03",
-    heading: "Digital Presence and Reputation",
-    body: "We set up and manage the Google Business Profile so the business shows up correctly in local search and maps. After each visit, a short automatic message asks the customer for a review. The owner never has to remember to ask.",
-  },
-  {
-    id: "booking-systems",
-    number: "04",
-    heading: "Booking and Reservations",
-    body: "We connect whichever booking method actually fits the business, a simple WhatsApp line, a dedicated platform, or something in between, so appointments and tables land in one place instead of three different apps.",
-  },
-  {
-    id: "brand-print",
-    number: "05",
-    heading: "Brand and Print",
-    body: "For businesses that want a complete look, we design the menu, the signage, and the printed materials alongside the site, so everything a customer sees matches.",
-  },
+  { id: "web-design-building", number: "01", key: "webDesignBuilding" },
+  { id: "lead-automation", number: "02", key: "leadAutomation" },
+  { id: "digital-presence", number: "03", key: "digitalPresence" },
+  { id: "booking-systems", number: "04", key: "bookingSystems" },
+  { id: "brand-print", number: "05", key: "brandPrint" },
 ];
 
 function ServiceRow({
   id,
   number,
-  heading,
-  body,
+  translationKey,
 }: {
   id: string;
   number: string;
-  heading: string;
-  body: string;
+  translationKey: string;
 }) {
   const rowRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -93,10 +68,10 @@ function ServiceRow({
         </span>
         <div className="flex-1">
           <h3 className="font-display font-bold text-2xl md:text-4xl text-white mb-3 transition-colors duration-300 group-hover:text-cyan-300">
-            {heading}
+            {t(`servicesIndex.${translationKey}.heading`)}
           </h3>
           <p className="font-body text-white/60 text-base md:text-lg leading-relaxed max-w-3xl">
-            {body}
+            {t(`servicesIndex.${translationKey}.body`)}
           </p>
         </div>
       </div>
@@ -109,7 +84,12 @@ export default function Services() {
     <div className="py-16 px-4 md:py-24 md:px-16">
       <div className="max-w-4xl mx-auto">
         {SECTIONS.map((section) => (
-          <ServiceRow key={section.id} {...section} />
+          <ServiceRow
+            key={section.id}
+            id={section.id}
+            number={section.number}
+            translationKey={section.key}
+          />
         ))}
       </div>
     </div>

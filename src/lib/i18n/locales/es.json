@@ -1,0 +1,239 @@
+{
+  "meta": { "name": "Español", "short": "ES" },
+  "hero": {
+    "subtitle": "Diseño y desarrollo web de alta gama. Construido para ser rápido, para convertir, y respaldado por los sistemas que lo mantienen en marcha.",
+    "chips": {
+      "digitalPresence": "Presencia Digital",
+      "bookingSystems": "Sistemas de Reserva",
+      "brandPrint": "Marca e Impresión",
+      "leadAutomation": "Automatización de Leads"
+    }
+  },
+  "servicesIndex": {
+    "webDesignBuilding": {
+      "heading": "Diseño y Desarrollo Web",
+      "body": "Diseñamos y construimos el sitio en sí, a medida, mobile-first, y publicado en tu propio dominio. Todo lo demás de esta lista existe para respaldar lo que se construye aquí primero."
+    },
+    "leadAutomation": {
+      "heading": "Seguimiento y Respuesta a Leads",
+      "body": "Una llamada perdida es un cliente perdido. Configuramos respuestas automáticas para que cada llamada, mensaje o formulario reciba respuesta en minutos, incluso fuera del horario comercial."
+    },
+    "digitalPresence": {
+      "heading": "Presencia Digital y Reputación",
+      "body": "Configuramos y gestionamos el Perfil de Empresa de Google para que el negocio aparezca correctamente en las búsquedas locales y en el mapa. Después de cada visita, un mensaje automático breve pide una reseña al cliente. El propietario nunca tiene que acordarse de pedirla."
+    },
+    "bookingSystems": {
+      "heading": "Reservas y Citas",
+      "body": "Conectamos el método de reserva que realmente encaja con el negocio, una línea de WhatsApp sencilla, una plataforma dedicada, o algo intermedio, para que las citas y mesas lleguen a un único sitio en lugar de tres aplicaciones distintas."
+    },
+    "brandPrint": {
+      "heading": "Marca e Impresión",
+      "body": "Para los negocios que buscan una imagen completa, diseñamos la carta, la señalética y el material impreso junto con el sitio web, para que todo lo que ve el cliente sea coherente."
+    }
+  },
+  "coreServices": {
+    "eyebrow": "QUÉ HACEMOS",
+    "heading": "Primero la Web. Después los Sistemas que la Mantienen Funcionando.",
+    "items": [
+      {
+        "title": "Diseño y Desarrollo Web",
+        "description": "Sitios web a medida y de alta gama, diseñados y construidos internamente, mobile-first desde el primer píxel. Rápidos de lanzar, hechos para durar, y de tu propiedad total, no una plantilla alquilada con tu logo encima."
+      },
+      {
+        "title": "Sistemas de Gestión de Consultas y Leads",
+        "description": "Una vez el sitio está publicado, cada consulta entrante, llamada, formulario, mensaje o visita presencial, queda registrada, etiquetada y enviada automáticamente a la persona correcta. Nada se queda esperando en una bandeja de entrada."
+      },
+      {
+        "title": "Integración de Flujos y Herramientas",
+        "description": "Conectamos los calendarios, sistemas de punto de venta y plataformas de mensajería que ya se usan, e incorporamos automatización e IA solo donde elimina trabajo manual real, no donde simplemente queda vistoso."
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "TRABAJOS DESTACADOS",
+    "heading": "Proyectos Recientes",
+    "comingSoon": "PRÓXIMAMENTE"
+  },
+  "operationalFlow": {
+    "eyebrow": "FLUJO OPERATIVO",
+    "heading": "Cómo una Señal se Convierte en un Cliente con Reserva",
+    "steps": [
+      {
+        "label": "Diseño y Construcción",
+        "detail": "El sitio web se publica primero, diseñado y construido de principio a fin, antes de que se incorpore ninguna automatización."
+      },
+      {
+        "label": "Señal",
+        "detail": "Llega una llamada, un mensaje, una solicitud de reserva o un formulario."
+      },
+      {
+        "label": "Enrutamiento",
+        "detail": "El sistema identifica el tipo de solicitud y la envía al canal o persona correcta."
+      },
+      {
+        "label": "Acción",
+        "detail": "Se envía una respuesta, se reserva una plaza, o se crea una tarea, en cuestión de minutos."
+      },
+      {
+        "label": "Registro",
+        "detail": "Cada interacción queda registrada, para que nada dependa de la memoria."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "TARIFAS",
+    "heading": "Tres Formas de Empezar",
+    "cta": "¿Interesado?",
+    "toLaunch": "de lanzamiento, luego {price}",
+    "tiers": [
+      {
+        "name": "STANDARD",
+        "tagline": "Sitio Web",
+        "launchPrice": "€249",
+        "monthlyPrice": "€35/mes",
+        "whatYouGet": "Un sitio a medida, publicado en tu propio dominio, mobile-first desde el primer píxel. Hosting, SSL y las páginas legales obligatorias, todo incluido, todo gestionado.",
+        "howItWorks": "Lo construimos, tú lo apruebas, y se publica en cuestión de días. A partir de ahí, el mantenimiento mensual lo mantiene rápido, seguro y actualizado, para que nunca quede desfasado como la mayoría de webs de pequeños negocios.",
+        "context": "Un desarrollo independiente como este suele costar entre 399 € y 999 € antes de añadir el mantenimiento continuo, que normalmente suma otros 30 € a 150 € al mes por su cuenta."
+      },
+      {
+        "name": "PLUS",
+        "tagline": "Web + Presencia",
+        "launchPrice": "€329",
+        "monthlyPrice": "€59/mes",
+        "whatYouGet": "Todo lo de Standard, más un Perfil de Empresa de Google correctamente optimizado y un sistema automático que pide una reseña a cada cliente justo después de su visita, para que tu valoración suba sin que tengas que mover un dedo.",
+        "howItWorks": "Configuramos el método de reserva que elijas, ya sea una línea de WhatsApp o una plataforma dedicada, conectamos tu presencia en Google, y gestionamos ambos cada mes junto con el propio sitio.",
+        "context": "Contratar por separado un plan de mantenimiento web y un servicio de gestión de Google Business suele costar entre 60 € y más de 130 € al mes combinados. Aquí es un solo plan, un solo precio, una sola persona a quien llamar."
+      },
+      {
+        "name": "PREMIUM",
+        "tagline": "Identidad Completa",
+        "launchPrice": "€449",
+        "monthlyPrice": "€79/mes",
+        "whatYouGet": "Todo lo de Plus, más una identidad visual completa, tu carta, tu señalética, tu material impreso, todo diseñado para encajar con el sitio y entre sí, con prioridad en cada actualización tras el lanzamiento.",
+        "howItWorks": "Tu trabajo de diseño avanza en paralelo con el desarrollo, para que toda la identidad se lance junta en lugar de llegar en piezas sueltas y facturas separadas.",
+        "context": "Encargado por separado, un diseño de carta profesional por sí solo suele costar entre 80 € y 250 €, además del sitio web y su mantenimiento. Aquí, agrupado, forma parte de un solo lanzamiento, a un precio por debajo de lo que costarían las piezas por separado."
+      }
+    ]
+  },
+  "bridge": {
+    "heading": "Una web bonita que no contesta al teléfono es solo arte digital.",
+    "body": "Nosotros creamos el arte, pero diseñamos la infraestructura. Captamos el lead, reservamos la mesa, aseguramos la reseña. Automáticamente."
+  },
+  "contact": {
+    "heading": "Consulta de Proyecto",
+    "namePlaceholder": "Nombre",
+    "emailPlaceholder": "Correo electrónico",
+    "messagePlaceholder": "El Problema a Resolver",
+    "consentPrefix": "Acepto el tratamiento de mis datos de acuerdo con la ",
+    "consentLink": "Política de Privacidad",
+    "consentSuffix": ".",
+    "submit": "Enviar",
+    "submitting": "Enviando...",
+    "successHeading": "Transmisión Recibida",
+    "successBody": "Nos pondremos en contacto contigo en breve.",
+    "error": "Algo ha salido mal. Por favor, inténtalo de nuevo."
+  },
+  "footer": {
+    "legalNavLabel": "Legal",
+    "links": {
+      "privacy": "Política de Privacidad",
+      "terms": "Términos de Servicio",
+      "cookies": "Política de Cookies"
+    },
+    "copyright": "© {year} PeakLogic Digital"
+  },
+  "cookieBanner": {
+    "ariaLabel": "Consentimiento de cookies",
+    "messagePrefix": "Utilizamos almacenamiento local esencial para el funcionamiento del sitio, y nos gustaría tu permiso para analíticas opcionales que nos ayuden a mejorarlo. Consulta nuestra ",
+    "messageLink": "Política de Cookies",
+    "messageSuffix": ".",
+    "acceptAll": "Aceptar Todo",
+    "essentialOnly": "Solo lo Esencial",
+    "preferences": "Preferencias",
+    "preferencesIntro": "Elige con qué almacenamiento no esencial te sientes cómodo.",
+    "essential": "Esencial",
+    "essentialDesc": "Necesario para recordar esta elección. Siempre activo.",
+    "analytics": "Analíticas",
+    "analyticsDesc": "Nos ayuda a entender cómo se usa el sitio.",
+    "savePreferences": "Guardar Preferencias",
+    "back": "Atrás"
+  },
+  "legal": {
+    "backLink": "← VOLVER A PEAKLOGIC",
+    "lastUpdatedLabel": "Última actualización: {date}",
+    "privacy": {
+      "title": "Política de Privacidad",
+      "date": "septiembre de 2026",
+      "intro": "Esta política explica qué información recopila PeakLogic Digital (\"nosotros\") a través de peaklogicdigital.com, por qué la recopilamos y qué opciones tienes. Recopilamos lo mínimo posible.",
+      "collectHeading": "Qué recopilamos",
+      "collectFormStrong": "Envíos del formulario de contacto.",
+      "collectFormText": " Cuando envías el formulario de consulta de proyecto, recopilamos el nombre, el correo electrónico y el mensaje que proporcionas. Esto se nos envía directamente a través de Web3Forms, un servicio externo de procesamiento de formularios, y se utiliza únicamente para responder a tu consulta.",
+      "collectCookieStrong": "Preferencia de cookies.",
+      "collectCookieText": " Si haces una elección en el banner de consentimiento de cookies, guardamos esa elección en el almacenamiento local de tu navegador para no volver a preguntarte. Esto no se nos envía ni se envía a terceros.",
+      "noAnalyticsPre": "Actualmente no utilizamos analíticas, publicidad ni scripts de rastreo en este sitio. Si eso cambia, solo se activará tras tu consentimiento explícito a través del banner de cookies, y esta política y nuestra ",
+      "noAnalyticsLink": "Política de Cookies",
+      "noAnalyticsPost": " se actualizarán para describirlo.",
+      "thirdPartyHeading": "Terceros que procesan datos",
+      "thirdPartyPre": "Los envíos del formulario de contacto son procesados por ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", que nos entrega el envío y está sujeto a su propia política de privacidad. No controlamos, ni somos responsables de, cómo Web3Forms gestiona los datos en tránsito.",
+      "retentionHeading": "Cuánto tiempo lo conservamos",
+      "retentionText": "Conservamos los datos de la consulta durante el tiempo razonablemente necesario para responderte y, si el proyecto sigue adelante, durante la duración de ese proyecto más un período razonable adicional para nuestros propios registros. Puedes pedirnos que lo eliminemos antes en cualquier momento.",
+      "rightsHeading": "Tus derechos",
+      "rightsIntro": "Puedes pedirnos en cualquier momento que:",
+      "rightsList": [
+        "te digamos qué datos tenemos sobre ti,",
+        "corrijamos cualquier dato inexacto,",
+        "eliminemos datos que ya no tengamos motivo para conservar, y",
+        "dejemos de usar tus datos para un fin concreto."
+      ],
+      "rightsOutro": "Envía esa solicitud a través del formulario de contacto en la página de inicio, incluyendo suficiente información (como el correo electrónico que usaste) para que podamos localizar tu registro.",
+      "securityHeading": "Seguridad",
+      "securityText": "Este sitio se sirve íntegramente mediante HTTPS. No operamos nuestra propia base de datos de visitantes: el único lugar donde se encuentran los datos de las consultas es en la bandeja de entrada a la que se envían y, brevemente, en los sistemas de Web3Forms mientras se entregan.",
+      "changesHeading": "Cambios en esta política",
+      "changesText": "Si cambiamos de forma significativa qué recopilamos o por qué, actualizaremos la fecha en la parte superior de esta página.",
+      "contactHeading": "Contacto",
+      "contactPre": "Las preguntas sobre esta política, o una solicitud conforme al apartado \"Tus derechos\" anterior, pueden enviarse a través del formulario de contacto en la ",
+      "contactLink": "página de inicio",
+      "contactPost": "."
+    },
+    "terms": {
+      "title": "Términos de Servicio",
+      "date": "septiembre de 2026",
+      "intro": "Estos términos cubren dos cosas: el uso de este sitio web y, a grandes rasgos, la contratación de PeakLogic Digital para un proyecto. Los detalles de cualquier proyecto concreto —alcance, precio, plazos— se acuerdan por separado y por escrito antes de comenzar el trabajo; nada de lo aquí expuesto sustituye ese acuerdo.",
+      "usingHeading": "Uso de este sitio web",
+      "usingText": "Eres bienvenido a navegar, leer y ponerte en contacto a través del formulario. Te comprometes a no usar el sitio para nada ilícito, a no intentar interrumpirlo ni acceder sin autorización a él ni a los sistemas que lo sustentan, y a no extraerlo o recopilarlo de forma masiva sin nuestro permiso.",
+      "offerHeading": "Qué ofrecemos",
+      "offerText": "PeakLogic Digital diseña y construye sitios web, y añade sistemas de soporte, gestión de presencia digital, integraciones de reserva, trabajo de marca e impresión, y automatización de respuesta a leads, tal y como se describe en otras partes de este sitio. Los precios mostrados en el sitio son orientativos y pueden cambiar; el precio del trabajo real es el que se confirme por escrito antes de comenzar.",
+      "ipHeading": "Propiedad intelectual",
+      "ipText": "El diseño, el código y el contenido de este sitio web pertenecen a PeakLogic Digital salvo que se indique lo contrario. Los entregables producidos para un proyecto de cliente —el propio sitio del cliente, sus activos de marca y similares— se rigen por los términos de propiedad del acuerdo de ese proyecto, no por esta página.",
+      "warrantyHeading": "Sin garantía",
+      "warrantyText": "Este sitio web se ofrece tal cual. Intentamos mantenerlo preciso y disponible, pero no garantizamos que vaya a estar libre de interrupciones, sin errores, o adecuado para un fin concreto, y no somos responsables de los problemas derivados de tu uso del mismo, en la medida en que la ley nos permita limitar esa responsabilidad.",
+      "changesHeading": "Cambios en estos términos",
+      "changesText": "Podemos actualizar estos términos a medida que el sitio o los servicios cambien. Continuar usando el sitio tras una actualización implica que aceptas la versión vigente.",
+      "contactHeading": "Contacto",
+      "contactPre": "Las preguntas sobre estos términos pueden enviarse a través del formulario de contacto en la ",
+      "contactLink": "página de inicio",
+      "contactPost": "."
+    },
+    "cookies": {
+      "title": "Política de Cookies",
+      "date": "septiembre de 2026",
+      "intro": "Este sitio no instala actualmente ninguna cookie de rastreo o publicidad. Esto es exactamente lo que almacena y las opciones que tienes.",
+      "useHeading": "Qué usamos realmente",
+      "useStrong": "Preferencia de consentimiento de cookies.",
+      "useText": " Cuando eliges \"Aceptar Todo\", \"Solo lo Esencial\", o guardas preferencias en el banner de cookies, esa elección se guarda en el almacenamiento local de tu navegador —no una cookie— únicamente para no volver a preguntarte en tu próxima visita. Nunca sale de tu navegador.",
+      "useOnly": "Eso es lo único que este sitio almacena en tu navegador por el momento. No hay ningún script de analíticas, publicidad o rastreo de terceros en ejecución.",
+      "changeHeading": "Si eso cambia",
+      "changeText": "Las opciones \"Aceptar Todo\" y \"Preferencias\" del banner existen para que, si en el futuro añadimos una herramienta de analíticas (para entender el tráfico y mejorar el sitio), esta solo se active para los visitantes que hayan dado su consentimiento, nunca por defecto. Esta página se actualizará para nombrar la herramienta y lo que almacena antes de que eso ocurra.",
+      "thirdPartyHeading": "Cookies de terceros",
+      "thirdPartyPre": "Al enviar el formulario de contacto, tus datos se envían a ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", un procesador de formularios externo, que puede instalar sus propias cookies como parte de la gestión de esa solicitud. Eso se rige por su política, no por esta.",
+      "controlHeading": "Controlar el almacenamiento tú mismo",
+      "controlText": "Puedes borrar tu elección de consentimiento de cookies en cualquier momento eliminando el almacenamiento local de este sitio en la configuración de tu navegador, o usando una ventana privada/de incógnito. La mayoría de los navegadores también permiten bloquear el almacenamiento local y las cookies por completo, sitio por sitio.",
+      "changesHeading": "Cambios en esta política",
+      "changesText": "Si lo que almacenamos cambia, actualizaremos la fecha en la parte superior de esta página y, para cualquier elemento no esencial, volveremos a preguntar a través del banner."
+    }
+  }
+}

@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { deferToNextFrame } from "@/lib/deferredEffect";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
+import { useLanguage } from "@/lib/i18n/LanguageContext";
 import type { ComponentType } from "react";
 
 // Three.js/@react-three are heavy to parse and compile; loading these client-
@@ -30,35 +31,16 @@ const Lattice = dynamic(() => import("@/components/three/Lattice"), {
 
 const CORE_SERVICES: {
   number: string;
-  title: string;
-  description: string;
   Visual: ComponentType;
 }[] = [
-  {
-    number: "01",
-    title: "Web Design & Build",
-    description:
-      "Custom, high-end websites designed and built in-house, mobile-first from the first pixel. Fast to launch, built to last, and yours to own outright, not a rented template with your logo on it.",
-    Visual: ServicePrism,
-  },
-  {
-    number: "02",
-    title: "Enquiry & Lead Handling Systems",
-    description:
-      "Once the site is live, every inbound enquiry, call, form, message, or walk-in, gets logged, tagged, and routed to the right person automatically. Nothing sits in an inbox waiting to be noticed.",
-    Visual: DataCore,
-  },
-  {
-    number: "03",
-    title: "Workflow & Tool Integration",
-    description:
-      "We connect the calendars, POS systems, and messaging platforms already in use, and layer in automation and AI only where it removes real manual work, not where it looks impressive.",
-    Visual: Lattice,
-  },
+  { number: "01", Visual: ServicePrism },
+  { number: "02", Visual: DataCore },
+  { number: "03", Visual: Lattice },
 ];
 
 export default function CoreServices() {
   const sectionRef = useRef<HTMLDivElement>(null);
+  const { t } = useLanguage();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -102,14 +84,14 @@ export default function CoreServices() {
     >
       <div className="max-w-2xl text-center mb-16">
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
-          WHAT WE DO
+          {t("coreServices.eyebrow")}
         </span>
         <h2 className="font-display font-bold text-3xl md:text-5xl text-white mt-4">
-          Websites First. Systems That Keep Them Working.
+          {t("coreServices.heading")}
         </h2>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-stretch">
-        {CORE_SERVICES.map((service) => (
+        {CORE_SERVICES.map((service, index) => (
           <div key={service.number} className="core-service-card h-full">
             <Magnetic className="block h-full" radius={40} strength={10}>
               <GlassTiltCard className="h-full p-8 flex flex-col">
@@ -120,10 +102,10 @@ export default function CoreServices() {
                   {service.number}
                 </span>
                 <h3 className="font-display font-bold text-xl text-white mt-4 mb-3">
-                  {service.title}
+                  {t(`coreServices.items.${index}.title`)}
                 </h3>
                 <p className="font-body text-white/60 text-sm leading-relaxed">
-                  {service.description}
+                  {t(`coreServices.items.${index}.description`)}
                 </p>
               </GlassTiltCard>
             </Magnetic>

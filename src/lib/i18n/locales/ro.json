@@ -1,0 +1,239 @@
+{
+  "meta": { "name": "Română", "short": "RO" },
+  "hero": {
+    "subtitle": "Design și dezvoltare web de top. Construit rapid, construit pentru conversie, susținut de sistemele care îl mențin funcțional.",
+    "chips": {
+      "digitalPresence": "Prezență Digitală",
+      "bookingSystems": "Sisteme de Rezervare",
+      "brandPrint": "Brand și Print",
+      "leadAutomation": "Automatizare Leaduri"
+    }
+  },
+  "servicesIndex": {
+    "webDesignBuilding": {
+      "heading": "Design și Dezvoltare Web",
+      "body": "Proiectăm și construim site-ul în sine, personalizat, mobile-first, live pe propriul vostru domeniu. Tot restul din această listă există pentru a susține ceea ce se construiește aici, primul pas."
+    },
+    "leadAutomation": {
+      "heading": "Urmărire și Răspuns la Leaduri",
+      "body": "Un apel pierdut este un client pierdut. Configurăm răspunsuri automate astfel încât fiecare apel, mesaj sau formular trimis să primească un răspuns în câteva minute, chiar și în afara programului de lucru."
+    },
+    "digitalPresence": {
+      "heading": "Prezență Digitală și Reputație",
+      "body": "Configurăm și gestionăm Profilul de Afacere Google pentru ca afacerea să apară corect în căutările locale și pe hartă. După fiecare vizită, un mesaj automat scurt îi cere clientului o recenzie. Proprietarul nu trebuie niciodată să își amintească să o ceară."
+    },
+    "bookingSystems": {
+      "heading": "Rezervări și Programări",
+      "body": "Conectăm metoda de rezervare care se potrivește cu adevărat afacerii, o linie simplă de WhatsApp, o platformă dedicată, sau ceva intermediar, astfel încât programările și mesele să ajungă într-un singur loc, nu în trei aplicații diferite."
+    },
+    "brandPrint": {
+      "heading": "Brand și Print",
+      "body": "Pentru afacerile care vor o imagine completă, proiectăm meniul, semnalistica și materialele tipărite alături de site, astfel încât tot ce vede clientul să fie coerent."
+    }
+  },
+  "coreServices": {
+    "eyebrow": "CE FACEM",
+    "heading": "Mai Întâi Site-ul. Apoi Sistemele Care Îl Mențin Funcțional.",
+    "items": [
+      {
+        "title": "Design și Dezvoltare Web",
+        "description": "Site-uri web personalizate, de top, proiectate și construite intern, mobile-first încă din primul pixel. Rapid de lansat, construit să dureze, și al vostru în întregime, nu un șablon închiriat cu logo-ul vostru deasupra."
+      },
+      {
+        "title": "Sisteme de Gestionare a Cererilor și Leadurilor",
+        "description": "Odată ce site-ul este live, fiecare cerere primită, apel, formular, mesaj sau vizită directă, este înregistrată, etichetată și direcționată automat către persoana potrivită. Nimic nu rămâne uitat într-o căsuță de mesaje."
+      },
+      {
+        "title": "Integrare Fluxuri de Lucru și Instrumente",
+        "description": "Conectăm calendarele, sistemele de casă și platformele de mesagerie deja folosite, și adăugăm automatizare și AI doar acolo unde elimină muncă manuală reală, nu unde pur și simplu arată impresionant."
+      }
+    ]
+  },
+  "selectedWork": {
+    "eyebrow": "PROIECTE SELECTATE",
+    "heading": "Lucrări Recente",
+    "comingSoon": "ÎN CURÂND"
+  },
+  "operationalFlow": {
+    "eyebrow": "FLUX OPERAȚIONAL",
+    "heading": "Cum Devine un Semnal un Client cu Rezervare",
+    "steps": [
+      {
+        "label": "Design și Construcție",
+        "detail": "Site-ul este lansat mai întâi, proiectat și construit integral, înainte ca automatizarea să fie adăugată deasupra."
+      },
+      {
+        "label": "Semnal",
+        "detail": "Vine un apel, un mesaj, o cerere de rezervare sau un formular trimis."
+      },
+      {
+        "label": "Direcționare",
+        "detail": "Sistemul identifică tipul cererii și o trimite către canalul sau persoana potrivită."
+      },
+      {
+        "label": "Acțiune",
+        "detail": "Pleacă un răspuns, se rezervă un loc, sau se creează o sarcină, în câteva minute."
+      },
+      {
+        "label": "Înregistrare",
+        "detail": "Fiecare interacțiune este înregistrată, astfel încât nimic să nu depindă de memorie."
+      }
+    ]
+  },
+  "pricing": {
+    "eyebrow": "PREȚURI",
+    "heading": "Trei Moduri de a Începe",
+    "cta": "Interesat?",
+    "toLaunch": "la lansare, apoi {price}",
+    "tiers": [
+      {
+        "name": "STANDARD",
+        "tagline": "Site Web",
+        "launchPrice": "249€",
+        "monthlyPrice": "35€/lună",
+        "whatYouGet": "Un site personalizat, live pe propriul vostru domeniu, mobile-first încă din primul pixel. Hosting, SSL și paginile legale obligatorii, toate incluse, toate gestionate.",
+        "howItWorks": "Îl construim, îl aprobați, este live în câteva zile. După aceea, mentenanța lunară îl menține rapid, sigur și actualizat, astfel încât să nu devină niciodată depășit, așa cum se întâmplă cu majoritatea site-urilor de afaceri mici.",
+        "context": "Un proiect independent ca acesta costă de obicei între 399 € și 999 € înainte să adăugați mentenanța continuă, care de obicei adaugă alte 30 € până la 150 € pe lună."
+      },
+      {
+        "name": "PLUS",
+        "tagline": "Site Web + Prezență",
+        "launchPrice": "329€",
+        "monthlyPrice": "59€/lună",
+        "whatYouGet": "Tot ce include Standard, plus un Profil de Afacere Google optimizat corect și un sistem automat care cere fiecărui client o recenzie imediat după vizită, astfel încât rating-ul vostru crește fără niciun efort din partea voastră.",
+        "howItWorks": "Configurăm metoda de rezervare aleasă, fie o linie de WhatsApp, fie o platformă dedicată, conectăm prezența voastră pe Google, și le gestionăm pe amândouă în fiecare lună, alături de site.",
+        "context": "Achiziționarea separată a unui plan de mentenanță pentru site și a unui serviciu de gestionare Google Business costă de obicei între 60 € și peste 130 € pe lună combinat. Aici este un singur plan, un singur preț, o singură persoană de contactat."
+      },
+      {
+        "name": "PREMIUM",
+        "tagline": "Identitate Completă",
+        "launchPrice": "449€",
+        "monthlyPrice": "79€/lună",
+        "whatYouGet": "Tot ce include Plus, plus o identitate vizuală completă, meniul vostru, semnalistica, materialele tipărite, toate proiectate să se potrivească între ele și cu site-ul, cu prioritate la fiecare actualizare după lansare.",
+        "howItWorks": "Lucrul de design avansează în paralel cu construcția site-ului, astfel încât întreaga identitate este lansată împreună, nu în bucăți, pe facturi separate.",
+        "context": "Comandat separat, doar un design profesional de meniu costă de obicei între 80 € și 250 €, pe lângă site și mentenanța lui. Aici, inclus în pachet, face parte dintr-o singură lansare, la un preț sub costul pieselor separate."
+      }
+    ]
+  },
+  "bridge": {
+    "heading": "Un site frumos care nu răspunde la telefon este doar artă digitală.",
+    "body": "Noi construim arta, dar proiectăm infrastructura. Captăm leadul, rezervăm masa, asigurăm recenzia. Automat."
+  },
+  "contact": {
+    "heading": "Solicitare Proiect",
+    "namePlaceholder": "Nume",
+    "emailPlaceholder": "Email",
+    "messagePlaceholder": "Problema de Rezolvat",
+    "consentPrefix": "Sunt de acord cu prelucrarea datelor mele în conformitate cu ",
+    "consentLink": "Politica de Confidențialitate",
+    "consentSuffix": ".",
+    "submit": "Trimite",
+    "submitting": "Se trimite...",
+    "successHeading": "Mesaj Recepționat",
+    "successBody": "Vă vom contacta în curând.",
+    "error": "Ceva nu a mers bine. Vă rugăm încercați din nou."
+  },
+  "footer": {
+    "legalNavLabel": "Legal",
+    "links": {
+      "privacy": "Politica de Confidențialitate",
+      "terms": "Termeni și Condiții",
+      "cookies": "Politica de Cookie-uri"
+    },
+    "copyright": "© {year} PeakLogic Digital"
+  },
+  "cookieBanner": {
+    "ariaLabel": "Consimțământ cookie-uri",
+    "messagePrefix": "Folosim stocare locală esențială pentru a face site-ul funcțional și am dori permisiunea voastră pentru analize opționale care ne ajută să îl îmbunătățim. Citiți ",
+    "messageLink": "Politica de Cookie-uri",
+    "messageSuffix": ".",
+    "acceptAll": "Acceptă Tot",
+    "essentialOnly": "Doar Esențiale",
+    "preferences": "Preferințe",
+    "preferencesIntro": "Alegeți cu ce stocare neesențială vă simțiți confortabil.",
+    "essential": "Esențiale",
+    "essentialDesc": "Necesare pentru a reține această alegere. Mereu active.",
+    "analytics": "Analize",
+    "analyticsDesc": "Ne ajută să înțelegem cum este folosit site-ul.",
+    "savePreferences": "Salvează Preferințele",
+    "back": "Înapoi"
+  },
+  "legal": {
+    "backLink": "← ÎNAPOI LA PEAKLOGIC",
+    "lastUpdatedLabel": "Ultima actualizare: {date}",
+    "privacy": {
+      "title": "Politica de Confidențialitate",
+      "date": "septembrie 2026",
+      "intro": "Această politică explică ce informații colectează PeakLogic Digital (\"noi\") prin peaklogicdigital.com, de ce le colectăm și ce opțiuni aveți. Colectăm cât mai puțin posibil.",
+      "collectHeading": "Ce colectăm",
+      "collectFormStrong": "Trimiteri prin formularul de contact.",
+      "collectFormText": " Când trimiteți formularul de solicitare a proiectului, colectăm numele, adresa de email și mesajul pe care le furnizați. Acestea ne sunt trimise direct prin Web3Forms, un serviciu terț de procesare a formularelor, și sunt folosite doar pentru a răspunde solicitării voastre.",
+      "collectCookieStrong": "Preferința privind cookie-urile.",
+      "collectCookieText": " Dacă faceți o alegere în bannerul de consimțământ pentru cookie-uri, salvăm acea alegere în stocarea locală a browserului vostru, ca să nu vă mai întrebăm din nou. Aceasta nu ne este trimisă nouă și nici unor terți.",
+      "noAnalyticsPre": "În prezent nu rulăm scripturi de analiză, publicitate sau urmărire pe acest site. Dacă acest lucru se schimbă, va funcționa doar după ce vă exprimați explicit acordul prin bannerul de cookie-uri, iar această politică și ",
+      "noAnalyticsLink": "Politica noastră de Cookie-uri",
+      "noAnalyticsPost": " vor fi actualizate pentru a descrie acest lucru.",
+      "thirdPartyHeading": "Procesatori terți",
+      "thirdPartyPre": "Trimiterile prin formularul de contact sunt procesate de ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", care ne livrează trimiterea și care respectă propria politică de confidențialitate. Nu controlăm și nu suntem responsabili pentru modul în care Web3Forms gestionează datele în tranzit.",
+      "retentionHeading": "Cât timp le păstrăm",
+      "retentionText": "Păstrăm detaliile solicitării atât timp cât este rezonabil necesar pentru a vă răspunde și, dacă proiectul avansează, pe durata acelui proiect plus o perioadă rezonabilă ulterioară pentru evidențele noastre proprii. Ne puteți cere să le ștergem mai devreme, oricând.",
+      "rightsHeading": "Drepturile voastre",
+      "rightsIntro": "Ne puteți cere oricând să:",
+      "rightsList": [
+        "vă spunem ce date deținem despre voi,",
+        "corectăm orice informație inexactă,",
+        "ștergem datele pe care nu mai avem motiv să le păstrăm, și",
+        "încetăm să folosim datele voastre într-un anumit scop."
+      ],
+      "rightsOutro": "Trimiteți această solicitare prin formularul de contact de pe pagina principală, incluzând suficiente detalii (precum adresa de email folosită) pentru a vă putea găsi înregistrarea.",
+      "securityHeading": "Securitate",
+      "securityText": "Acest site este servit integral prin HTTPS. Nu operăm propria bază de date cu vizitatori — singurul loc unde există detaliile solicitărilor este căsuța de mesaje către care sunt livrate și, temporar, sistemele Web3Forms în timpul livrării.",
+      "changesHeading": "Modificări ale acestei politici",
+      "changesText": "Dacă schimbăm în mod semnificativ ce colectăm sau de ce, vom actualiza data din partea de sus a acestei pagini.",
+      "contactHeading": "Contact",
+      "contactPre": "Întrebările despre această politică, sau o solicitare conform secțiunii \"Drepturile voastre\" de mai sus, pot fi trimise prin formularul de contact de pe ",
+      "contactLink": "pagina principală",
+      "contactPost": "."
+    },
+    "terms": {
+      "title": "Termeni și Condiții",
+      "date": "septembrie 2026",
+      "intro": "Acești termeni acoperă două lucruri: folosirea acestui site web și, la un nivel general, angajarea PeakLogic Digital pentru un proiect. Detaliile oricărui proiect concret — scop, preț, termene — se stabilesc separat, în scris, înainte de începerea lucrului; nimic de aici nu înlocuiește acel acord.",
+      "usingHeading": "Folosirea acestui site web",
+      "usingText": "Sunteți binevenit să navigați, să citiți și să ne contactați prin formular. Sunteți de acord să nu folosiți site-ul pentru nimic ilegal, să nu încercați să îl perturbați sau să obțineți acces neautorizat la el sau la sistemele din spate, și să nu îl extrageți sau colectați la scară largă fără permisiunea noastră.",
+      "offerHeading": "Ce oferim",
+      "offerText": "PeakLogic Digital proiectează și construiește site-uri web, și adaugă sisteme de suport, gestionarea prezenței digitale, integrări de rezervare, lucrări de brand și print, și automatizarea răspunsului la leaduri, așa cum este descris în alte părți ale site-ului. Prețurile afișate pe site sunt orientative și se pot modifica; prețul pentru lucrarea efectivă este cel confirmat în scris înainte de începerea acesteia.",
+      "ipHeading": "Proprietate intelectuală",
+      "ipText": "Designul, codul și conținutul acestui site web aparțin PeakLogic Digital, cu excepția cazurilor menționate altfel. Livrabilele produse pentru un proiect de client — site-ul propriu al clientului, materialele de brand și similare — sunt guvernate de termenii de proprietate din acordul acelui proiect, nu de această pagină.",
+      "warrantyHeading": "Fără garanție",
+      "warrantyText": "Acest site web este oferit ca atare. Încercăm să îl menținem corect și disponibil, dar nu garantăm că va fi neîntrerupt, fără erori sau potrivit pentru un anumit scop, și nu suntem răspunzători pentru problemele apărute din folosirea lui, în măsura în care legea ne permite să limităm această răspundere.",
+      "changesHeading": "Modificări ale acestor termeni",
+      "changesText": "Putem actualiza acești termeni pe măsură ce site-ul sau serviciile se schimbă. Continuarea folosirii site-ului după o actualizare înseamnă că acceptați versiunea curentă.",
+      "contactHeading": "Contact",
+      "contactPre": "Întrebările despre acești termeni pot fi trimise prin formularul de contact de pe ",
+      "contactLink": "pagina principală",
+      "contactPost": "."
+    },
+    "cookies": {
+      "title": "Politica de Cookie-uri",
+      "date": "septembrie 2026",
+      "intro": "Acest site nu setează în prezent niciun cookie de urmărire sau publicitate. Iată exact ce stochează și ce opțiuni aveți.",
+      "useHeading": "Ce folosim de fapt",
+      "useStrong": "Preferința de consimțământ pentru cookie-uri.",
+      "useText": " Când alegeți \"Acceptă Tot\", \"Doar Esențiale\", sau salvați preferințele în bannerul de cookie-uri, acea alegere este salvată în stocarea locală a browserului vostru — nu un cookie — pur și simplu ca să nu vă întrebăm din nou la următoarea vizită. Nu părăsește niciodată browserul vostru.",
+      "useOnly": "Acesta este singurul lucru pe care acest site îl stochează în browserul vostru în acest moment. Nu rulează niciun script de analiză, publicitate sau urmărire de la terți.",
+      "changeHeading": "Dacă acest lucru se schimbă",
+      "changeText": "Opțiunile \"Acceptă Tot\" și \"Preferințe\" din banner există pentru ca, dacă adăugăm în viitor un instrument de analiză (pentru a înțelege traficul și a îmbunătăți site-ul), acesta să funcționeze doar pentru vizitatorii care și-au exprimat acordul — niciodată implicit. Această pagină va fi actualizată pentru a numi instrumentul și ce stochează, înainte ca acest lucru să se întâmple.",
+      "thirdPartyHeading": "Cookie-uri de la terți",
+      "thirdPartyPre": "Trimiterea formularului de contact trimite datele voastre către ",
+      "thirdPartyLink": "Web3Forms",
+      "thirdPartyPost": ", un procesator terț de formulare, care poate seta propriile cookie-uri ca parte a gestionării acelei solicitări. Acest lucru este guvernat de politica lor, nu de aceasta.",
+      "controlHeading": "Controlarea stocării de către voi",
+      "controlText": "Puteți șterge alegerea privind consimțământul pentru cookie-uri oricând, ștergând stocarea locală a acestui site din setările browserului, sau folosind o fereastră privată/incognito. Majoritatea browserelor vă permit, de asemenea, să blocați complet stocarea locală și cookie-urile, site cu site.",
+      "changesHeading": "Modificări ale acestei politici",
+      "changesText": "Dacă se schimbă ce stocăm, vom actualiza data din partea de sus a acestei pagini și, pentru orice element neesențial, vom întreba din nou prin banner."
+    }
+  }
+}
