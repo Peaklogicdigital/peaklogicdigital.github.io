@@ -20,6 +20,13 @@ body {
   cursor: none !important;
 }
 
+/* Sitewide fallback so every interactive element gets an intentional,
+   on-brand focus indicator even where a component doesn't apply the
+   focus-visible utility classes explicitly. */
+:focus-visible {
+  @apply outline-none ring-2 ring-cyan-400/80 ring-offset-2 ring-offset-black;
+}
+
 @keyframes blink-cursor {
   0%,
   49% {
