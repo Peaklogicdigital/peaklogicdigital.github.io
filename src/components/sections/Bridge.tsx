@@ -3,6 +3,7 @@
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { deferToNextFrame } from "@/lib/deferredEffect";
 
 export default function Bridge() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -11,26 +12,32 @@ export default function Bridge() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-      gsap.fromTo(
-        contentRef.current,
-        { opacity: 0, y: 60, scale: 0.95 },
-        {
-          opacity: 1,
-          y: 0,
-          scale: 1,
-          duration: 1.4,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: sectionRef.current,
-            start: "top 55%",
-            toggleActions: "play none none reverse",
-          },
-        }
-      );
-    }, sectionRef);
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+    const cancel = deferToNextFrame(() => {
+      ctx = gsap.context(() => {
+        gsap.fromTo(
+          contentRef.current,
+          { opacity: 0, y: 60, scale: 0.95 },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 1.4,
+            ease: "power4.out",
+            scrollTrigger: {
+              trigger: sectionRef.current,
+              start: "top 55%",
+              toggleActions: "play none none reverse",
+            },
+          }
+        );
+      }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancel();
+      ctx?.revert();
+    };
   }, []);
 
   return (

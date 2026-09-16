@@ -1,14 +1,32 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { deferToNextFrame } from "@/lib/deferredEffect";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
-import ServicePrism from "@/components/three/ServicePrism";
-import DataCore from "@/components/three/DataCore";
-import Lattice from "@/components/three/Lattice";
 import type { ComponentType } from "react";
+
+// Three.js/@react-three are heavy to parse and compile; loading these client-
+// only and off the initial bundle keeps first paint from waiting on them.
+function CardSkeleton() {
+  return <div className="w-full h-full bg-white/5 animate-pulse" />;
+}
+
+const ServicePrism = dynamic(() => import("@/components/three/ServicePrism"), {
+  ssr: false,
+  loading: CardSkeleton,
+});
+const DataCore = dynamic(() => import("@/components/three/DataCore"), {
+  ssr: false,
+  loading: CardSkeleton,
+});
+const Lattice = dynamic(() => import("@/components/three/Lattice"), {
+  ssr: false,
+  loading: CardSkeleton,
+});
 
 const CORE_SERVICES: {
   number: string;
@@ -45,29 +63,35 @@ export default function CoreServices() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-      const cards = sectionRef.current?.querySelectorAll(".core-service-card");
-      if (cards && cards.length > 0) {
-        gsap.fromTo(
-          cards,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.15,
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 55%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-    }, sectionRef);
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+    const cancel = deferToNextFrame(() => {
+      ctx = gsap.context(() => {
+        const cards = sectionRef.current?.querySelectorAll(".core-service-card");
+        if (cards && cards.length > 0) {
+          gsap.fromTo(
+            cards,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.15,
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 55%",
+                toggleActions: "play none none reverse",
+              },
+            }
+          );
+        }
+      }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancel();
+      ctx?.revert();
+    };
   }, []);
 
   return (

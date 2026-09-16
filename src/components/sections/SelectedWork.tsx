@@ -1,10 +1,23 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import dynamic from "next/dynamic";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
-import MinimalGlassPanel from "@/components/three/MinimalGlassPanel";
+
+// Same reasoning as CoreServices.tsx: statically importing this would pull
+// the entire three.js/@react-three dependency graph into the initial
+// bundle, since this section renders unconditionally on first paint.
+function PanelSkeleton() {
+  return <div className="w-full h-full bg-white/5 animate-pulse" />;
+}
+
+const MinimalGlassPanel = dynamic(() => import("@/components/three/MinimalGlassPanel"), {
+  ssr: false,
+  loading: PanelSkeleton,
+});
 
 export default function SelectedWork() {
   const sectionRef = useRef<HTMLDivElement>(null);
@@ -12,29 +25,35 @@ export default function SelectedWork() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-      const panels = sectionRef.current?.querySelectorAll(".work-panel");
-      if (panels && panels.length > 0) {
-        gsap.fromTo(
-          panels,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.15,
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 55%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-    }, sectionRef);
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+    const cancel = deferToNextFrame(() => {
+      ctx = gsap.context(() => {
+        const panels = sectionRef.current?.querySelectorAll(".work-panel");
+        if (panels && panels.length > 0) {
+          gsap.fromTo(
+            panels,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.15,
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 55%",
+                toggleActions: "play none none reverse",
+              },
+            }
+          );
+        }
+      }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancel();
+      ctx?.revert();
+    };
   }, []);
 
   return (
