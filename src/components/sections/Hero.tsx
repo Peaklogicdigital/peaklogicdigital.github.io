@@ -4,6 +4,7 @@ import { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scrollToSection } from "@/lib/lenis";
+import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
 
 const HEADLINE = "PEAKLOGIC";
@@ -22,38 +23,44 @@ export default function Hero() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-      const letters = headlineRef.current?.querySelectorAll(".hero-letter");
-      if (letters && letters.length > 0) {
-        gsap.fromTo(
-          letters,
-          { opacity: 0, y: 80 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1.2,
-            ease: "expo.out",
-            stagger: 0.05,
-            delay: 0.2,
-          }
-        );
-      }
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+    const cancel = deferToNextFrame(() => {
+      ctx = gsap.context(() => {
+        const letters = headlineRef.current?.querySelectorAll(".hero-letter");
+        if (letters && letters.length > 0) {
+          gsap.fromTo(
+            letters,
+            { opacity: 0, y: 80 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1.2,
+              ease: "expo.out",
+              stagger: 0.05,
+              delay: 0.2,
+            }
+          );
+        }
 
-      gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionRef.current,
-          start: "top top",
-          end: "bottom top",
-          scrub: true,
-        },
-      }).to(headlineRef.current, {
-        scale: 4,
-        opacity: 0,
-        ease: "none",
-      });
-    }, sectionRef);
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: sectionRef.current,
+            start: "top top",
+            end: "bottom top",
+            scrub: true,
+          },
+        }).to(headlineRef.current, {
+          scale: 4,
+          opacity: 0,
+          ease: "none",
+        });
+      }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancel();
+      ctx?.revert();
+    };
   }, []);
 
   return (

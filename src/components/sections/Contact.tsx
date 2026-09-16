@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
 
 type Status = "idle" | "loading" | "success" | "error";
@@ -18,31 +19,37 @@ export default function Contact() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const bridgeSection = document.getElementById("bridge");
-    const bridgeContent = document.getElementById("bridge-content");
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+    const cancel = deferToNextFrame(() => {
+      const bridgeSection = document.getElementById("bridge");
+      const bridgeContent = document.getElementById("bridge-content");
 
-    const ctx = gsap.context(() => {
-      if (bridgeSection && bridgeContent) {
-        gsap
-          .timeline({
-            scrollTrigger: {
-              trigger: bridgeSection,
-              start: "bottom 80%",
-              end: "bottom 10%",
-              scrub: true,
-            },
-          })
-          .to(bridgeContent, { scale: 0, rotate: 25, opacity: 0, ease: "power2.in" }, 0)
-          .fromTo(
-            formWrapperRef.current,
-            { opacity: 0, scale: 0.8 },
-            { opacity: 1, scale: 1, ease: "power2.out" },
-            0
-          );
-      }
-    }, sectionRef);
+      ctx = gsap.context(() => {
+        if (bridgeSection && bridgeContent) {
+          gsap
+            .timeline({
+              scrollTrigger: {
+                trigger: bridgeSection,
+                start: "bottom 80%",
+                end: "bottom 10%",
+                scrub: true,
+              },
+            })
+            .to(bridgeContent, { scale: 0, rotate: 25, opacity: 0, ease: "power2.in" }, 0)
+            .fromTo(
+              formWrapperRef.current,
+              { opacity: 0, scale: 0.8 },
+              { opacity: 1, scale: 1, ease: "power2.out" },
+              0
+            );
+        }
+      }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancel();
+      ctx?.revert();
+    };
   }, []);
 
   async function handleSubmit(event: React.FormEvent<HTMLFormElement>) {

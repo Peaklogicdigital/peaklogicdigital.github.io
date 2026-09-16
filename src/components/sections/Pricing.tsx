@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import GlassTiltCard from "@/components/ui/GlassTiltCard";
 import Magnetic from "@/components/ui/Magnetic";
 import { scrollToSection } from "@/lib/lenis";
+import { deferToNextFrame } from "@/lib/deferredEffect";
 
 const TIERS = [
   {
@@ -52,29 +53,35 @@ export default function Pricing() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const ctx = gsap.context(() => {
-      const cards = sectionRef.current?.querySelectorAll(".pricing-card");
-      if (cards && cards.length > 0) {
-        gsap.fromTo(
-          cards,
-          { opacity: 0, y: 40 },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 1,
-            ease: "power3.out",
-            stagger: 0.15,
-            scrollTrigger: {
-              trigger: sectionRef.current,
-              start: "top 55%",
-              toggleActions: "play none none reverse",
-            },
-          }
-        );
-      }
-    }, sectionRef);
+    let ctx: ReturnType<typeof gsap.context> | undefined;
+    const cancel = deferToNextFrame(() => {
+      ctx = gsap.context(() => {
+        const cards = sectionRef.current?.querySelectorAll(".pricing-card");
+        if (cards && cards.length > 0) {
+          gsap.fromTo(
+            cards,
+            { opacity: 0, y: 40 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1,
+              ease: "power3.out",
+              stagger: 0.15,
+              scrollTrigger: {
+                trigger: sectionRef.current,
+                start: "top 55%",
+                toggleActions: "play none none reverse",
+              },
+            }
+          );
+        }
+      }, sectionRef);
+    });
 
-    return () => ctx.revert();
+    return () => {
+      cancel();
+      ctx?.revert();
+    };
   }, []);
 
   return (
