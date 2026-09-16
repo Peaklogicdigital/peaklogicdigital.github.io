@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { scrollToSection } from "@/lib/lenis";
@@ -8,6 +8,9 @@ import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
 
 const HEADLINE = "PEAKLOGIC";
+const TYPE_SPEED_MS = 45;
+const CURSOR_FADE_DELAY_S = 0.4;
+const CURSOR_FADE_DURATION_S = 0.6;
 
 const INDEX_CHIPS = [
   { label: "Digital Presence", href: "#digital-presence" },
@@ -19,29 +22,57 @@ const INDEX_CHIPS = [
 export default function Hero() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const headlineRef = useRef<HTMLHeadingElement>(null);
+  const cursorRef = useRef<HTMLSpanElement>(null);
+  const [typedCount, setTypedCount] = useState(0);
+  const [isTypingDone, setIsTypingDone] = useState(false);
 
+  // Character-by-character typing reveal, deferred so it doesn't compete
+  // with first paint.
+  useEffect(() => {
+    let charIndex = 0;
+    let intervalId: ReturnType<typeof setInterval> | undefined;
+
+    const cancelDefer = deferToNextFrame(() => {
+      intervalId = setInterval(() => {
+        charIndex += 1;
+        setTypedCount(charIndex);
+        if (charIndex >= HEADLINE.length) {
+          clearInterval(intervalId);
+          setIsTypingDone(true);
+        }
+      }, TYPE_SPEED_MS);
+    });
+
+    return () => {
+      cancelDefer();
+      if (intervalId) clearInterval(intervalId);
+    };
+  }, []);
+
+  // Once typing finishes, hand the cursor off from its CSS blink to a
+  // smooth GSAP fade-out.
+  useEffect(() => {
+    if (!isTypingDone) return;
+
+    const ctx = gsap.context(() => {
+      gsap.to(cursorRef.current, {
+        opacity: 0,
+        duration: CURSOR_FADE_DURATION_S,
+        delay: CURSOR_FADE_DELAY_S,
+        ease: "power2.out",
+      });
+    });
+
+    return () => ctx.revert();
+  }, [isTypingDone]);
+
+  // Scroll-scrubbed grow/fade exit, unchanged.
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
     let ctx: ReturnType<typeof gsap.context> | undefined;
     const cancel = deferToNextFrame(() => {
       ctx = gsap.context(() => {
-        const letters = headlineRef.current?.querySelectorAll(".hero-letter");
-        if (letters && letters.length > 0) {
-          gsap.fromTo(
-            letters,
-            { opacity: 0, y: 80 },
-            {
-              opacity: 1,
-              y: 0,
-              duration: 1.2,
-              ease: "expo.out",
-              stagger: 0.05,
-              delay: 0.2,
-            }
-          );
-        }
-
         gsap.timeline({
           scrollTrigger: {
             trigger: sectionRef.current,
@@ -70,13 +101,18 @@ export default function Hero() {
     >
       <h1
         ref={headlineRef}
-        className="font-display font-black text-white text-7xl md:text-[10vw] leading-none tracking-tight overflow-hidden flex"
+        className="font-display font-black text-white text-4xl sm:text-5xl md:text-[10vw] leading-none tracking-tight"
       >
-        {HEADLINE.split("").map((letter, index) => (
-          <span key={index} className="hero-letter inline-block">
-            {letter}
+        <span aria-hidden="true">
+          {HEADLINE.slice(0, typedCount)}
+          <span
+            ref={cursorRef}
+            className={`text-cyan-400 ${isTypingDone ? "" : "cursor-blink"}`}
+          >
+            |
           </span>
-        ))}
+        </span>
+        <span className="sr-only">{HEADLINE}</span>
       </h1>
       <p className="font-body text-white/70 text-lg md:text-2xl mt-6 text-center max-w-2xl px-4 md:px-6">
         High-End Web Design &amp; Development. Built fast, built to convert,
