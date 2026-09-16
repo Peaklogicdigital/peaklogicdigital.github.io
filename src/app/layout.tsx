@@ -3,6 +3,8 @@ import { Space_Grotesk, Inter } from "next/font/google";
 import SmoothScroll from "@/components/layout/SmoothScroll";
 import MouseGlowOverlay from "@/components/layout/MouseGlowOverlay";
 import GrainOverlay from "@/components/layout/GrainOverlay";
+import Footer from "@/components/layout/Footer";
+import CookieConsentBanner from "@/components/layout/CookieConsentBanner";
 import CustomCursor from "@/components/ui/CustomCursor";
 import "./globals.css";
 
@@ -79,7 +81,11 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <GrainOverlay />
         <MouseGlowOverlay />
         <CustomCursor />
-        <SmoothScroll>{children}</SmoothScroll>
+        <SmoothScroll>
+          {children}
+          <Footer />
+        </SmoothScroll>
+        <CookieConsentBanner />
       </body>
     </html>
   );
