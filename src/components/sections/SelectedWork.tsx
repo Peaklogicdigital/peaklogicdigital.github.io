@@ -41,7 +41,7 @@ export default function SelectedWork() {
     <div
       id="selected-work"
       ref={sectionRef}
-      className="flex flex-col items-center justify-center px-6 md:px-16 py-24"
+      className="flex flex-col items-center justify-center px-4 py-16 md:px-16 md:py-24"
     >
       <div className="max-w-2xl text-center mb-16">
         <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
