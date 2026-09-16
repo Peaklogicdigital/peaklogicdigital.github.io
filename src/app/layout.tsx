@@ -6,6 +6,7 @@ import GrainOverlay from "@/components/layout/GrainOverlay";
 import Footer from "@/components/layout/Footer";
 import CookieConsentBanner from "@/components/layout/CookieConsentBanner";
 import CustomCursor from "@/components/ui/CustomCursor";
+import SoundToggle from "@/components/layout/SoundToggle";
 import "./globals.css";
 
 const spaceGrotesk = Space_Grotesk({
@@ -81,6 +82,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <GrainOverlay />
         <MouseGlowOverlay />
         <CustomCursor />
+        <SoundToggle />
         <SmoothScroll>
           {children}
           <Footer />

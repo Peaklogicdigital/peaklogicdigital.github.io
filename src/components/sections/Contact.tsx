@@ -7,6 +7,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { deferToNextFrame } from "@/lib/deferredEffect";
 import { FOCUS_RING } from "@/lib/focusRing";
 import Magnetic from "@/components/ui/Magnetic";
+import { playTone } from "@/lib/sound";
 
 type Status = "idle" | "loading" | "success" | "error";
 
@@ -163,6 +164,9 @@ export default function Contact() {
                 type="submit"
                 disabled={status === "loading" || !consentChecked}
                 aria-disabled={status === "loading" || !consentChecked}
+                onMouseEnter={() => {
+                  if (status !== "loading" && consentChecked) playTone(1100);
+                }}
                 className={`font-body text-white border border-white/20 rounded-full px-8 py-3 mt-4 transition-colors hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent ${FOCUS_RING}`}
               >
                 {status === "loading" ? "Sending..." : "Send"}

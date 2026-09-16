@@ -6,18 +6,21 @@ import OperationalFlow from "@/components/sections/OperationalFlow";
 import Pricing from "@/components/sections/Pricing";
 import Bridge from "@/components/sections/Bridge";
 import Contact from "@/components/sections/Contact";
+import ScrollSkewWrapper from "@/components/layout/ScrollSkewWrapper";
 
 export default function Home() {
   return (
     <main className="relative bg-transparent">
-      <Hero />
-      <Services />
-      <CoreServices />
-      <SelectedWork />
-      <OperationalFlow />
-      <Pricing />
-      <Bridge />
-      <Contact />
+      <ScrollSkewWrapper>
+        <Hero />
+        <Services />
+        <CoreServices />
+        <SelectedWork />
+        <OperationalFlow />
+        <Pricing />
+        <Bridge />
+        <Contact />
+      </ScrollSkewWrapper>
     </main>
   );
 }
