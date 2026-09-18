@@ -19,8 +19,15 @@ body {
   font-family: var(--font-inter);
 }
 
-* {
-  cursor: none !important;
+/* Only fine-pointer (mouse/trackpad) devices get the custom cursor's
+   cursor:none treatment. Coarse-pointer/touch devices keep native cursor
+   behavior - irrelevant for pure touch, but preserves the system cursor for
+   hybrid touch+mouse setups (e.g. a touchscreen laptop) where a real cursor
+   is still expected when the mouse is in use. */
+@media (pointer: fine) {
+  * {
+    cursor: none !important;
+  }
 }
 
 /* Sitewide fallback so every interactive element gets an intentional,
