@@ -1,12 +1,12 @@
 {
   "meta": { "name": "English", "short": "EN" },
   "hero": {
-    "subtitle": "High-End Web Design & Development. Built fast, built to convert, backed by the systems that keep it running.",
+    "subtitle": "Smart Marketing Infrastructure. We build high-converting digital storefronts and automated lead systems that turn your traffic into high-ticket clients—while you sleep.",
     "chips": {
-      "digitalPresence": "Digital Presence",
-      "bookingSystems": "Booking Systems",
-      "brandPrint": "Brand & Print",
-      "leadAutomation": "Lead Automation"
+      "digitalPresence": "Conversion Web Design",
+      "bookingSystems": "Automated Booking",
+      "brandPrint": "Zero-Leak Lead Routing",
+      "leadAutomation": "Multi-Market Reach"
     }
   },
   "servicesIndex": {
@@ -36,16 +36,20 @@
     "heading": "Websites First. Systems That Keep Them Working.",
     "items": [
       {
-        "title": "Web Design & Build",
-        "description": "Custom, high-end websites designed and built in-house, mobile-first from the first pixel. Fast to launch, built to last, and yours to own outright, not a rented template with your logo on it."
+        "title": "High-Conversion Digital Storefronts",
+        "description": "Stop losing clients to outdated websites. We engineer premium, blazing-fast web experiences that build instant trust and position you as the undisputed authority in your market."
       },
       {
-        "title": "Enquiry & Lead Handling Systems",
-        "description": "Once the site is live, every inbound enquiry, call, form, message, or walk-in, gets logged, tagged, and routed to the right person automatically. Nothing sits in an inbox waiting to be noticed."
+        "title": "Automated Booking Systems",
+        "description": "Eliminate the endless back-and-forth emails. We integrate seamless scheduling tools so qualified prospects can book consultations straight into your calendar, 24/7."
       },
       {
-        "title": "Workflow & Tool Integration",
-        "description": "We connect the calendars, POS systems, and messaging platforms already in use, and layer in automation and AI only where it removes real manual work, not where it looks impressive."
+        "title": "Zero-Leak Lead Routing",
+        "description": "Never let a hot lead go cold. We connect your site to automated pipelines that instantly notify you via SMS and log inquiries into your CRM the second a prospect reaches out."
+      },
+      {
+        "title": "Global Market Expansion",
+        "description": "Dominate local and international markets. We deploy flawless, SEO-optimized multi-language architectures (English, Spanish, Catalan, Romanian) to instantly multiply your reach."
       }
     ]
   },
@@ -84,34 +88,48 @@
     "eyebrow": "PRICING",
     "heading": "Three Ways In",
     "cta": "Interested?",
-    "toLaunch": "to launch, then {price}",
+    "mostPopular": "Most Popular",
+    "buildLabel": "Build",
+    "yearlyNote": "or {price}",
     "tiers": [
       {
-        "name": "STANDARD",
-        "tagline": "Website",
-        "launchPrice": "€249",
-        "monthlyPrice": "€35/month",
-        "whatYouGet": "A custom-built site, live on your own domain, mobile-first from the first pixel. Hosting, SSL, and the legal pages you're required to have, all included, all handled.",
-        "howItWorks": "We build it, you approve it, it goes live within days. After that, monthly upkeep keeps it fast, secure, and current, so it never quietly goes stale the way most small business sites do.",
-        "context": "A standalone build like this typically runs €399 to €999 before you've even added ongoing maintenance, which usually adds another €30 to €150 a month on its own."
+        "name": "The Authority Foundation",
+        "buildPrice": "€950",
+        "monthlyPrice": "€49/mo",
+        "yearlyPrice": "€490/yr",
+        "description": "A bespoke, blazing-fast digital presence designed to establish instant market dominance and capture leads.",
+        "features": [
+          "Premium UX/UI Design",
+          "Next.js High-Speed Architecture",
+          "Technical SEO Baseline",
+          "Managed Enterprise Hosting"
+        ]
       },
       {
-        "name": "PLUS",
-        "tagline": "Website + Presence",
-        "launchPrice": "€329",
-        "monthlyPrice": "€59/month",
-        "whatYouGet": "Everything in Standard, plus a properly optimized Google Business Profile and an automatic system that asks every customer for a review right after their visit, so your rating climbs without you lifting a finger.",
-        "howItWorks": "We set up your booking method of choice, whether that's a WhatsApp line or a dedicated platform, connect your Google presence, and manage both every month alongside the site itself.",
-        "context": "Buying a website maintenance plan and a Google Business management service separately typically costs €60 to over €130 a month combined. Here it's one plan, one price, one person to call."
+        "name": "The Smart Conversion Engine",
+        "buildPrice": "€1,450",
+        "monthlyPrice": "€89/mo",
+        "yearlyPrice": "€890/yr",
+        "description": "The complete hands-off acquisition system. The premium digital presence, plus automated calendar booking and instant lead routing.",
+        "features": [
+          "Everything in Foundation",
+          "Automated Calendar Integration",
+          "Zero-Leak CRM/SMS Routing",
+          "Priority Automation Support"
+        ]
       },
       {
-        "name": "PREMIUM",
-        "tagline": "Full Identity",
-        "launchPrice": "€449",
-        "monthlyPrice": "€79/month",
-        "whatYouGet": "Everything in Plus, plus a complete visual identity, your menu, your signage, your printed materials, all designed to match the site and each other, with priority turnaround on every update after launch.",
-        "howItWorks": "Your design work runs in parallel with the build, so the whole identity launches together instead of arriving in pieces over separate invoices.",
-        "context": "Commissioned separately, a professional menu design alone typically runs €80 to €250, on top of the website and its maintenance. Bundled here, it's part of one launch, at a price below what the pieces would cost apart."
+        "name": "Elite Market Dominance",
+        "buildPrice": "€2,450",
+        "monthlyPrice": "€149/mo",
+        "yearlyPrice": "€1,490/yr",
+        "description": "The ultimate scalable asset. Supercharged with multi-language global architecture to capture local and international market share.",
+        "features": [
+          "Everything in Conversion Engine",
+          "Full Multi-Language (EN/ES/CAT/RO) Architecture",
+          "Advanced Bespoke Automations",
+          "Dedicated Growth Partner"
+        ]
       }
     ]
   },

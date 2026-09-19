@@ -1,12 +1,12 @@
 {
   "meta": { "name": "Español", "short": "ES" },
   "hero": {
-    "subtitle": "Diseño y desarrollo web de alta gama. Construido para ser rápido, para convertir, y respaldado por los sistemas que lo mantienen en marcha.",
+    "subtitle": "Infraestructura de Marketing Inteligente. Creamos escaparates digitales de alta conversión y sistemas de captación automatizados que convierten tu tráfico en clientes de alto valor, mientras duermes.",
     "chips": {
-      "digitalPresence": "Presencia Digital",
-      "bookingSystems": "Sistemas de Reserva",
-      "brandPrint": "Marca e Impresión",
-      "leadAutomation": "Automatización de Leads"
+      "digitalPresence": "Diseño Web de Conversión",
+      "bookingSystems": "Reservas Automatizadas",
+      "brandPrint": "Leads sin Fugas",
+      "leadAutomation": "Alcance Multi-Mercado"
     }
   },
   "servicesIndex": {
@@ -36,16 +36,20 @@
     "heading": "Primero la Web. Después los Sistemas que la Mantienen Funcionando.",
     "items": [
       {
-        "title": "Diseño y Desarrollo Web",
-        "description": "Sitios web a medida y de alta gama, diseñados y construidos internamente, mobile-first desde el primer píxel. Rápidos de lanzar, hechos para durar, y de tu propiedad total, no una plantilla alquilada con tu logo encima."
+        "title": "Escaparates Digitales de Alta Conversión",
+        "description": "Deja de perder clientes por una web anticuada. Diseñamos experiencias web premium y ultrarrápidas que generan confianza al instante y te posicionan como la autoridad indiscutible de tu sector."
       },
       {
-        "title": "Sistemas de Gestión de Consultas y Leads",
-        "description": "Una vez el sitio está publicado, cada consulta entrante, llamada, formulario, mensaje o visita presencial, queda registrada, etiquetada y enviada automáticamente a la persona correcta. Nada se queda esperando en una bandeja de entrada."
+        "title": "Sistemas de Reserva Automatizados",
+        "description": "Elimina el interminable ir y venir de correos. Integramos herramientas de reserva fluidas para que tus prospectos cualificados agenden consultas directamente en tu calendario, las 24 horas."
       },
       {
-        "title": "Integración de Flujos y Herramientas",
-        "description": "Conectamos los calendarios, sistemas de punto de venta y plataformas de mensajería que ya se usan, e incorporamos automatización e IA solo donde elimina trabajo manual real, no donde simplemente queda vistoso."
+        "title": "Enrutamiento de Leads sin Fugas",
+        "description": "Nunca dejes que un lead caliente se enfríe. Conectamos tu web a flujos automatizados que te avisan al instante por SMS y registran cada consulta en tu CRM en el momento exacto en que un prospecto contacta."
+      },
+      {
+        "title": "Expansión a Mercados Globales",
+        "description": "Domina mercados locales e internacionales. Desplegamos arquitecturas multilingües impecables y optimizadas para SEO (inglés, español, catalán, rumano) que multiplican tu alcance al instante."
       }
     ]
   },
@@ -84,34 +88,48 @@
     "eyebrow": "TARIFAS",
     "heading": "Tres Formas de Empezar",
     "cta": "¿Interesado?",
-    "toLaunch": "de lanzamiento, luego {price}",
+    "mostPopular": "Más Popular",
+    "buildLabel": "Lanzamiento",
+    "yearlyNote": "o {price}",
     "tiers": [
       {
-        "name": "STANDARD",
-        "tagline": "Sitio Web",
-        "launchPrice": "€249",
-        "monthlyPrice": "€35/mes",
-        "whatYouGet": "Un sitio a medida, publicado en tu propio dominio, mobile-first desde el primer píxel. Hosting, SSL y las páginas legales obligatorias, todo incluido, todo gestionado.",
-        "howItWorks": "Lo construimos, tú lo apruebas, y se publica en cuestión de días. A partir de ahí, el mantenimiento mensual lo mantiene rápido, seguro y actualizado, para que nunca quede desfasado como la mayoría de webs de pequeños negocios.",
-        "context": "Un desarrollo independiente como este suele costar entre 399 € y 999 € antes de añadir el mantenimiento continuo, que normalmente suma otros 30 € a 150 € al mes por su cuenta."
+        "name": "Cimiento de Autoridad",
+        "buildPrice": "€950",
+        "monthlyPrice": "€49/mes",
+        "yearlyPrice": "€490/año",
+        "description": "Una presencia digital a medida y ultrarrápida, diseñada para establecer un dominio de mercado inmediato y captar clientes potenciales.",
+        "features": [
+          "Diseño UX/UI Premium",
+          "Arquitectura Next.js de Alta Velocidad",
+          "SEO Técnico de Base",
+          "Hosting Empresarial Gestionado"
+        ]
       },
       {
-        "name": "PLUS",
-        "tagline": "Web + Presencia",
-        "launchPrice": "€329",
-        "monthlyPrice": "€59/mes",
-        "whatYouGet": "Todo lo de Standard, más un Perfil de Empresa de Google correctamente optimizado y un sistema automático que pide una reseña a cada cliente justo después de su visita, para que tu valoración suba sin que tengas que mover un dedo.",
-        "howItWorks": "Configuramos el método de reserva que elijas, ya sea una línea de WhatsApp o una plataforma dedicada, conectamos tu presencia en Google, y gestionamos ambos cada mes junto con el propio sitio.",
-        "context": "Contratar por separado un plan de mantenimiento web y un servicio de gestión de Google Business suele costar entre 60 € y más de 130 € al mes combinados. Aquí es un solo plan, un solo precio, una sola persona a quien llamar."
+        "name": "Motor de Conversión Inteligente",
+        "buildPrice": "€1.450",
+        "monthlyPrice": "€89/mes",
+        "yearlyPrice": "€890/año",
+        "description": "El sistema de captación completo y sin esfuerzo. La presencia digital premium, más reservas automatizadas en tu calendario y enrutamiento instantáneo de leads.",
+        "features": [
+          "Todo lo incluido en Cimiento de Autoridad",
+          "Integración de Calendario Automatizada",
+          "Enrutamiento CRM/SMS sin Fugas",
+          "Soporte de Automatización Prioritario"
+        ]
       },
       {
-        "name": "PREMIUM",
-        "tagline": "Identidad Completa",
-        "launchPrice": "€449",
-        "monthlyPrice": "€79/mes",
-        "whatYouGet": "Todo lo de Plus, más una identidad visual completa, tu carta, tu señalética, tu material impreso, todo diseñado para encajar con el sitio y entre sí, con prioridad en cada actualización tras el lanzamiento.",
-        "howItWorks": "Tu trabajo de diseño avanza en paralelo con el desarrollo, para que toda la identidad se lance junta en lugar de llegar en piezas sueltas y facturas separadas.",
-        "context": "Encargado por separado, un diseño de carta profesional por sí solo suele costar entre 80 € y 250 €, además del sitio web y su mantenimiento. Aquí, agrupado, forma parte de un solo lanzamiento, a un precio por debajo de lo que costarían las piezas por separado."
+        "name": "Dominio de Mercado Élite",
+        "buildPrice": "€2.450",
+        "monthlyPrice": "€149/mes",
+        "yearlyPrice": "€1.490/año",
+        "description": "El activo escalable definitivo. Potenciado con una arquitectura multilingüe global para capturar cuota de mercado local e internacional.",
+        "features": [
+          "Todo lo incluido en Motor de Conversión Inteligente",
+          "Arquitectura Multilingüe Completa (EN/ES/CAT/RO)",
+          "Automatizaciones Avanzadas a Medida",
+          "Socio de Crecimiento Dedicado"
+        ]
       }
     ]
   },

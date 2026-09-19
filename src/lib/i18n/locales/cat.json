@@ -1,12 +1,12 @@
 {
   "meta": { "name": "Català", "short": "CAT" },
   "hero": {
-    "subtitle": "Disseny i desenvolupament web d'alta gamma. Construït per ser ràpid, per convertir, i recolzat pels sistemes que el mantenen en marxa.",
+    "subtitle": "Infraestructura de Màrqueting Intel·ligent. Creem aparadors digitals d'alta conversió i sistemes de captació automatitzats que converteixen el teu trànsit en clients d'alt valor, mentre dorms.",
     "chips": {
-      "digitalPresence": "Presència Digital",
-      "bookingSystems": "Sistemes de Reserva",
-      "brandPrint": "Marca i Impressió",
-      "leadAutomation": "Automatització de Leads"
+      "digitalPresence": "Disseny Web de Conversió",
+      "bookingSystems": "Reserves Automatitzades",
+      "brandPrint": "Leads sense Fugues",
+      "leadAutomation": "Abast Multi-Mercat"
     }
   },
   "servicesIndex": {
@@ -36,16 +36,20 @@
     "heading": "Primer la Web. Després els Sistemes que la Mantenen Funcionant.",
     "items": [
       {
-        "title": "Disseny i Desenvolupament Web",
-        "description": "Llocs web a mida i d'alta gamma, dissenyats i construïts internament, mobile-first des del primer píxel. Ràpids de llançar, fets per durar, i de la teva propietat total, no una plantilla llogada amb el teu logotip a sobre."
+        "title": "Aparadors Digitals d'Alta Conversió",
+        "description": "Deixa de perdre clients per una web obsoleta. Dissenyem experiències web premium i ultraràpides que generen confiança a l'instant i et posicionen com l'autoritat indiscutible del teu sector."
       },
       {
-        "title": "Sistemes de Gestió de Consultes i Leads",
-        "description": "Un cop el lloc està publicat, cada consulta entrant, trucada, formulari, missatge o visita presencial, queda registrada, etiquetada i enviada automàticament a la persona correcta. Res no es queda esperant en una safata d'entrada."
+        "title": "Sistemes de Reserva Automatitzats",
+        "description": "Elimina l'interminable anar i venir de correus. Integrem eines de reserva fluides perquè els teus prospectes qualificats reservin consultes directament al teu calendari, les 24 hores."
       },
       {
-        "title": "Integració de Fluxos i Eines",
-        "description": "Connectem els calendaris, sistemes de punt de venda i plataformes de missatgeria que ja s'utilitzen, i incorporem automatització i IA només on elimina feina manual real, no on simplement queda vistós."
+        "title": "Enrutament de Leads sense Fugues",
+        "description": "No deixis mai que un lead calent es refredi. Connectem la teva web a fluxos automatitzats que t'avisen a l'instant per SMS i registren cada consulta al teu CRM en el moment exacte en què un prospecte contacta."
+      },
+      {
+        "title": "Expansió a Mercats Globals",
+        "description": "Domina mercats locals i internacionals. Despleguem arquitectures multilingües impecables i optimitzades per SEO (anglès, espanyol, català, romanès) que multipliquen el teu abast a l'instant."
       }
     ]
   },
@@ -84,34 +88,48 @@
     "eyebrow": "TARIFES",
     "heading": "Tres Maneres de Començar",
     "cta": "T'interessa?",
-    "toLaunch": "de llançament, després {price}",
+    "mostPopular": "Més Popular",
+    "buildLabel": "Llançament",
+    "yearlyNote": "o {price}",
     "tiers": [
       {
-        "name": "STANDARD",
-        "tagline": "Lloc Web",
-        "launchPrice": "€249",
-        "monthlyPrice": "€35/mes",
-        "whatYouGet": "Un lloc a mida, publicat al teu propi domini, mobile-first des del primer píxel. Hosting, SSL i les pàgines legals obligatòries, tot inclòs, tot gestionat.",
-        "howItWorks": "El construïm, tu l'aproves, i es publica en pocs dies. A partir d'aquí, el manteniment mensual el manté ràpid, segur i actualitzat, perquè mai quedi obsolet com la majoria de webs de petits negocis.",
-        "context": "Un desenvolupament independent com aquest sol costar entre 399 € i 999 € abans d'afegir-hi el manteniment continuat, que normalment suma entre 30 € i 150 € més al mes."
+        "name": "Fonament d'Autoritat",
+        "buildPrice": "€950",
+        "monthlyPrice": "€49/mes",
+        "yearlyPrice": "€490/any",
+        "description": "Una presència digital a mida i ultraràpida, dissenyada per establir un domini de mercat immediat i captar clients potencials.",
+        "features": [
+          "Disseny UX/UI Premium",
+          "Arquitectura Next.js d'Alta Velocitat",
+          "SEO Tècnic de Base",
+          "Hosting Empresarial Gestionat"
+        ]
       },
       {
-        "name": "PLUS",
-        "tagline": "Web + Presència",
-        "launchPrice": "€329",
-        "monthlyPrice": "€59/mes",
-        "whatYouGet": "Tot el que inclou Standard, més un Perfil d'Empresa de Google correctament optimitzat i un sistema automàtic que demana una ressenya a cada client just després de la seva visita, perquè la teva valoració pugi sense moure un dit.",
-        "howItWorks": "Configurem el mètode de reserva que triïs, ja sigui una línia de WhatsApp o una plataforma dedicada, connectem la teva presència a Google, i en gestionem tots dos cada mes juntament amb el mateix lloc web.",
-        "context": "Contractar per separat un pla de manteniment web i un servei de gestió de Google Business sol costar entre 60 € i més de 130 € al mes combinats. Aquí és un sol pla, un sol preu, una sola persona a qui trucar."
+        "name": "Motor de Conversió Intel·ligent",
+        "buildPrice": "€1.450",
+        "monthlyPrice": "€89/mes",
+        "yearlyPrice": "€890/any",
+        "description": "El sistema de captació complet i sense esforç. La presència digital premium, més reserves automatitzades al teu calendari i enrutament instantani de leads.",
+        "features": [
+          "Tot el que inclou Fonament d'Autoritat",
+          "Integració de Calendari Automatitzada",
+          "Enrutament CRM/SMS sense Fugues",
+          "Suport d'Automatització Prioritari"
+        ]
       },
       {
-        "name": "PREMIUM",
-        "tagline": "Identitat Completa",
-        "launchPrice": "€449",
-        "monthlyPrice": "€79/mes",
-        "whatYouGet": "Tot el que inclou Plus, més una identitat visual completa, la teva carta, la teva senyalització, el teu material imprès, tot dissenyat perquè encaixi amb el lloc i entre si, amb prioritat en cada actualització després del llançament.",
-        "howItWorks": "La teva feina de disseny avança en paral·lel amb la construcció del lloc, perquè tota la identitat es llanci junta en comptes d'arribar en peces soltes i factures separades.",
-        "context": "Encarregat per separat, un disseny de carta professional sol costar entre 80 € i 250 €, a més del lloc web i el seu manteniment. Aquí, agrupat, forma part d'un sol llançament, a un preu per sota del que costarien les peces per separat."
+        "name": "Domini de Mercat Elit",
+        "buildPrice": "€2.450",
+        "monthlyPrice": "€149/mes",
+        "yearlyPrice": "€1.490/any",
+        "description": "L'actiu escalable definitiu. Potenciat amb una arquitectura multilingüe global per capturar quota de mercat local i internacional.",
+        "features": [
+          "Tot el que inclou el Motor de Conversió Intel·ligent",
+          "Arquitectura Multilingüe Completa (EN/ES/CAT/RO)",
+          "Automatitzacions Avançades a Mida",
+          "Soci de Creixement Dedicat"
+        ]
       }
     ]
   },
