@@ -10,25 +10,17 @@
     }
   },
   "servicesIndex": {
-    "webDesignBuilding": {
-      "heading": "Diseño y Desarrollo Web",
-      "body": "Diseñamos y construimos el sitio en sí, a medida, mobile-first, y publicado en tu propio dominio. Todo lo demás de esta lista existe para respaldar lo que se construye aquí primero."
+    "digitalStorefronts": {
+      "heading": "Escaparates Digitales de Alta Conversión",
+      "body": "Deja de perder clientes por una web anticuada. Diseñamos experiencias web premium y ultrarrápidas que generan confianza al instante y te posicionan como la autoridad indiscutible de tu sector."
     },
-    "leadAutomation": {
-      "heading": "Seguimiento y Respuesta a Leads",
-      "body": "Una llamada perdida es un cliente perdido. Configuramos respuestas automáticas para que cada llamada, mensaje o formulario reciba respuesta en minutos, incluso fuera del horario comercial."
+    "automatedBooking": {
+      "heading": "Sistemas Automatizados de Leads y Reservas",
+      "body": "Elimina el ir y venir de correos. Integramos herramientas de reserva fluidas y pipelines de CRM automatizados para que tus prospectos cualificados reserven al instante, las 24 horas."
     },
-    "digitalPresence": {
-      "heading": "Presencia Digital y Reputación",
-      "body": "Configuramos y gestionamos el Perfil de Empresa de Google para que el negocio aparezca correctamente en las búsquedas locales y en el mapa. Después de cada visita, un mensaje automático breve pide una reseña al cliente. El propietario nunca tiene que acordarse de pedirla."
-    },
-    "bookingSystems": {
-      "heading": "Reservas y Citas",
-      "body": "Conectamos el método de reserva que realmente encaja con el negocio, una línea de WhatsApp sencilla, una plataforma dedicada, o algo intermedio, para que las citas y mesas lleguen a un único sitio en lugar de tres aplicaciones distintas."
-    },
-    "brandPrint": {
-      "heading": "Marca e Impresión",
-      "body": "Para los negocios que buscan una imagen completa, diseñamos la carta, la señalética y el material impreso junto con el sitio web, para que todo lo que ve el cliente sea coherente."
+    "globalExpansion": {
+      "heading": "Expansión a Mercados Globales",
+      "body": "Domina mercados locales e internacionales. Desplegamos arquitecturas multilingües impecables y optimizadas para SEO (inglés, español, catalán, rumano) que multiplican tu alcance al instante."
     }
   },
   "coreServices": {
@@ -63,24 +55,16 @@
     "heading": "Cómo una Señal se Convierte en un Cliente con Reserva",
     "steps": [
       {
-        "label": "Diseño y Construcción",
-        "detail": "El sitio web se publica primero, diseñado y construido de principio a fin, antes de que se incorpore ninguna automatización."
+        "label": "Planificación Estratégica",
+        "detail": "Analizamos tu posicionamiento de mercado y los cuellos de botella en ventas para diseñar una infraestructura digital a medida, pensada estrictamente para la conversión de alto valor y la confianza."
       },
       {
-        "label": "Señal",
-        "detail": "Llega una llamada, un mensaje, una solicitud de reserva o un formulario."
+        "label": "Ingeniería y Automatización",
+        "detail": "Construimos tu escaparate digital ultrarrápido mientras conectamos, en paralelo, la automatización del backend: tus sistemas de reserva, tu CRM y tus flujos de captación de leads."
       },
       {
-        "label": "Enrutamiento",
-        "detail": "El sistema identifica el tipo de solicitud y la envía al canal o persona correcta."
-      },
-      {
-        "label": "Acción",
-        "detail": "Se envía una respuesta, se reserva una plaza, o se crea una tarea, en cuestión de minutos."
-      },
-      {
-        "label": "Registro",
-        "detail": "Cada interacción queda registrada, para que nada dependa de la memoria."
+        "label": "Despliegue y Entrega",
+        "detail": "Lanzamos tu ecosistema en una red global de última generación. Recibes una máquina de captación de clientes totalmente automatizada, activa 24/7, que capta y convierte tráfico mientras duermes."
       }
     ]
   },

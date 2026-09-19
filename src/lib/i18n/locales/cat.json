@@ -10,25 +10,17 @@
     }
   },
   "servicesIndex": {
-    "webDesignBuilding": {
-      "heading": "Disseny i Desenvolupament Web",
-      "body": "Dissenyem i construïm el lloc web, fet a mida, mobile-first, i publicat al teu propi domini. Tota la resta d'aquesta llista existeix per donar suport al que es construeix aquí primer."
+    "digitalStorefronts": {
+      "heading": "Aparadors Digitals d'Alta Conversió",
+      "body": "Deixa de perdre clients per una web obsoleta. Dissenyem experiències web premium i ultraràpides que generen confiança a l'instant i et posicionen com l'autoritat indiscutible del teu sector."
     },
-    "leadAutomation": {
-      "heading": "Seguiment i Resposta a Leads",
-      "body": "Una trucada perduda és un client perdut. Configurem respostes automàtiques perquè cada trucada, missatge o formulari rebi resposta en pocs minuts, fins i tot fora de l'horari comercial."
+    "automatedBooking": {
+      "heading": "Sistemes Automatitzats de Leads i Reserves",
+      "body": "Elimina l'anar i venir de correus. Integrem eines de reserva fluides i pipelines de CRM automatitzats perquè els teus prospectes qualificats reservin a l'instant, les 24 hores."
     },
-    "digitalPresence": {
-      "heading": "Presència Digital i Reputació",
-      "body": "Configurem i gestionem el Perfil d'Empresa de Google perquè el negoci aparegui correctament a les cerques locals i al mapa. Després de cada visita, un missatge automàtic breu demana una ressenya al client. El propietari mai ha de recordar demanar-la."
-    },
-    "bookingSystems": {
-      "heading": "Reserves i Cites",
-      "body": "Connectem el mètode de reserva que realment s'adapta al negoci, una línia de WhatsApp senzilla, una plataforma dedicada, o alguna cosa intermèdia, perquè les cites i les taules arribin a un sol lloc en comptes de tres aplicacions diferents."
-    },
-    "brandPrint": {
-      "heading": "Marca i Impressió",
-      "body": "Per als negocis que volen una imatge completa, dissenyem la carta, la senyalització i el material imprès juntament amb el lloc web, perquè tot el que veu el client sigui coherent."
+    "globalExpansion": {
+      "heading": "Expansió a Mercats Globals",
+      "body": "Domina mercats locals i internacionals. Despleguem arquitectures multilingües impecables i optimitzades per SEO (anglès, espanyol, català, romanès) que multipliquen el teu abast a l'instant."
     }
   },
   "coreServices": {
@@ -63,24 +55,16 @@
     "heading": "Com un Senyal es Converteix en un Client amb Reserva",
     "steps": [
       {
-        "label": "Disseny i Construcció",
-        "detail": "El lloc web es publica primer, dissenyat i construït de principi a fi, abans que s'incorpori cap automatització."
+        "label": "Planificació Estratègica",
+        "detail": "Analitzem el teu posicionament de mercat i els colls d'ampolla en vendes per dissenyar una infraestructura digital a mida, pensada estrictament per a la conversió d'alt valor i la confiança."
       },
       {
-        "label": "Senyal",
-        "detail": "Arriba una trucada, un missatge, una sol·licitud de reserva o un formulari."
+        "label": "Enginyeria i Automatització",
+        "detail": "Construïm el teu aparador digital ultraràpid mentre connectem, en paral·lel, l'automatització del backend: els teus sistemes de reserva, el teu CRM i els teus fluxos de captació de leads."
       },
       {
-        "label": "Encaminament",
-        "detail": "El sistema identifica el tipus de sol·licitud i l'envia al canal o persona correcta."
-      },
-      {
-        "label": "Acció",
-        "detail": "S'envia una resposta, es reserva una plaça, o es crea una tasca, en qüestió de minuts."
-      },
-      {
-        "label": "Registre",
-        "detail": "Cada interacció queda registrada, perquè res no depengui de la memòria."
+        "label": "Desplegament i Lliurament",
+        "detail": "Llancem el teu ecosistema en una xarxa global d'última generació. Reps una màquina de captació de clients totalment automatitzada, activa 24/7, que capta i converteix trànsit mentre dorms."
       }
     ]
   },

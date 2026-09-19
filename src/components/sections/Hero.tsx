@@ -16,10 +16,10 @@ const CURSOR_FADE_DELAY_S = 0.4;
 const CURSOR_FADE_DURATION_S = 0.6;
 
 const INDEX_CHIPS = [
-  { key: "digitalPresence", href: "#digital-presence" },
-  { key: "bookingSystems", href: "#booking-systems" },
-  { key: "brandPrint", href: "#brand-print" },
-  { key: "leadAutomation", href: "#lead-automation" },
+  { key: "digitalPresence", href: "#digital-storefronts" },
+  { key: "bookingSystems", href: "#automated-booking" },
+  { key: "brandPrint", href: "#core-services" },
+  { key: "leadAutomation", href: "#global-expansion" },
 ];
 
 export default function Hero() {

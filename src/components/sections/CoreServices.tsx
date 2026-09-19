@@ -29,6 +29,10 @@ const Lattice = dynamic(() => import("@/components/three/Lattice"), {
   ssr: false,
   loading: CardSkeleton,
 });
+const MinimalGlassPanel = dynamic(() => import("@/components/three/MinimalGlassPanel"), {
+  ssr: false,
+  loading: CardSkeleton,
+});
 
 const CORE_SERVICES: {
   number: string;
@@ -37,9 +41,7 @@ const CORE_SERVICES: {
   { number: "01", Visual: ServicePrism },
   { number: "02", Visual: DataCore },
   { number: "03", Visual: Lattice },
-  // Reuses ServicePrism rather than introducing a fourth WebGL scene - the
-  // 3D visuals in src/components/three/ are a fixed, protected set.
-  { number: "04", Visual: ServicePrism },
+  { number: "04", Visual: MinimalGlassPanel },
 ];
 
 export default function CoreServices() {
