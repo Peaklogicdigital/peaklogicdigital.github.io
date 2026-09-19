@@ -11,10 +11,30 @@ import { playTone } from "@/lib/sound";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const TIER_COUNT = 3;
+const HIGHLIGHTED_TIER_INDEX = 1;
+
+function CheckIcon() {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      fill="none"
+      className="w-4 h-4 shrink-0 mt-0.5 text-cyan-400"
+      aria-hidden="true"
+    >
+      <path
+        d="M4 10.5L8 14.5L16 5.5"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+    </svg>
+  );
+}
 
 export default function Pricing() {
   const sectionRef = useRef<HTMLDivElement>(null);
-  const { t } = useLanguage();
+  const { t, dict } = useLanguage();
 
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
@@ -66,44 +86,66 @@ export default function Pricing() {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-stretch">
-        {Array.from({ length: TIER_COUNT }, (_, index) => (
-          <div key={index} className="pricing-card h-full">
-            <Magnetic className="block h-full" radius={40} strength={10}>
-            <GlassTiltCard className="h-full p-8 flex flex-col">
-              <span className="font-mono text-xs text-cyan-400/80 tracking-widest">
-                {t(`pricing.tiers.${index}.name`)}
-              </span>
-              <h3 className="font-display font-bold text-2xl text-white mt-2 mb-6">
-                {t(`pricing.tiers.${index}.tagline`)}
-              </h3>
+        {Array.from({ length: TIER_COUNT }, (_, index) => {
+          const isHighlighted = index === HIGHLIGHTED_TIER_INDEX;
+          const features = dict.pricing.tiers[index].features;
 
-              <div className="mb-6">
-                <p className="font-display font-black text-3xl text-white">
-                  {t(`pricing.tiers.${index}.launchPrice`)}
-                </p>
-                <p className="font-body text-white/50 text-sm">
-                  {t("pricing.toLaunch", {
-                    price: t(`pricing.tiers.${index}.monthlyPrice`),
-                  })}
-                </p>
-              </div>
+          return (
+            <div key={index} className="pricing-card h-full">
+              <Magnetic className="block h-full" radius={40} strength={10}>
+                <GlassTiltCard
+                  className={`h-full p-8 flex flex-col relative ${
+                    isHighlighted
+                      ? "border-cyan-400/60 shadow-[0_0_50px_-12px_rgba(34,211,238,0.35)]"
+                      : ""
+                  }`}
+                >
+                  {isHighlighted && (
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 font-mono text-[10px] font-bold tracking-widest text-zinc-950 bg-cyan-400 rounded-full px-3 py-1 whitespace-nowrap">
+                      {t("pricing.mostPopular")}
+                    </span>
+                  )}
 
-              <div className="flex-1">
-                <p className="font-body text-white/70 text-sm leading-relaxed mb-4">
-                  {t(`pricing.tiers.${index}.whatYouGet`)}
-                </p>
-                <p className="font-body text-white/50 text-sm leading-relaxed">
-                  {t(`pricing.tiers.${index}.howItWorks`)}
-                </p>
-              </div>
+                  <h3 className="font-display font-bold text-xl text-white mb-6">
+                    {t(`pricing.tiers.${index}.name`)}
+                  </h3>
 
-              <p className="font-body text-white/35 text-xs leading-relaxed mt-6 pt-6 border-t border-white/10">
-                {t(`pricing.tiers.${index}.context`)}
-              </p>
-            </GlassTiltCard>
-            </Magnetic>
-          </div>
-        ))}
+                  <div className="mb-6">
+                    <p className="font-display font-black text-2xl md:text-3xl text-white leading-snug">
+                      {t(`pricing.tiers.${index}.buildPrice`)}{" "}
+                      <span className="font-body font-normal text-base text-white/50">
+                        {t("pricing.buildLabel")}
+                      </span>
+                      {" + "}
+                      {t(`pricing.tiers.${index}.monthlyPrice`)}
+                    </p>
+                    <p className="font-body text-white/40 text-xs mt-1">
+                      {t("pricing.yearlyNote", {
+                        price: t(`pricing.tiers.${index}.yearlyPrice`),
+                      })}
+                    </p>
+                  </div>
+
+                  <p className="font-body text-white/70 text-sm leading-relaxed mb-6">
+                    {t(`pricing.tiers.${index}.description`)}
+                  </p>
+
+                  <ul className="flex-1 space-y-3">
+                    {features.map((feature) => (
+                      <li
+                        key={feature}
+                        className="flex items-start gap-2 font-body text-white/60 text-sm leading-snug"
+                      >
+                        <CheckIcon />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </GlassTiltCard>
+              </Magnetic>
+            </div>
+          );
+        })}
       </div>
 
       <Magnetic className="block mt-16" radius={50} strength={10}>

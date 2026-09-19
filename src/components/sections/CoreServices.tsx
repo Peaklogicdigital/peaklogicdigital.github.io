@@ -37,6 +37,9 @@ const CORE_SERVICES: {
   { number: "01", Visual: ServicePrism },
   { number: "02", Visual: DataCore },
   { number: "03", Visual: Lattice },
+  // Reuses ServicePrism rather than introducing a fourth WebGL scene - the
+  // 3D visuals in src/components/three/ are a fixed, protected set.
+  { number: "04", Visual: ServicePrism },
 ];
 
 export default function CoreServices() {
@@ -100,7 +103,7 @@ export default function CoreServices() {
           {t("coreServices.heading")}
         </h2>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 w-full max-w-6xl items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl items-stretch">
         {CORE_SERVICES.map((service, index) => (
           <div key={service.number} className="core-service-card h-full">
             <Magnetic className="block h-full" radius={40} strength={10}>

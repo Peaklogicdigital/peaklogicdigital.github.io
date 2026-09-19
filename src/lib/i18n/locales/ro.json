@@ -1,12 +1,12 @@
 {
   "meta": { "name": "Română", "short": "RO" },
   "hero": {
-    "subtitle": "Design și dezvoltare web de top. Construit rapid, construit pentru conversie, susținut de sistemele care îl mențin funcțional.",
+    "subtitle": "Infrastructură Inteligentă de Marketing. Construim vitrine digitale cu conversie ridicată și sisteme automate de generare a leadurilor care transformă traficul dvs. în clienți premium — chiar și atunci când dormiți.",
     "chips": {
-      "digitalPresence": "Prezență Digitală",
-      "bookingSystems": "Sisteme de Rezervare",
-      "brandPrint": "Brand și Print",
-      "leadAutomation": "Automatizare Leaduri"
+      "digitalPresence": "Design Web pentru Conversie",
+      "bookingSystems": "Rezervări Automatizate",
+      "brandPrint": "Leaduri fără Pierderi",
+      "leadAutomation": "Acoperire Multi-Piață"
     }
   },
   "servicesIndex": {
@@ -36,16 +36,20 @@
     "heading": "Mai Întâi Site-ul. Apoi Sistemele Care Îl Mențin Funcțional.",
     "items": [
       {
-        "title": "Design și Dezvoltare Web",
-        "description": "Site-uri web personalizate, de top, proiectate și construite intern, mobile-first încă din primul pixel. Rapid de lansat, construit să dureze, și al vostru în întregime, nu un șablon închiriat cu logo-ul vostru deasupra."
+        "title": "Vitrine Digitale cu Conversie Ridicată",
+        "description": "Nu mai pierdeți clienți din cauza unui site învechit. Construim experiențe web premium, extrem de rapide, care generează încredere instantanee și vă poziționează drept autoritatea de necontestat în domeniul dvs."
       },
       {
-        "title": "Sisteme de Gestionare a Cererilor și Leadurilor",
-        "description": "Odată ce site-ul este live, fiecare cerere primită, apel, formular, mesaj sau vizită directă, este înregistrată, etichetată și direcționată automat către persoana potrivită. Nimic nu rămâne uitat într-o căsuță de mesaje."
+        "title": "Sisteme de Rezervare Automatizate",
+        "description": "Eliminați schimbul nesfârșit de emailuri. Integrăm instrumente de programare fluide, astfel încât prospecții calificați să poată rezerva consultații direct în calendarul dvs., non-stop."
       },
       {
-        "title": "Integrare Fluxuri de Lucru și Instrumente",
-        "description": "Conectăm calendarele, sistemele de casă și platformele de mesagerie deja folosite, și adăugăm automatizare și AI doar acolo unde elimină muncă manuală reală, nu unde pur și simplu arată impresionant."
+        "title": "Direcționare Leaduri fără Pierderi",
+        "description": "Nu lăsați niciodată un lead fierbinte să se răcească. Vă conectăm site-ul la fluxuri automate care vă notifică instant prin SMS și înregistrează fiecare solicitare în CRM chiar în momentul în care un prospect vă contactează."
+      },
+      {
+        "title": "Expansiune pe Piețe Globale",
+        "description": "Dominați piețele locale și internaționale. Implementăm arhitecturi impecabile, multilingve și optimizate SEO (engleză, spaniolă, catalană, română) care vă multiplică instant vizibilitatea."
       }
     ]
   },
@@ -84,34 +88,48 @@
     "eyebrow": "PREȚURI",
     "heading": "Trei Moduri de a Începe",
     "cta": "Interesat?",
-    "toLaunch": "la lansare, apoi {price}",
+    "mostPopular": "Cel Mai Popular",
+    "buildLabel": "Lansare",
+    "yearlyNote": "sau {price}",
     "tiers": [
       {
-        "name": "STANDARD",
-        "tagline": "Site Web",
-        "launchPrice": "249€",
-        "monthlyPrice": "35€/lună",
-        "whatYouGet": "Un site personalizat, live pe propriul vostru domeniu, mobile-first încă din primul pixel. Hosting, SSL și paginile legale obligatorii, toate incluse, toate gestionate.",
-        "howItWorks": "Îl construim, îl aprobați, este live în câteva zile. După aceea, mentenanța lunară îl menține rapid, sigur și actualizat, astfel încât să nu devină niciodată depășit, așa cum se întâmplă cu majoritatea site-urilor de afaceri mici.",
-        "context": "Un proiect independent ca acesta costă de obicei între 399 € și 999 € înainte să adăugați mentenanța continuă, care de obicei adaugă alte 30 € până la 150 € pe lună."
+        "name": "Fundația Autorității",
+        "buildPrice": "950€",
+        "monthlyPrice": "49€/lună",
+        "yearlyPrice": "490€/an",
+        "description": "O prezență digitală personalizată și extrem de rapidă, concepută pentru a stabili instant dominația pe piață și a capta clienți potențiali.",
+        "features": [
+          "Design UX/UI Premium",
+          "Arhitectură Next.js de Mare Viteză",
+          "Bază Tehnică SEO",
+          "Găzduire Enterprise Gestionată"
+        ]
       },
       {
-        "name": "PLUS",
-        "tagline": "Site Web + Prezență",
-        "launchPrice": "329€",
-        "monthlyPrice": "59€/lună",
-        "whatYouGet": "Tot ce include Standard, plus un Profil de Afacere Google optimizat corect și un sistem automat care cere fiecărui client o recenzie imediat după vizită, astfel încât rating-ul vostru crește fără niciun efort din partea voastră.",
-        "howItWorks": "Configurăm metoda de rezervare aleasă, fie o linie de WhatsApp, fie o platformă dedicată, conectăm prezența voastră pe Google, și le gestionăm pe amândouă în fiecare lună, alături de site.",
-        "context": "Achiziționarea separată a unui plan de mentenanță pentru site și a unui serviciu de gestionare Google Business costă de obicei între 60 € și peste 130 € pe lună combinat. Aici este un singur plan, un singur preț, o singură persoană de contactat."
+        "name": "Motorul Inteligent de Conversie",
+        "buildPrice": "1.450€",
+        "monthlyPrice": "89€/lună",
+        "yearlyPrice": "890€/an",
+        "description": "Sistemul complet de achiziție, fără niciun efort din partea dvs. Prezența digitală premium, plus rezervări automate în calendar și direcționare instantanee a leadurilor.",
+        "features": [
+          "Tot ce include Fundația Autorității",
+          "Integrare Automată a Calendarului",
+          "Direcționare CRM/SMS fără Pierderi",
+          "Suport Prioritar pentru Automatizări"
+        ]
       },
       {
-        "name": "PREMIUM",
-        "tagline": "Identitate Completă",
-        "launchPrice": "449€",
-        "monthlyPrice": "79€/lună",
-        "whatYouGet": "Tot ce include Plus, plus o identitate vizuală completă, meniul vostru, semnalistica, materialele tipărite, toate proiectate să se potrivească între ele și cu site-ul, cu prioritate la fiecare actualizare după lansare.",
-        "howItWorks": "Lucrul de design avansează în paralel cu construcția site-ului, astfel încât întreaga identitate este lansată împreună, nu în bucăți, pe facturi separate.",
-        "context": "Comandat separat, doar un design profesional de meniu costă de obicei între 80 € și 250 €, pe lângă site și mentenanța lui. Aici, inclus în pachet, face parte dintr-o singură lansare, la un preț sub costul pieselor separate."
+        "name": "Dominația Elită a Pieței",
+        "buildPrice": "2.450€",
+        "monthlyPrice": "149€/lună",
+        "yearlyPrice": "1.490€/an",
+        "description": "Activul scalabil suprem. Potențat cu o arhitectură multilingvă globală pentru a capta cotă de piață locală și internațională.",
+        "features": [
+          "Tot ce include Motorul Inteligent de Conversie",
+          "Arhitectură Multilingvă Completă (EN/ES/CAT/RO)",
+          "Automatizări Avansate Personalizate",
+          "Partener Dedicat de Creștere"
+        ]
       }
     ]
   },
