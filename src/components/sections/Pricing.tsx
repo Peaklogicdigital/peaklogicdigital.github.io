@@ -111,13 +111,14 @@ export default function Pricing() {
                   </h3>
 
                   <div className="mb-6">
-                    <p className="font-display font-black text-2xl md:text-3xl text-white leading-snug">
-                      {t(`pricing.tiers.${index}.buildPrice`)}{" "}
-                      <span className="font-body font-normal text-base text-white/50">
+                    <p className="font-display font-black text-3xl md:text-4xl text-white leading-none">
+                      {t(`pricing.tiers.${index}.buildPrice`)}
+                      <span className="font-body font-normal text-sm text-white/50 ml-1.5">
                         {t("pricing.buildLabel")}
                       </span>
-                      {" + "}
-                      {t(`pricing.tiers.${index}.monthlyPrice`)}
+                    </p>
+                    <p className="font-body font-medium text-white/60 text-base mt-2">
+                      + {t(`pricing.tiers.${index}.monthlyPrice`)}
                     </p>
                     <p className="font-body text-white/40 text-xs mt-1">
                       {t("pricing.yearlyNote", {
