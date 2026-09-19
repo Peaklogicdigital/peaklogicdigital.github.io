@@ -103,7 +103,7 @@ export default function CoreServices() {
           {t("coreServices.heading")}
         </h2>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 w-full max-w-7xl items-stretch">
+      <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-6 w-full max-w-7xl items-stretch">
         {CORE_SERVICES.map((service, index) => (
           <div key={service.number} className="core-service-card h-full">
             <Magnetic className="block h-full" radius={40} strength={10}>
