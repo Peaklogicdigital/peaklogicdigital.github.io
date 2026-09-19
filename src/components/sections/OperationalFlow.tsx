@@ -7,7 +7,7 @@ import { deferToNextFrame } from "@/lib/deferredEffect";
 import Magnetic from "@/components/ui/Magnetic";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
-const FLOW_STEP_COUNT = 5;
+const FLOW_STEP_COUNT = 3;
 
 export default function OperationalFlow() {
   const sectionRef = useRef<HTMLDivElement>(null);

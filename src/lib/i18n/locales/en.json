@@ -10,25 +10,17 @@
     }
   },
   "servicesIndex": {
-    "webDesignBuilding": {
-      "heading": "Web Design and Building",
-      "body": "We design and build the site itself, custom, mobile-first, and live on your own domain. Everything else on this list exists to support what gets built here first."
+    "digitalStorefronts": {
+      "heading": "High-Conversion Digital Storefronts",
+      "body": "Stop losing clients to outdated websites. We engineer premium, blazing-fast web experiences that build instant trust and position you as the undisputed authority in your market."
     },
-    "leadAutomation": {
-      "heading": "Follow Up and Lead Response",
-      "body": "A missed call is a missed customer. We set up automatic replies so every call, message, or form submission gets a response within minutes, even outside business hours."
+    "automatedBooking": {
+      "heading": "Automated Lead & Booking Systems",
+      "body": "Eliminate back-and-forth emails. We integrate seamless scheduling tools and automated CRM pipelines so qualified prospects can book instantly, 24/7."
     },
-    "digitalPresence": {
-      "heading": "Digital Presence and Reputation",
-      "body": "We set up and manage the Google Business Profile so the business shows up correctly in local search and maps. After each visit, a short automatic message asks the customer for a review. The owner never has to remember to ask."
-    },
-    "bookingSystems": {
-      "heading": "Booking and Reservations",
-      "body": "We connect whichever booking method actually fits the business, a simple WhatsApp line, a dedicated platform, or something in between, so appointments and tables land in one place instead of three different apps."
-    },
-    "brandPrint": {
-      "heading": "Brand and Print",
-      "body": "For businesses that want a complete look, we design the menu, the signage, and the printed materials alongside the site, so everything a customer sees matches."
+    "globalExpansion": {
+      "heading": "Global Market Expansion",
+      "body": "Dominate local and international markets. We deploy flawless, SEO-optimized multi-language architectures (English, Spanish, Catalan, Romanian) to instantly multiply your reach."
     }
   },
   "coreServices": {
@@ -63,24 +55,16 @@
     "heading": "How a Signal Becomes a Booked Customer",
     "steps": [
       {
-        "label": "Design & Build",
-        "detail": "The website goes live first, designed and built end to end, before any of the automation gets layered on top of it."
+        "label": "Strategic Blueprinting",
+        "detail": "We analyze your market positioning and sales bottlenecks to blueprint a custom digital infrastructure designed strictly for high-ticket conversion and trust."
       },
       {
-        "label": "Signal",
-        "detail": "A call, message, booking request, or form submission comes in."
+        "label": "Engineering & Automation",
+        "detail": "We build your blazing-fast digital storefront while simultaneously wiring the backend automation—seamlessly connecting your booking systems, CRM, and lead routing pipelines."
       },
       {
-        "label": "Route",
-        "detail": "The system identifies the type and sends it to the right channel or person."
-      },
-      {
-        "label": "Action",
-        "detail": "A reply goes out, a slot gets booked, or a task gets created, within minutes."
-      },
-      {
-        "label": "Record",
-        "detail": "Every interaction is logged, so nothing depends on memory."
+        "label": "Deployment & Handoff",
+        "detail": "We launch your ecosystem on a global edge network. You receive a fully automated, 24/7 client acquisition machine that captures and converts traffic while you sleep."
       }
     ]
   },

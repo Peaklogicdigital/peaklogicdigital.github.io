@@ -10,25 +10,17 @@
     }
   },
   "servicesIndex": {
-    "webDesignBuilding": {
-      "heading": "Design și Dezvoltare Web",
-      "body": "Proiectăm și construim site-ul în sine, personalizat, mobile-first, live pe propriul vostru domeniu. Tot restul din această listă există pentru a susține ceea ce se construiește aici, primul pas."
+    "digitalStorefronts": {
+      "heading": "Vitrine Digitale cu Conversie Ridicată",
+      "body": "Nu mai pierdeți clienți din cauza unui site învechit. Construim experiențe web premium, extrem de rapide, care generează încredere instantanee și vă poziționează drept autoritatea de necontestat în domeniul dvs."
     },
-    "leadAutomation": {
-      "heading": "Urmărire și Răspuns la Leaduri",
-      "body": "Un apel pierdut este un client pierdut. Configurăm răspunsuri automate astfel încât fiecare apel, mesaj sau formular trimis să primească un răspuns în câteva minute, chiar și în afara programului de lucru."
+    "automatedBooking": {
+      "heading": "Sisteme Automatizate de Leaduri și Rezervări",
+      "body": "Eliminați schimbul nesfârșit de emailuri. Integrăm instrumente de programare fluide și pipeline-uri CRM automatizate, astfel încât prospecții calificați să poată rezerva instant, non-stop."
     },
-    "digitalPresence": {
-      "heading": "Prezență Digitală și Reputație",
-      "body": "Configurăm și gestionăm Profilul de Afacere Google pentru ca afacerea să apară corect în căutările locale și pe hartă. După fiecare vizită, un mesaj automat scurt îi cere clientului o recenzie. Proprietarul nu trebuie niciodată să își amintească să o ceară."
-    },
-    "bookingSystems": {
-      "heading": "Rezervări și Programări",
-      "body": "Conectăm metoda de rezervare care se potrivește cu adevărat afacerii, o linie simplă de WhatsApp, o platformă dedicată, sau ceva intermediar, astfel încât programările și mesele să ajungă într-un singur loc, nu în trei aplicații diferite."
-    },
-    "brandPrint": {
-      "heading": "Brand și Print",
-      "body": "Pentru afacerile care vor o imagine completă, proiectăm meniul, semnalistica și materialele tipărite alături de site, astfel încât tot ce vede clientul să fie coerent."
+    "globalExpansion": {
+      "heading": "Expansiune pe Piețe Globale",
+      "body": "Dominați piețele locale și internaționale. Implementăm arhitecturi impecabile, multilingve și optimizate SEO (engleză, spaniolă, catalană, română) care vă multiplică instant vizibilitatea."
     }
   },
   "coreServices": {
@@ -63,24 +55,16 @@
     "heading": "Cum Devine un Semnal un Client cu Rezervare",
     "steps": [
       {
-        "label": "Design și Construcție",
-        "detail": "Site-ul este lansat mai întâi, proiectat și construit integral, înainte ca automatizarea să fie adăugată deasupra."
+        "label": "Planificare Strategică",
+        "detail": "Analizăm poziționarea dvs. pe piață și blocajele din procesul de vânzare pentru a proiecta o infrastructură digitală personalizată, concepută strict pentru conversia premium și încredere."
       },
       {
-        "label": "Semnal",
-        "detail": "Vine un apel, un mesaj, o cerere de rezervare sau un formular trimis."
+        "label": "Inginerie și Automatizare",
+        "detail": "Construim vitrina dvs. digitală ultrarapidă, conectând simultan automatizarea din spate: sistemele de rezervare, CRM-ul și fluxurile de direcționare a leadurilor."
       },
       {
-        "label": "Direcționare",
-        "detail": "Sistemul identifică tipul cererii și o trimite către canalul sau persoana potrivită."
-      },
-      {
-        "label": "Acțiune",
-        "detail": "Pleacă un răspuns, se rezervă un loc, sau se creează o sarcină, în câteva minute."
-      },
-      {
-        "label": "Înregistrare",
-        "detail": "Fiecare interacțiune este înregistrată, astfel încât nimic să nu depindă de memorie."
+        "label": "Implementare și Predare",
+        "detail": "Lansăm ecosistemul dvs. pe o rețea globală de tip edge. Primiți o mașinărie complet automatizată de achiziție a clienților, activă non-stop, care captează și convertește traficul chiar și atunci când dormiți."
       }
     ]
   },

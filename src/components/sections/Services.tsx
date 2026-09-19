@@ -7,11 +7,9 @@ import { deferToNextFrame } from "@/lib/deferredEffect";
 import { useLanguage } from "@/lib/i18n/LanguageContext";
 
 const SECTIONS = [
-  { id: "web-design-building", number: "01", key: "webDesignBuilding" },
-  { id: "lead-automation", number: "02", key: "leadAutomation" },
-  { id: "digital-presence", number: "03", key: "digitalPresence" },
-  { id: "booking-systems", number: "04", key: "bookingSystems" },
-  { id: "brand-print", number: "05", key: "brandPrint" },
+  { id: "digital-storefronts", number: "01", key: "digitalStorefronts" },
+  { id: "automated-booking", number: "02", key: "automatedBooking" },
+  { id: "global-expansion", number: "03", key: "globalExpansion" },
 ];
 
 function ServiceRow({
