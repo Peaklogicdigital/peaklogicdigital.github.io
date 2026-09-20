@@ -95,7 +95,7 @@
         "yearlyPrice": "€490/yr",
         "description": "A custom, fast-loading website built to help you stand out and start capturing leads right away.",
         "features": [
-          "Premium UX/UI Design",
+          "Custom UX/UI Design",
           "Next.js High-Speed Architecture",
           "Technical SEO Baseline",
           "Managed Enterprise Hosting"
@@ -123,14 +123,14 @@
         "features": [
           "Everything in Conversion Engine",
           "Full Multi-Language (EN/ES/CAT/RO) Architecture",
-          "Advanced Bespoke Automations",
+          "Custom Automation Builds",
           "Dedicated Growth Partner"
         ]
       }
     ]
   },
   "bridge": {
-    "heading": "A beautiful website that doesn't answer the phone is just digital art.",
+    "heading": "A beautiful website is just digital art if it never picks up the phone.",
     "body": "We build the art and engineer the infrastructure behind it: the systems that capture the lead, book the table, and get the review, automatically."
   },
   "contact": {
@@ -143,7 +143,7 @@
     "consentSuffix": ".",
     "submit": "Send",
     "submitting": "Sending...",
-    "successHeading": "Transmission Received",
+    "successHeading": "Message Received",
     "successBody": "We'll be in touch shortly.",
     "error": "Something went wrong. Please try again."
   },
