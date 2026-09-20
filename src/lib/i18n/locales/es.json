@@ -12,15 +12,19 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "Escaparates Digitales de Alta Conversión",
-      "body": "Deja de perder clientes por una web anticuada. Diseñamos experiencias web premium y ultrarrápidas que generan confianza al instante y te posicionan como la autoridad indiscutible de tu sector."
+      "body": "Tu web suele ser lo primero que ve un cliente potencial. La construimos rápida, limpia y fácil de usar, para que la gente confíe en ti desde el primer momento en lugar de volver a Google."
     },
     "automatedBooking": {
-      "heading": "Sistemas Automatizados de Leads y Reservas",
-      "body": "Elimina el ir y venir de correos. Integramos herramientas de reserva fluidas y pipelines de CRM automatizados para que tus prospectos cualificados reserven al instante, las 24 horas."
+      "heading": "Sistemas de Reserva Automatizados",
+      "body": "Se acabó eso de escribir correos para encontrar un hueco. Configuramos un sistema de reservas online para que la gente elija su cita cuando le venga bien, a cualquier hora del día."
+    },
+    "leadRouting": {
+      "heading": "Enrutamiento de Leads sin Fugas",
+      "body": "Cuando alguien rellena tu formulario o te escribe, te avisamos al momento y sus datos quedan guardados directamente en tu CRM. Así ningún cliente se queda en el olvido."
     },
     "globalExpansion": {
       "heading": "Expansión a Mercados Globales",
-      "body": "Domina mercados locales e internacionales. Desplegamos arquitecturas multilingües impecables y optimizadas para SEO (inglés, español, catalán, rumano) que multiplican tu alcance al instante."
+      "body": "¿Quieres llegar a clientes en España, Cataluña o Rumanía, además de los que hablan inglés? Construimos tu web en los cuatro idiomas desde el primer día, lista para vender donde estén tus clientes."
     }
   },
   "coreServices": {
@@ -55,16 +59,24 @@
     "heading": "Cómo una Señal se Convierte en un Cliente con Reserva",
     "steps": [
       {
-        "label": "Planificación Estratégica",
-        "detail": "Analizamos tu posicionamiento de mercado y los cuellos de botella en ventas para diseñar una infraestructura digital a medida, pensada estrictamente para la conversión de alto valor y la confianza."
+        "label": "Auditoría y Estrategia",
+        "detail": "Empezamos revisando lo que ya tienes: tu web actual, cómo gestionas las reservas hoy y en qué punto se te están escapando clientes. Después trazamos exactamente qué hay que cambiar."
       },
       {
-        "label": "Ingeniería y Automatización",
-        "detail": "Construimos tu escaparate digital ultrarrápido mientras conectamos, en paralelo, la automatización del backend: tus sistemas de reserva, tu CRM y tus flujos de captación de leads."
+        "label": "Construcción de la Web",
+        "detail": "Diseñamos y construimos tu nueva web con Next.js, un framework moderno pensado para la velocidad. Las páginas cargan casi al instante, así que los visitantes se quedan en lugar de irse."
       },
       {
-        "label": "Despliegue y Entrega",
-        "detail": "Lanzamos tu ecosistema en una red global de última generación. Recibes una máquina de captación de clientes totalmente automatizada, activa 24/7, que capta y convierte tráfico mientras duermes."
+        "label": "Conectamos tu Calendario",
+        "detail": "Configuramos Cal.com para que la gente pueda reservar contigo directamente desde tu web. Eligen el hueco que les viene bien y queda en tu calendario al momento. Sin correos de por medio."
+      },
+      {
+        "label": "Enrutamos cada Lead",
+        "detail": "Con Zapier, cada formulario o reserva te envía un SMS en el momento en que ocurre, y los datos se guardan automáticamente. Nunca más tendrás que buscar un contacto nuevo."
+      },
+      {
+        "label": "Entrega y Lanzamiento",
+        "detail": "Cuando todo está probado y funcionando como debe, te entregamos un sistema terminado. Te llevas una web que funciona y un proceso que funciona, listos para traerte clientes desde el primer día."
       }
     ]
   },

@@ -38,6 +38,7 @@ export default function CustomCursor() {
       }
     }
 
+    applyPosition();
     window.addEventListener("mousemove", handleMouseMove, { passive: true });
     return () => {
       window.removeEventListener("mousemove", handleMouseMove);

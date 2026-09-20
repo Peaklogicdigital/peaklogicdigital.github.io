@@ -12,15 +12,19 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "High-Conversion Digital Storefronts",
-      "body": "Stop losing clients to outdated websites. We engineer premium, blazing-fast web experiences that build instant trust and position you as the undisputed authority in your market."
+      "body": "Your website is often the first thing a potential client sees. We build it fast, clean, and easy to use, so people trust you right away instead of clicking back to Google."
     },
     "automatedBooking": {
-      "heading": "Automated Lead & Booking Systems",
-      "body": "Eliminate back-and-forth emails. We integrate seamless scheduling tools and automated CRM pipelines so qualified prospects can book instantly, 24/7."
+      "heading": "Automated Booking Systems",
+      "body": "No more emailing back and forth to find a time that works. We set up online booking so people can grab a slot on your calendar whenever it suits them, day or night."
+    },
+    "leadRouting": {
+      "heading": "Zero-Leak Lead Routing",
+      "body": "When someone fills out your form or sends a message, you get notified right away, and their details land straight in your CRM. Nobody falls through the cracks."
     },
     "globalExpansion": {
       "heading": "Global Market Expansion",
-      "body": "Dominate local and international markets. We deploy flawless, SEO-optimized multi-language architectures (English, Spanish, Catalan, Romanian) to instantly multiply your reach."
+      "body": "Want to reach customers in Spain, Catalonia, or Romania as well as English speakers? We build your site in all four languages from day one, so you're ready to sell wherever your customers are."
     }
   },
   "coreServices": {
@@ -55,16 +59,24 @@
     "heading": "How a Signal Becomes a Booked Customer",
     "steps": [
       {
-        "label": "Strategic Blueprinting",
-        "detail": "We analyze your market positioning and sales bottlenecks to blueprint a custom digital infrastructure designed strictly for high-ticket conversion and trust."
+        "label": "Audit & Strategy",
+        "detail": "We start by reviewing what you have now: your current website, how bookings happen today, and where leads are slipping through the cracks. Then we map out exactly what needs to change."
       },
       {
-        "label": "Engineering & Automation",
-        "detail": "We build your blazing-fast digital storefront while simultaneously wiring the backend automation—seamlessly connecting your booking systems, CRM, and lead routing pipelines."
+        "label": "Build the Website",
+        "detail": "We design and build your new site using Next.js, a modern framework built for speed. Pages load almost instantly, which keeps visitors on the page instead of clicking away."
       },
       {
-        "label": "Deployment & Handoff",
-        "detail": "We launch your ecosystem on a global edge network. You receive a fully automated, 24/7 client acquisition machine that captures and converts traffic while you sleep."
+        "label": "Connect Your Calendar",
+        "detail": "We set up Cal.com so people can book time with you straight from your website. They pick a slot that works for them, and it lands on your calendar automatically. No emails back and forth."
+      },
+      {
+        "label": "Route Every Lead",
+        "detail": "Using Zapier, every form submission or booking sends you a text message the moment it happens, and the details get saved automatically. You never have to go digging for a new lead."
+      },
+      {
+        "label": "Handover & Launch",
+        "detail": "Once everything is tested and working the way it should, we hand you a finished system. You get a working website and a working process, ready to bring in clients from day one."
       }
     ]
   },

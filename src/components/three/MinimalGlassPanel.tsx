@@ -19,12 +19,14 @@ function Panel() {
   return (
     <RoundedBox ref={meshRef} args={[2.6, 1.7, 0.15]} radius={0.08} smoothness={4}>
       <meshPhysicalMaterial
-        color="#0a0b0e"
-        metalness={0.4}
-        roughness={0.25}
+        color="#e8fbff"
+        transmission={0.9}
+        thickness={0.4}
+        roughness={0.15}
+        ior={1.4}
         clearcoat={1}
-        clearcoatRoughness={0.15}
-        envMapIntensity={1}
+        clearcoatRoughness={0.1}
+        envMapIntensity={1.4}
       />
     </RoundedBox>
   );

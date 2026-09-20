@@ -18,7 +18,7 @@ const CURSOR_FADE_DURATION_S = 0.6;
 const INDEX_CHIPS = [
   { key: "digitalPresence", href: "#digital-storefronts" },
   { key: "bookingSystems", href: "#automated-booking" },
-  { key: "brandPrint", href: "#core-services" },
+  { key: "brandPrint", href: "#lead-routing" },
   { key: "leadAutomation", href: "#global-expansion" },
 ];
 

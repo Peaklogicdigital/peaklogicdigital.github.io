@@ -169,7 +169,7 @@ export default function Contact() {
                 onMouseEnter={() => {
                   if (status !== "loading" && consentChecked) playTone(1100);
                 }}
-                className={`font-body text-white border border-white/20 rounded-full px-8 py-3 mt-4 transition-colors hover:bg-white/10 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-transparent ${FOCUS_RING}`}
+                className={`font-body font-semibold text-zinc-950 bg-cyan-400 rounded-full px-8 py-3 mt-4 transition-colors hover:bg-cyan-300 disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:bg-cyan-400 ${FOCUS_RING}`}
               >
                 {status === "loading" ? t("contact.submitting") : t("contact.submit")}
               </button>

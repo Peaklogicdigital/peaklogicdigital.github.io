@@ -1,7 +1,7 @@
 import Hero from "@/components/sections/Hero";
 import Services from "@/components/sections/Services";
 import CoreServices from "@/components/sections/CoreServices";
-import SelectedWork from "@/components/sections/SelectedWork";
+// import SelectedWork from "@/components/sections/SelectedWork";
 import OperationalFlow from "@/components/sections/OperationalFlow";
 import Pricing from "@/components/sections/Pricing";
 import Bridge from "@/components/sections/Bridge";
@@ -17,7 +17,7 @@ export default function Home() {
         <Hero />
         <Services />
         <CoreServices />
-        <SelectedWork />
+        {/* <SelectedWork /> - hidden until we have live case studies to show */}
         <OperationalFlow />
         <Pricing />
         <Bridge />
