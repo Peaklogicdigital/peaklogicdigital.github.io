@@ -95,7 +95,7 @@
         "yearlyPrice": "€490/año",
         "description": "Una web a medida y rápida, pensada para ayudarte a destacar y empezar a captar clientes potenciales desde ya.",
         "features": [
-          "Diseño UX/UI Premium",
+          "Diseño UX/UI a Medida",
           "Arquitectura Next.js de Alta Velocidad",
           "SEO Técnico de Base",
           "Hosting Empresarial Gestionado"
@@ -123,14 +123,14 @@
         "features": [
           "Todo lo incluido en Motor de Conversión Inteligente",
           "Arquitectura Multilingüe Completa (EN/ES/CAT/RO)",
-          "Automatizaciones Avanzadas a Medida",
+          "Automatizaciones a Medida",
           "Socio de Crecimiento Dedicado"
         ]
       }
     ]
   },
   "bridge": {
-    "heading": "Una web bonita que no contesta al teléfono es solo arte digital.",
+    "heading": "Una web bonita es solo arte digital si nunca contesta al teléfono.",
     "body": "Creamos el arte y diseñamos la infraestructura detrás de él: los sistemas que captan el lead, reservan la mesa y consiguen la reseña, de forma automática."
   },
   "contact": {
@@ -143,7 +143,7 @@
     "consentSuffix": ".",
     "submit": "Enviar",
     "submitting": "Enviando...",
-    "successHeading": "Transmisión Recibida",
+    "successHeading": "Mensaje Recibido",
     "successBody": "Nos pondremos en contacto contigo en breve.",
     "error": "Algo ha salido mal. Por favor, inténtalo de nuevo."
   },

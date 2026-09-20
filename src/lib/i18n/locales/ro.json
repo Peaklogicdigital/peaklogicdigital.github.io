@@ -95,7 +95,7 @@
         "yearlyPrice": "490€/an",
         "description": "Un site personalizat și rapid, conceput să vă ajute să ieșiți în evidență și să începeți să captați clienți potențiali chiar de acum.",
         "features": [
-          "Design UX/UI Premium",
+          "Design UX/UI Personalizat",
           "Arhitectură Next.js de Mare Viteză",
           "Bază Tehnică SEO",
           "Găzduire Enterprise Gestionată"
@@ -123,14 +123,14 @@
         "features": [
           "Tot ce include Motorul Inteligent de Conversie",
           "Arhitectură Multilingvă Completă (EN/ES/CAT/RO)",
-          "Automatizări Avansate Personalizate",
+          "Automatizări Personalizate",
           "Partener Dedicat de Creștere"
         ]
       }
     ]
   },
   "bridge": {
-    "heading": "Un site frumos care nu răspunde la telefon este doar artă digitală.",
+    "heading": "Un site frumos este doar artă digitală dacă nu răspunde niciodată la telefon.",
     "body": "Construim arta și proiectăm infrastructura din spatele ei: sistemele care captează leadul, rezervă masa și obțin recenzia, automat."
   },
   "contact": {

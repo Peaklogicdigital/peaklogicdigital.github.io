@@ -95,7 +95,7 @@
         "yearlyPrice": "€490/any",
         "description": "Una web a mida i ràpida, pensada per ajudar-te a destacar i començar a captar clients potencials des d'ara.",
         "features": [
-          "Disseny UX/UI Premium",
+          "Disseny UX/UI a Mida",
           "Arquitectura Next.js d'Alta Velocitat",
           "SEO Tècnic de Base",
           "Hosting Empresarial Gestionat"
@@ -123,14 +123,14 @@
         "features": [
           "Tot el que inclou el Motor de Conversió Intel·ligent",
           "Arquitectura Multilingüe Completa (EN/ES/CAT/RO)",
-          "Automatitzacions Avançades a Mida",
+          "Automatitzacions a Mida",
           "Soci de Creixement Dedicat"
         ]
       }
     ]
   },
   "bridge": {
-    "heading": "Una web bonica que no contesta el telèfon és només art digital.",
+    "heading": "Una web bonica és només art digital si mai no contesta el telèfon.",
     "body": "Creem l'art i dissenyem la infraestructura que hi ha darrere: els sistemes que capten el lead, reserven la taula i aconsegueixen la ressenya, de manera automàtica."
   },
   "contact": {
@@ -143,7 +143,7 @@
     "consentSuffix": ".",
     "submit": "Enviar",
     "submitting": "Enviant...",
-    "successHeading": "Transmissió Rebuda",
+    "successHeading": "Missatge Rebut",
     "successBody": "Ens posarem en contacte amb tu ben aviat.",
     "error": "Alguna cosa ha fallat. Torna-ho a provar, si us plau."
   },
