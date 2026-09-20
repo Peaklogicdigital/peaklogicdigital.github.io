@@ -60,16 +60,16 @@ export default function OperationalFlow() {
       </div>
 
       <div className="w-full max-w-4xl">
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-2 w-full">
+        <div className="grid grid-cols-1 sm:grid-cols-5 gap-3 w-full items-stretch">
           {Array.from({ length: FLOW_STEP_COUNT }, (_, index) => {
             const isActive = index === activeIndex;
             return (
-              <Magnetic key={index} className="block w-full" radius={30} strength={8}>
+              <Magnetic key={index} className="block w-full h-full" radius={30} strength={8}>
                 <button
                   type="button"
                   onClick={() => setActiveIndex(index)}
                   onMouseEnter={() => setActiveIndex(index)}
-                  className={`w-full text-center rounded-xl border px-3 py-4 transition-colors ${
+                  className={`w-full h-full min-h-[72px] flex flex-col items-center justify-center text-center px-3 py-3 box-border rounded-xl border transition-colors ${
                     isActive
                       ? "border-cyan-400/60 bg-cyan-400/10"
                       : "border-white/10 bg-white/5 hover:border-white/25"
