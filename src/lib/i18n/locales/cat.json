@@ -64,15 +64,15 @@
       },
       {
         "label": "Construcció de la Web",
-        "detail": "Dissenyem i construïm la teva nova web amb Next.js, un framework modern pensat per a la velocitat. Les pàgines carreguen gairebé a l'instant, així els visitants es queden en comptes de marxar."
+        "detail": "Dissenyem i construïm la teva nova web perquè carregui ràpid i sigui senzilla de fer servir. Les pàgines apareixen gairebé a l'instant, així els visitants es queden en comptes de marxar."
       },
       {
         "label": "Connectem el teu Calendari",
-        "detail": "Configurem Cal.com perquè la gent pugui reservar amb tu directament des de la teva web. Trien el moment que els va bé i queda al teu calendari a l'instant. Sense correus pel mig."
+        "detail": "Configurem una integració de reserves fluida perquè la gent pugui reservar amb tu directament des de la teva web. Trien el moment que els va bé i queda al teu calendari a l'instant. Sense correus pel mig."
       },
       {
         "label": "Enrutem cada Lead",
-        "detail": "Amb Zapier, cada formulari o reserva t'envia un SMS en el moment en què passa, i les dades es desen automàticament. Mai més hauràs de buscar un contacte nou."
+        "detail": "Cada formulari o reserva activa un enrutament automàtic de leads: reps un SMS en el moment en què passa, i les dades es desen automàticament. Mai més hauràs de buscar un contacte nou."
       },
       {
         "label": "Lliurament i Llançament",
