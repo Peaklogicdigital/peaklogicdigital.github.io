@@ -2,33 +2,39 @@
 
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
-import { RoundedBox } from "@react-three/drei";
-import type { Mesh } from "three";
+import type { Group, Mesh } from "three";
 import MiniCanvas from "./MiniCanvas";
 
 function Panel() {
+  const groupRef = useRef<Group>(null);
   const meshRef = useRef<Mesh>(null);
 
-  useFrame((state) => {
+  useFrame((state, delta) => {
+    if (groupRef.current) {
+      groupRef.current.rotation.y += delta * 0.2;
+    }
     if (meshRef.current) {
-      meshRef.current.rotation.y = Math.sin(state.clock.elapsedTime * 0.15) * 0.25;
-      meshRef.current.rotation.x = Math.cos(state.clock.elapsedTime * 0.12) * 0.08;
+      meshRef.current.position.y = Math.sin(state.clock.elapsedTime * 0.6) * 0.12;
     }
   });
 
   return (
-    <RoundedBox ref={meshRef} args={[2.6, 1.7, 0.15]} radius={0.08} smoothness={4}>
-      <meshPhysicalMaterial
-        color="#e8fbff"
-        transmission={0.9}
-        thickness={0.4}
-        roughness={0.15}
-        ior={1.4}
-        clearcoat={1}
-        clearcoatRoughness={0.1}
-        envMapIntensity={1.4}
-      />
-    </RoundedBox>
+    <group ref={groupRef}>
+      <pointLight position={[0, 0, 0.6]} intensity={2.2} color="#00e5ff" distance={4} />
+      <mesh ref={meshRef} rotation={[Math.PI / 2.4, 0, 0]}>
+        <torusGeometry args={[1, 0.4, 32, 128]} />
+        <meshPhysicalMaterial
+          color="#ffffff"
+          transmission={1}
+          thickness={0.5}
+          roughness={0.1}
+          ior={1.5}
+          clearcoat={1}
+          clearcoatRoughness={0.1}
+          envMapIntensity={1.4}
+        />
+      </mesh>
+    </group>
   );
 }
 

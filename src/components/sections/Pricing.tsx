@@ -18,7 +18,7 @@ function CheckIcon() {
     <svg
       viewBox="0 0 20 20"
       fill="none"
-      className="w-4 h-4 shrink-0 mt-0.5 text-cyan-400"
+      className="w-5 h-5 shrink-0 mt-0.5 text-cyan-400"
       aria-hidden="true"
     >
       <path

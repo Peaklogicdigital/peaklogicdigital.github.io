@@ -64,15 +64,15 @@
       },
       {
         "label": "Construcción de la Web",
-        "detail": "Diseñamos y construimos tu nueva web con Next.js, un framework moderno pensado para la velocidad. Las páginas cargan casi al instante, así que los visitantes se quedan en lugar de irse."
+        "detail": "Diseñamos y construimos tu nueva web para que cargue rápido y sea sencilla de usar. Las páginas aparecen casi al instante, así que los visitantes se quedan en lugar de irse."
       },
       {
         "label": "Conectamos tu Calendario",
-        "detail": "Configuramos Cal.com para que la gente pueda reservar contigo directamente desde tu web. Eligen el hueco que les viene bien y queda en tu calendario al momento. Sin correos de por medio."
+        "detail": "Configuramos una integración de reservas fluida para que la gente pueda reservar contigo directamente desde tu web. Eligen el hueco que les viene bien y queda en tu calendario al momento. Sin correos de por medio."
       },
       {
         "label": "Enrutamos cada Lead",
-        "detail": "Con Zapier, cada formulario o reserva te envía un SMS en el momento en que ocurre, y los datos se guardan automáticamente. Nunca más tendrás que buscar un contacto nuevo."
+        "detail": "Cada formulario o reserva activa un enrutamiento automático de leads: recibes un SMS en el momento en que ocurre, y los datos se guardan automáticamente. Nunca más tendrás que buscar un contacto nuevo."
       },
       {
         "label": "Entrega y Lanzamiento",
