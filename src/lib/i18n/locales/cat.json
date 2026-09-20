@@ -12,15 +12,19 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "Aparadors Digitals d'Alta Conversió",
-      "body": "Deixa de perdre clients per una web obsoleta. Dissenyem experiències web premium i ultraràpides que generen confiança a l'instant i et posicionen com l'autoritat indiscutible del teu sector."
+      "body": "La teva web sol ser el primer que veu un client potencial. La construïm ràpida, neta i fàcil d'utilitzar, perquè la gent confiï en tu des del primer moment en comptes de tornar a Google."
     },
     "automatedBooking": {
-      "heading": "Sistemes Automatitzats de Leads i Reserves",
-      "body": "Elimina l'anar i venir de correus. Integrem eines de reserva fluides i pipelines de CRM automatitzats perquè els teus prospectes qualificats reservin a l'instant, les 24 hores."
+      "heading": "Sistemes de Reserva Automatitzats",
+      "body": "S'ha acabat allò d'escriure correus per trobar un forat. Configurem un sistema de reserves en línia perquè la gent triï la seva cita quan els vagi bé, a qualsevol hora del dia."
+    },
+    "leadRouting": {
+      "heading": "Enrutament de Leads sense Fugues",
+      "body": "Quan algú omple el teu formulari o t'escriu, t'avisem a l'instant i les seves dades queden desades directament al teu CRM. Així cap client no es queda en l'oblit."
     },
     "globalExpansion": {
       "heading": "Expansió a Mercats Globals",
-      "body": "Domina mercats locals i internacionals. Despleguem arquitectures multilingües impecables i optimitzades per SEO (anglès, espanyol, català, romanès) que multipliquen el teu abast a l'instant."
+      "body": "Vols arribar a clients a Espanya, Catalunya o Romania, a més dels que parlen anglès? Construïm la teva web en els quatre idiomes des del primer dia, a punt per vendre allà on siguin els teus clients."
     }
   },
   "coreServices": {
@@ -55,16 +59,24 @@
     "heading": "Com un Senyal es Converteix en un Client amb Reserva",
     "steps": [
       {
-        "label": "Planificació Estratègica",
-        "detail": "Analitzem el teu posicionament de mercat i els colls d'ampolla en vendes per dissenyar una infraestructura digital a mida, pensada estrictament per a la conversió d'alt valor i la confiança."
+        "label": "Auditoria i Estratègia",
+        "detail": "Comencem revisant el que ja tens: la teva web actual, com gestiones les reserves ara mateix i en quin punt se t'estan escapant clients. Després tracem exactament què cal canviar."
       },
       {
-        "label": "Enginyeria i Automatització",
-        "detail": "Construïm el teu aparador digital ultraràpid mentre connectem, en paral·lel, l'automatització del backend: els teus sistemes de reserva, el teu CRM i els teus fluxos de captació de leads."
+        "label": "Construcció de la Web",
+        "detail": "Dissenyem i construïm la teva nova web amb Next.js, un framework modern pensat per a la velocitat. Les pàgines carreguen gairebé a l'instant, així els visitants es queden en comptes de marxar."
       },
       {
-        "label": "Desplegament i Lliurament",
-        "detail": "Llancem el teu ecosistema en una xarxa global d'última generació. Reps una màquina de captació de clients totalment automatitzada, activa 24/7, que capta i converteix trànsit mentre dorms."
+        "label": "Connectem el teu Calendari",
+        "detail": "Configurem Cal.com perquè la gent pugui reservar amb tu directament des de la teva web. Trien el moment que els va bé i queda al teu calendari a l'instant. Sense correus pel mig."
+      },
+      {
+        "label": "Enrutem cada Lead",
+        "detail": "Amb Zapier, cada formulari o reserva t'envia un SMS en el moment en què passa, i les dades es desen automàticament. Mai més hauràs de buscar un contacte nou."
+      },
+      {
+        "label": "Lliurament i Llançament",
+        "detail": "Quan tot està provat i funciona com toca, et lliurem un sistema acabat. T'enduus una web que funciona i un procés que funciona, a punt per portar-te clients des del primer dia."
       }
     ]
   },

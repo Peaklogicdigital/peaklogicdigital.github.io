@@ -12,15 +12,19 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "Vitrine Digitale cu Conversie Ridicată",
-      "body": "Nu mai pierdeți clienți din cauza unui site învechit. Construim experiențe web premium, extrem de rapide, care generează încredere instantanee și vă poziționează drept autoritatea de necontestat în domeniul dvs."
+      "body": "Site-ul dvs. este adesea primul lucru pe care îl vede un client potențial. Îl construim rapid, curat și ușor de folosit, ca oamenii să aibă încredere în dvs. din prima clipă, în loc să se întoarcă pe Google."
     },
     "automatedBooking": {
-      "heading": "Sisteme Automatizate de Leaduri și Rezervări",
-      "body": "Eliminați schimbul nesfârșit de emailuri. Integrăm instrumente de programare fluide și pipeline-uri CRM automatizate, astfel încât prospecții calificați să poată rezerva instant, non-stop."
+      "heading": "Sisteme de Rezervare Automatizate",
+      "body": "Gata cu emailurile trimise înainte și înapoi ca să găsiți o oră potrivită. Configurăm rezervări online, astfel încât clienții să își aleagă singuri o oră din calendarul dvs., oricând le convine."
+    },
+    "leadRouting": {
+      "heading": "Direcționare Leaduri fără Pierderi",
+      "body": "Când cineva completează formularul sau vă scrie, sunteți anunțat imediat, iar datele ajung direct în CRM-ul dvs. Așa nu mai pierdeți niciun client pe drum."
     },
     "globalExpansion": {
       "heading": "Expansiune pe Piețe Globale",
-      "body": "Dominați piețele locale și internaționale. Implementăm arhitecturi impecabile, multilingve și optimizate SEO (engleză, spaniolă, catalană, română) care vă multiplică instant vizibilitatea."
+      "body": "Vreți să ajungeți la clienți din Spania, Catalonia sau România, pe lângă cei vorbitori de engleză? Construim site-ul dvs. în toate cele patru limbi chiar de la început, gata să vindeți oriunde se află clienții dvs."
     }
   },
   "coreServices": {
@@ -55,16 +59,24 @@
     "heading": "Cum Devine un Semnal un Client cu Rezervare",
     "steps": [
       {
-        "label": "Planificare Strategică",
-        "detail": "Analizăm poziționarea dvs. pe piață și blocajele din procesul de vânzare pentru a proiecta o infrastructură digitală personalizată, concepută strict pentru conversia premium și încredere."
+        "label": "Analiză și Strategie",
+        "detail": "Începem prin a analiza ce aveți deja: site-ul actual, modul în care se fac rezervările acum și punctele unde pierdeți clienți. Apoi stabilim exact ce trebuie schimbat."
       },
       {
-        "label": "Inginerie și Automatizare",
-        "detail": "Construim vitrina dvs. digitală ultrarapidă, conectând simultan automatizarea din spate: sistemele de rezervare, CRM-ul și fluxurile de direcționare a leadurilor."
+        "label": "Construim Site-ul",
+        "detail": "Proiectăm și construim noul dvs. site folosind Next.js, un framework modern conceput pentru viteză. Paginile se încarcă aproape instant, ceea ce îi ține pe vizitatori pe pagină în loc să plece."
       },
       {
-        "label": "Implementare și Predare",
-        "detail": "Lansăm ecosistemul dvs. pe o rețea globală de tip edge. Primiți o mașinărie complet automatizată de achiziție a clienților, activă non-stop, care captează și convertește traficul chiar și atunci când dormiți."
+        "label": "Conectăm Calendarul",
+        "detail": "Configurăm Cal.com, astfel încât oamenii să poată rezerva o oră direct de pe site-ul dvs. Aleg un moment care li se potrivește, iar acesta apare automat în calendarul dvs. Fără emailuri trimise înainte și înapoi."
+      },
+      {
+        "label": "Direcționăm Fiecare Lead",
+        "detail": "Prin Zapier, fiecare formular completat sau rezervare vă trimite un SMS chiar în acel moment, iar datele se salvează automat. Nu mai trebuie să căutați un contact nou."
+      },
+      {
+        "label": "Predare și Lansare",
+        "detail": "După ce totul este testat și funcționează corect, vă predăm un sistem complet. Primiți un site funcțional și un proces funcțional, gata să aducă clienți din prima zi."
       }
     ]
   },

@@ -9,7 +9,8 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 const SECTIONS = [
   { id: "digital-storefronts", number: "01", key: "digitalStorefronts" },
   { id: "automated-booking", number: "02", key: "automatedBooking" },
-  { id: "global-expansion", number: "03", key: "globalExpansion" },
+  { id: "lead-routing", number: "03", key: "leadRouting" },
+  { id: "global-expansion", number: "04", key: "globalExpansion" },
 ];
 
 function ServiceRow({
