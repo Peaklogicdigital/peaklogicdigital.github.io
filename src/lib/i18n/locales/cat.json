@@ -1,7 +1,7 @@
 {
   "meta": { "name": "Català", "short": "CAT" },
   "hero": {
-    "subtitle": "Infraestructura de Màrqueting Intel·ligent. Creem aparadors digitals d'alta conversió i sistemes de captació automatitzats que converteixen el teu trànsit en clients d'alt valor, mentre dorms.",
+    "subtitle": "Creem webs d'alta conversió i sistemes de captació automatitzats que converteixen el teu trànsit en clients d'alt valor, fins i tot mentre dorms.",
     "chips": {
       "digitalPresence": "Disseny Web de Conversió",
       "bookingSystems": "Reserves Automatitzades",
@@ -12,7 +12,7 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "Aparadors Digitals d'Alta Conversió",
-      "body": "La teva web sol ser el primer que veu un client potencial. La construïm ràpida, neta i fàcil d'utilitzar, perquè la gent confiï en tu des del primer moment en comptes de tornar a Google."
+      "body": "La teva web sol ser el primer que veu un client potencial. La construïm ràpida i fàcil d'utilitzar, perquè la gent confiï en tu des del primer moment en comptes de tornar a Google."
     },
     "automatedBooking": {
       "heading": "Sistemes de Reserva Automatitzats",
@@ -33,19 +33,19 @@
     "items": [
       {
         "title": "Aparadors Digitals d'Alta Conversió",
-        "description": "Deixa de perdre clients per una web obsoleta. Dissenyem experiències web premium i ultraràpides que generen confiança a l'instant i et posicionen com l'autoritat indiscutible del teu sector."
+        "description": "Una web obsoleta et costa clients abans que ni tan sols despengin el telèfon. Construïm llocs ràpids i polits que generen confiança des del primer segon."
       },
       {
         "title": "Sistemes de Reserva Automatitzats",
-        "description": "Elimina l'interminable anar i venir de correus. Integrem eines de reserva fluides perquè els teus prospectes qualificats reservin consultes directament al teu calendari, les 24 hores."
+        "description": "S'ha acabat l'anar i venir de correus per trobar un forat. Connectem la teva web a eines de reserva perquè els teus prospectes reservin una consulta directament al teu calendari, a qualsevol hora."
       },
       {
         "title": "Enrutament de Leads sense Fugues",
-        "description": "No deixis mai que un lead calent es refredi. Connectem la teva web a fluxos automatitzats que t'avisen a l'instant per SMS i registren cada consulta al teu CRM en el moment exacte en què un prospecte contacta."
+        "description": "Un lead calent que espera massa es refreda. Connectem la teva web a fluxos automatitzats que t'avisen per SMS en el moment en què algú et contacta i registren cada consulta al teu CRM."
       },
       {
         "title": "Expansió a Mercats Globals",
-        "description": "Domina mercats locals i internacionals. Despleguem arquitectures multilingües impecables i optimitzades per SEO (anglès, espanyol, català, romanès) que multipliquen el teu abast a l'instant."
+        "description": "Construïm la teva web en anglès, espanyol, català i romanès, cadascuna optimitzada per a cercadors, perquè arribis a clients locals i internacionals des del primer dia."
       }
     ]
   },
@@ -68,7 +68,7 @@
       },
       {
         "label": "Connectem el teu Calendari",
-        "detail": "Configurem una integració de reserves fluida perquè la gent pugui reservar amb tu directament des de la teva web. Trien el moment que els va bé i queda al teu calendari a l'instant. Sense correus pel mig."
+        "detail": "Connectem una eina de reserves a la teva web perquè la gent pugui reservar amb tu directament. Trien el moment que els va bé i queda al teu calendari a l'instant. Sense correus pel mig."
       },
       {
         "label": "Enrutem cada Lead",
@@ -93,7 +93,7 @@
         "buildPrice": "€950",
         "monthlyPrice": "€49/mes",
         "yearlyPrice": "€490/any",
-        "description": "Una presència digital a mida i ultraràpida, dissenyada per establir un domini de mercat immediat i captar clients potencials.",
+        "description": "Una web a mida i ràpida, pensada per ajudar-te a destacar i començar a captar clients potencials des d'ara.",
         "features": [
           "Disseny UX/UI Premium",
           "Arquitectura Next.js d'Alta Velocitat",
@@ -106,7 +106,7 @@
         "buildPrice": "€1.450",
         "monthlyPrice": "€89/mes",
         "yearlyPrice": "€890/any",
-        "description": "El sistema de captació complet i sense esforç. La presència digital premium, més reserves automatitzades al teu calendari i enrutament instantani de leads.",
+        "description": "Un sistema sense esforç per guanyar clients nous: tot el que inclou Fonament d'Autoritat, més reserves automatitzades al teu calendari i enrutament instantani de leads.",
         "features": [
           "Tot el que inclou Fonament d'Autoritat",
           "Integració de Calendari Automatitzada",
@@ -119,7 +119,7 @@
         "buildPrice": "€2.450",
         "monthlyPrice": "€149/mes",
         "yearlyPrice": "€1.490/any",
-        "description": "L'actiu escalable definitiu. Potenciat amb una arquitectura multilingüe global per capturar quota de mercat local i internacional.",
+        "description": "Una web escalable i multilingüe, pensada per competir alhora en mercats locals i internacionals.",
         "features": [
           "Tot el que inclou el Motor de Conversió Intel·ligent",
           "Arquitectura Multilingüe Completa (EN/ES/CAT/RO)",
@@ -131,7 +131,7 @@
   },
   "bridge": {
     "heading": "Una web bonica que no contesta el telèfon és només art digital.",
-    "body": "Nosaltres creem l'art, però dissenyem la infraestructura. Captem el lead, reservem la taula, assegurem la ressenya. Automàticament."
+    "body": "Creem l'art i dissenyem la infraestructura que hi ha darrere: els sistemes que capten el lead, reserven la taula i aconsegueixen la ressenya, de manera automàtica."
   },
   "contact": {
     "heading": "Consulta de Projecte",
@@ -214,13 +214,13 @@
     "terms": {
       "title": "Termes de Servei",
       "date": "setembre de 2026",
-      "intro": "Aquests termes cobreixen dues coses: l'ús d'aquest lloc web i, a grans trets, la contractació de PeakLogic Digital per a una feina. Els detalls de qualsevol projecte concret —abast, preu, terminis— s'acorden per separat i per escrit abans de començar la feina; res del que hi ha aquí substitueix aquest acord.",
+      "intro": "Aquests termes cobreixen dues coses: l'ús d'aquest lloc web i, a grans trets, la contractació de PeakLogic Digital per a una feina. Els detalls de qualsevol projecte concret (abast, preu, terminis) s'acorden per separat i per escrit abans de començar la feina; res del que hi ha aquí substitueix aquest acord.",
       "usingHeading": "Ús d'aquest lloc web",
       "usingText": "Ets benvingut a navegar, llegir i posar-te en contacte mitjançant el formulari. Et compromets a no utilitzar el lloc per a res il·lícit, a no intentar interrompre'l ni accedir-hi sense autorització ni als sistemes que el sustenten, i a no extreure'l ni recopilar-lo massivament sense el nostre permís.",
       "offerHeading": "Què oferim",
       "offerText": "PeakLogic Digital dissenya i construeix llocs web, i hi afegeix sistemes de suport, gestió de presència digital, integracions de reserva, feina de marca i impressió, i automatització de resposta a leads, tal com es descriu en altres parts d'aquest lloc. Els preus mostrats al lloc són orientatius i poden canviar; el preu de la feina real és el que es confirmi per escrit abans de començar.",
       "ipHeading": "Propietat intel·lectual",
-      "ipText": "El disseny, el codi i el contingut d'aquest lloc web pertanyen a PeakLogic Digital llevat que s'indiqui el contrari. Els lliurables produïts per a un projecte de client —el propi lloc del client, els seus actius de marca i similars— es regeixen pels termes de propietat de l'acord d'aquell projecte, no per aquesta pàgina.",
+      "ipText": "El disseny, el codi i el contingut d'aquest lloc web pertanyen a PeakLogic Digital llevat que s'indiqui el contrari. Els lliurables produïts per a un projecte de client (el propi lloc del client, els seus actius de marca i similars) es regeixen pels termes de propietat de l'acord d'aquell projecte, no per aquesta pàgina.",
       "warrantyHeading": "Sense garantia",
       "warrantyText": "Aquest lloc web s'ofereix tal com és. Intentem mantenir-lo precís i disponible, però no garantim que estigui lliure d'interrupcions, sense errors, o adequat per a una finalitat concreta, i no som responsables dels problemes derivats del teu ús, en la mesura que la llei ens permeti limitar aquesta responsabilitat.",
       "changesHeading": "Canvis en aquests termes",
@@ -236,7 +236,7 @@
       "intro": "Aquest lloc no instal·la actualment cap cookie de seguiment o publicitat. Això és exactament el que emmagatzema i les opcions que tens.",
       "useHeading": "Què fem servir realment",
       "useStrong": "Preferència de consentiment de cookies.",
-      "useText": " Quan tries \"Acceptar-ho Tot\", \"Només l'Essencial\", o desa preferències al bàner de cookies, aquesta elecció es desa a l'emmagatzematge local del teu navegador —no una cookie— únicament perquè no t'ho tornem a preguntar a la teva pròxima visita. Mai no surt del teu navegador.",
+      "useText": " Quan tries \"Acceptar-ho Tot\", \"Només l'Essencial\", o desa preferències al bàner de cookies, aquesta elecció es desa a l'emmagatzematge local del teu navegador (no una cookie) únicament perquè no t'ho tornem a preguntar a la teva pròxima visita. Mai no surt del teu navegador.",
       "useOnly": "Això és l'única cosa que aquest lloc emmagatzema al teu navegador ara mateix. No hi ha cap script d'analítiques, publicitat o seguiment de tercers en funcionament.",
       "changeHeading": "Si això canvia",
       "changeText": "Les opcions \"Acceptar-ho Tot\" i \"Preferències\" del bàner existeixen perquè, si en el futur afegim una eina d'analítiques (per entendre el trànsit i millorar el lloc), aquesta només s'activarà per als visitants que hi hagin consentit, mai per defecte. Aquesta pàgina s'actualitzarà per anomenar l'eina i el que emmagatzema abans que això passi.",

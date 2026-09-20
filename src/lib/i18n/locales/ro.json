@@ -1,7 +1,7 @@
 {
   "meta": { "name": "Română", "short": "RO" },
   "hero": {
-    "subtitle": "Infrastructură Inteligentă de Marketing. Construim vitrine digitale cu conversie ridicată și sisteme automate de generare a leadurilor care transformă traficul dvs. în clienți premium — chiar și atunci când dormiți.",
+    "subtitle": "Construim site-uri cu conversie ridicată și sisteme automate de generare a leadurilor care transformă traficul dvs. în clienți premium, chiar și atunci când dormiți.",
     "chips": {
       "digitalPresence": "Design Web pentru Conversie",
       "bookingSystems": "Rezervări Automatizate",
@@ -12,7 +12,7 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "Vitrine Digitale cu Conversie Ridicată",
-      "body": "Site-ul dvs. este adesea primul lucru pe care îl vede un client potențial. Îl construim rapid, curat și ușor de folosit, ca oamenii să aibă încredere în dvs. din prima clipă, în loc să se întoarcă pe Google."
+      "body": "Site-ul dvs. este adesea primul lucru pe care îl vede un client potențial. Îl construim rapid și ușor de folosit, ca oamenii să aibă încredere în dvs. din prima clipă, în loc să se întoarcă pe Google."
     },
     "automatedBooking": {
       "heading": "Sisteme de Rezervare Automatizate",
@@ -33,19 +33,19 @@
     "items": [
       {
         "title": "Vitrine Digitale cu Conversie Ridicată",
-        "description": "Nu mai pierdeți clienți din cauza unui site învechit. Construim experiențe web premium, extrem de rapide, care generează încredere instantanee și vă poziționează drept autoritatea de necontestat în domeniul dvs."
+        "description": "Un site învechit vă costă clienți înainte să apuce să ridice telefonul. Construim site-uri rapide și îngrijite care câștigă încrederea din prima secundă."
       },
       {
         "title": "Sisteme de Rezervare Automatizate",
-        "description": "Eliminați schimbul nesfârșit de emailuri. Integrăm instrumente de programare fluide, astfel încât prospecții calificați să poată rezerva consultații direct în calendarul dvs., non-stop."
+        "description": "Gata cu schimbul nesfârșit de emailuri. Vă conectăm site-ul la instrumente de programare, astfel încât prospecții să poată rezerva o consultație direct în calendarul dvs., oricând."
       },
       {
         "title": "Direcționare Leaduri fără Pierderi",
-        "description": "Nu lăsați niciodată un lead fierbinte să se răcească. Vă conectăm site-ul la fluxuri automate care vă notifică instant prin SMS și înregistrează fiecare solicitare în CRM chiar în momentul în care un prospect vă contactează."
+        "description": "Un lead fierbinte care așteaptă prea mult se răcește. Vă conectăm site-ul la fluxuri automate care vă trimit un SMS chiar în momentul în care cineva vă contactează și înregistrează fiecare solicitare în CRM."
       },
       {
         "title": "Expansiune pe Piețe Globale",
-        "description": "Dominați piețele locale și internaționale. Implementăm arhitecturi impecabile, multilingve și optimizate SEO (engleză, spaniolă, catalană, română) care vă multiplică instant vizibilitatea."
+        "description": "Vă construim site-ul în engleză, spaniolă, catalană și română, fiecare variantă optimizată pentru motoarele de căutare, ca să ajungeți la clienți locali și internaționali chiar de la început."
       }
     ]
   },
@@ -68,7 +68,7 @@
       },
       {
         "label": "Conectăm Calendarul",
-        "detail": "Configurăm o integrare de programări fără fricțiuni, astfel încât oamenii să poată rezerva o oră direct de pe site-ul dvs. Aleg un moment care li se potrivește, iar acesta apare automat în calendarul dvs. Fără emailuri trimise înainte și înapoi."
+        "detail": "Conectăm un instrument de rezervări la site-ul dvs., astfel încât oamenii să poată rezerva o oră direct cu dvs. Aleg un moment care li se potrivește, iar acesta apare automat în calendarul dvs. Fără emailuri trimise înainte și înapoi."
       },
       {
         "label": "Direcționăm Fiecare Lead",
@@ -93,7 +93,7 @@
         "buildPrice": "950€",
         "monthlyPrice": "49€/lună",
         "yearlyPrice": "490€/an",
-        "description": "O prezență digitală personalizată și extrem de rapidă, concepută pentru a stabili instant dominația pe piață și a capta clienți potențiali.",
+        "description": "Un site personalizat și rapid, conceput să vă ajute să ieșiți în evidență și să începeți să captați clienți potențiali chiar de acum.",
         "features": [
           "Design UX/UI Premium",
           "Arhitectură Next.js de Mare Viteză",
@@ -106,7 +106,7 @@
         "buildPrice": "1.450€",
         "monthlyPrice": "89€/lună",
         "yearlyPrice": "890€/an",
-        "description": "Sistemul complet de achiziție, fără niciun efort din partea dvs. Prezența digitală premium, plus rezervări automate în calendar și direcționare instantanee a leadurilor.",
+        "description": "Un sistem fără efort pentru a câștiga clienți noi: tot ce include Fundația Autorității, plus rezervări automate în calendar și direcționare instantanee a leadurilor.",
         "features": [
           "Tot ce include Fundația Autorității",
           "Integrare Automată a Calendarului",
@@ -119,7 +119,7 @@
         "buildPrice": "2.450€",
         "monthlyPrice": "149€/lună",
         "yearlyPrice": "1.490€/an",
-        "description": "Activul scalabil suprem. Potențat cu o arhitectură multilingvă globală pentru a capta cotă de piață locală și internațională.",
+        "description": "Un site scalabil și multilingv, conceput să vă ajute să concurați simultan pe piețele locale și internaționale.",
         "features": [
           "Tot ce include Motorul Inteligent de Conversie",
           "Arhitectură Multilingvă Completă (EN/ES/CAT/RO)",
@@ -131,7 +131,7 @@
   },
   "bridge": {
     "heading": "Un site frumos care nu răspunde la telefon este doar artă digitală.",
-    "body": "Noi construim arta, dar proiectăm infrastructura. Captăm leadul, rezervăm masa, asigurăm recenzia. Automat."
+    "body": "Construim arta și proiectăm infrastructura din spatele ei: sistemele care captează leadul, rezervă masa și obțin recenzia, automat."
   },
   "contact": {
     "heading": "Solicitare Proiect",
@@ -203,7 +203,7 @@
       ],
       "rightsOutro": "Trimiteți această solicitare prin formularul de contact de pe pagina principală, incluzând suficiente detalii (precum adresa de email folosită) pentru a vă putea găsi înregistrarea.",
       "securityHeading": "Securitate",
-      "securityText": "Acest site este servit integral prin HTTPS. Nu operăm propria bază de date cu vizitatori — singurul loc unde există detaliile solicitărilor este căsuța de mesaje către care sunt livrate și, temporar, sistemele Web3Forms în timpul livrării.",
+      "securityText": "Acest site este servit integral prin HTTPS. Nu operăm propria bază de date cu vizitatori: singurul loc unde există detaliile solicitărilor este căsuța de mesaje către care sunt livrate și, temporar, sistemele Web3Forms în timpul livrării.",
       "changesHeading": "Modificări ale acestei politici",
       "changesText": "Dacă schimbăm în mod semnificativ ce colectăm sau de ce, vom actualiza data din partea de sus a acestei pagini.",
       "contactHeading": "Contact",
@@ -214,13 +214,13 @@
     "terms": {
       "title": "Termeni și Condiții",
       "date": "septembrie 2026",
-      "intro": "Acești termeni acoperă două lucruri: folosirea acestui site web și, la un nivel general, angajarea PeakLogic Digital pentru un proiect. Detaliile oricărui proiect concret — scop, preț, termene — se stabilesc separat, în scris, înainte de începerea lucrului; nimic de aici nu înlocuiește acel acord.",
+      "intro": "Acești termeni acoperă două lucruri: folosirea acestui site web și, la un nivel general, angajarea PeakLogic Digital pentru un proiect. Detaliile oricărui proiect concret (scop, preț, termene) se stabilesc separat, în scris, înainte de începerea lucrului; nimic de aici nu înlocuiește acel acord.",
       "usingHeading": "Folosirea acestui site web",
       "usingText": "Sunteți binevenit să navigați, să citiți și să ne contactați prin formular. Sunteți de acord să nu folosiți site-ul pentru nimic ilegal, să nu încercați să îl perturbați sau să obțineți acces neautorizat la el sau la sistemele din spate, și să nu îl extrageți sau colectați la scară largă fără permisiunea noastră.",
       "offerHeading": "Ce oferim",
       "offerText": "PeakLogic Digital proiectează și construiește site-uri web, și adaugă sisteme de suport, gestionarea prezenței digitale, integrări de rezervare, lucrări de brand și print, și automatizarea răspunsului la leaduri, așa cum este descris în alte părți ale site-ului. Prețurile afișate pe site sunt orientative și se pot modifica; prețul pentru lucrarea efectivă este cel confirmat în scris înainte de începerea acesteia.",
       "ipHeading": "Proprietate intelectuală",
-      "ipText": "Designul, codul și conținutul acestui site web aparțin PeakLogic Digital, cu excepția cazurilor menționate altfel. Livrabilele produse pentru un proiect de client — site-ul propriu al clientului, materialele de brand și similare — sunt guvernate de termenii de proprietate din acordul acelui proiect, nu de această pagină.",
+      "ipText": "Designul, codul și conținutul acestui site web aparțin PeakLogic Digital, cu excepția cazurilor menționate altfel. Livrabilele produse pentru un proiect de client (site-ul propriu al clientului, materialele de brand și similare) sunt guvernate de termenii de proprietate din acordul acelui proiect, nu de această pagină.",
       "warrantyHeading": "Fără garanție",
       "warrantyText": "Acest site web este oferit ca atare. Încercăm să îl menținem corect și disponibil, dar nu garantăm că va fi neîntrerupt, fără erori sau potrivit pentru un anumit scop, și nu suntem răspunzători pentru problemele apărute din folosirea lui, în măsura în care legea ne permite să limităm această răspundere.",
       "changesHeading": "Modificări ale acestor termeni",
@@ -236,10 +236,10 @@
       "intro": "Acest site nu setează în prezent niciun cookie de urmărire sau publicitate. Iată exact ce stochează și ce opțiuni aveți.",
       "useHeading": "Ce folosim de fapt",
       "useStrong": "Preferința de consimțământ pentru cookie-uri.",
-      "useText": " Când alegeți \"Acceptă Tot\", \"Doar Esențiale\", sau salvați preferințele în bannerul de cookie-uri, acea alegere este salvată în stocarea locală a browserului vostru — nu un cookie — pur și simplu ca să nu vă întrebăm din nou la următoarea vizită. Nu părăsește niciodată browserul vostru.",
+      "useText": " Când alegeți \"Acceptă Tot\", \"Doar Esențiale\", sau salvați preferințele în bannerul de cookie-uri, acea alegere este salvată în stocarea locală a browserului vostru (nu un cookie) pur și simplu ca să nu vă întrebăm din nou la următoarea vizită. Nu părăsește niciodată browserul vostru.",
       "useOnly": "Acesta este singurul lucru pe care acest site îl stochează în browserul vostru în acest moment. Nu rulează niciun script de analiză, publicitate sau urmărire de la terți.",
       "changeHeading": "Dacă acest lucru se schimbă",
-      "changeText": "Opțiunile \"Acceptă Tot\" și \"Preferințe\" din banner există pentru ca, dacă adăugăm în viitor un instrument de analiză (pentru a înțelege traficul și a îmbunătăți site-ul), acesta să funcționeze doar pentru vizitatorii care și-au exprimat acordul — niciodată implicit. Această pagină va fi actualizată pentru a numi instrumentul și ce stochează, înainte ca acest lucru să se întâmple.",
+      "changeText": "Opțiunile \"Acceptă Tot\" și \"Preferințe\" din banner există pentru ca, dacă adăugăm în viitor un instrument de analiză (pentru a înțelege traficul și a îmbunătăți site-ul), acesta să funcționeze doar pentru vizitatorii care și-au exprimat acordul, niciodată implicit. Această pagină va fi actualizată pentru a numi instrumentul și ce stochează, înainte ca acest lucru să se întâmple.",
       "thirdPartyHeading": "Cookie-uri de la terți",
       "thirdPartyPre": "Trimiterea formularului de contact trimite datele voastre către ",
       "thirdPartyLink": "Web3Forms",
