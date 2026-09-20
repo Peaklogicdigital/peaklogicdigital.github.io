@@ -1,7 +1,7 @@
 {
   "meta": { "name": "Español", "short": "ES" },
   "hero": {
-    "subtitle": "Infraestructura de Marketing Inteligente. Creamos escaparates digitales de alta conversión y sistemas de captación automatizados que convierten tu tráfico en clientes de alto valor, mientras duermes.",
+    "subtitle": "Creamos webs de alta conversión y sistemas de captación automatizados que convierten tu tráfico en clientes de alto valor, incluso mientras duermes.",
     "chips": {
       "digitalPresence": "Diseño Web de Conversión",
       "bookingSystems": "Reservas Automatizadas",
@@ -12,7 +12,7 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "Escaparates Digitales de Alta Conversión",
-      "body": "Tu web suele ser lo primero que ve un cliente potencial. La construimos rápida, limpia y fácil de usar, para que la gente confíe en ti desde el primer momento en lugar de volver a Google."
+      "body": "Tu web suele ser lo primero que ve un cliente potencial. La construimos rápida y fácil de usar, para que la gente confíe en ti desde el primer momento en lugar de volver a Google."
     },
     "automatedBooking": {
       "heading": "Sistemas de Reserva Automatizados",
@@ -33,19 +33,19 @@
     "items": [
       {
         "title": "Escaparates Digitales de Alta Conversión",
-        "description": "Deja de perder clientes por una web anticuada. Diseñamos experiencias web premium y ultrarrápidas que generan confianza al instante y te posicionan como la autoridad indiscutible de tu sector."
+        "description": "Una web anticuada te cuesta clientes antes de que descuelguen el teléfono. Construimos sitios rápidos y cuidados que generan confianza desde el primer segundo."
       },
       {
         "title": "Sistemas de Reserva Automatizados",
-        "description": "Elimina el interminable ir y venir de correos. Integramos herramientas de reserva fluidas para que tus prospectos cualificados agenden consultas directamente en tu calendario, las 24 horas."
+        "description": "Se acabó el ir y venir de correos para encontrar un hueco. Conectamos tu web a herramientas de reserva para que tus prospectos agenden una consulta directamente en tu calendario, a cualquier hora."
       },
       {
         "title": "Enrutamiento de Leads sin Fugas",
-        "description": "Nunca dejes que un lead caliente se enfríe. Conectamos tu web a flujos automatizados que te avisan al instante por SMS y registran cada consulta en tu CRM en el momento exacto en que un prospecto contacta."
+        "description": "Un lead caliente que espera demasiado se enfría. Conectamos tu web a flujos automatizados que te avisan por SMS en el momento en que alguien contacta y registran cada consulta en tu CRM."
       },
       {
         "title": "Expansión a Mercados Globales",
-        "description": "Domina mercados locales e internacionales. Desplegamos arquitecturas multilingües impecables y optimizadas para SEO (inglés, español, catalán, rumano) que multiplican tu alcance al instante."
+        "description": "Construimos tu web en inglés, español, catalán y rumano, cada una optimizada para buscadores, para que llegues a clientes locales e internacionales desde el primer día."
       }
     ]
   },
@@ -68,7 +68,7 @@
       },
       {
         "label": "Conectamos tu Calendario",
-        "detail": "Configuramos una integración de reservas fluida para que la gente pueda reservar contigo directamente desde tu web. Eligen el hueco que les viene bien y queda en tu calendario al momento. Sin correos de por medio."
+        "detail": "Conectamos una herramienta de reservas a tu web para que la gente pueda reservar contigo directamente. Eligen el hueco que les viene bien y queda en tu calendario al momento. Sin correos de por medio."
       },
       {
         "label": "Enrutamos cada Lead",
@@ -93,7 +93,7 @@
         "buildPrice": "€950",
         "monthlyPrice": "€49/mes",
         "yearlyPrice": "€490/año",
-        "description": "Una presencia digital a medida y ultrarrápida, diseñada para establecer un dominio de mercado inmediato y captar clientes potenciales.",
+        "description": "Una web a medida y rápida, pensada para ayudarte a destacar y empezar a captar clientes potenciales desde ya.",
         "features": [
           "Diseño UX/UI Premium",
           "Arquitectura Next.js de Alta Velocidad",
@@ -106,7 +106,7 @@
         "buildPrice": "€1.450",
         "monthlyPrice": "€89/mes",
         "yearlyPrice": "€890/año",
-        "description": "El sistema de captación completo y sin esfuerzo. La presencia digital premium, más reservas automatizadas en tu calendario y enrutamiento instantáneo de leads.",
+        "description": "Un sistema sin esfuerzo para ganar clientes nuevos: todo lo incluido en Cimiento de Autoridad, más reservas automatizadas en tu calendario y enrutamiento instantáneo de leads.",
         "features": [
           "Todo lo incluido en Cimiento de Autoridad",
           "Integración de Calendario Automatizada",
@@ -119,7 +119,7 @@
         "buildPrice": "€2.450",
         "monthlyPrice": "€149/mes",
         "yearlyPrice": "€1.490/año",
-        "description": "El activo escalable definitivo. Potenciado con una arquitectura multilingüe global para capturar cuota de mercado local e internacional.",
+        "description": "Una web escalable y multilingüe, pensada para competir a la vez en mercados locales e internacionales.",
         "features": [
           "Todo lo incluido en Motor de Conversión Inteligente",
           "Arquitectura Multilingüe Completa (EN/ES/CAT/RO)",
@@ -131,7 +131,7 @@
   },
   "bridge": {
     "heading": "Una web bonita que no contesta al teléfono es solo arte digital.",
-    "body": "Nosotros creamos el arte, pero diseñamos la infraestructura. Captamos el lead, reservamos la mesa, aseguramos la reseña. Automáticamente."
+    "body": "Creamos el arte y diseñamos la infraestructura detrás de él: los sistemas que captan el lead, reservan la mesa y consiguen la reseña, de forma automática."
   },
   "contact": {
     "heading": "Consulta de Proyecto",
@@ -214,13 +214,13 @@
     "terms": {
       "title": "Términos de Servicio",
       "date": "septiembre de 2026",
-      "intro": "Estos términos cubren dos cosas: el uso de este sitio web y, a grandes rasgos, la contratación de PeakLogic Digital para un proyecto. Los detalles de cualquier proyecto concreto —alcance, precio, plazos— se acuerdan por separado y por escrito antes de comenzar el trabajo; nada de lo aquí expuesto sustituye ese acuerdo.",
+      "intro": "Estos términos cubren dos cosas: el uso de este sitio web y, a grandes rasgos, la contratación de PeakLogic Digital para un proyecto. Los detalles de cualquier proyecto concreto (alcance, precio, plazos) se acuerdan por separado y por escrito antes de comenzar el trabajo; nada de lo aquí expuesto sustituye ese acuerdo.",
       "usingHeading": "Uso de este sitio web",
       "usingText": "Eres bienvenido a navegar, leer y ponerte en contacto a través del formulario. Te comprometes a no usar el sitio para nada ilícito, a no intentar interrumpirlo ni acceder sin autorización a él ni a los sistemas que lo sustentan, y a no extraerlo o recopilarlo de forma masiva sin nuestro permiso.",
       "offerHeading": "Qué ofrecemos",
       "offerText": "PeakLogic Digital diseña y construye sitios web, y añade sistemas de soporte, gestión de presencia digital, integraciones de reserva, trabajo de marca e impresión, y automatización de respuesta a leads, tal y como se describe en otras partes de este sitio. Los precios mostrados en el sitio son orientativos y pueden cambiar; el precio del trabajo real es el que se confirme por escrito antes de comenzar.",
       "ipHeading": "Propiedad intelectual",
-      "ipText": "El diseño, el código y el contenido de este sitio web pertenecen a PeakLogic Digital salvo que se indique lo contrario. Los entregables producidos para un proyecto de cliente —el propio sitio del cliente, sus activos de marca y similares— se rigen por los términos de propiedad del acuerdo de ese proyecto, no por esta página.",
+      "ipText": "El diseño, el código y el contenido de este sitio web pertenecen a PeakLogic Digital salvo que se indique lo contrario. Los entregables producidos para un proyecto de cliente (el propio sitio del cliente, sus activos de marca y similares) se rigen por los términos de propiedad del acuerdo de ese proyecto, no por esta página.",
       "warrantyHeading": "Sin garantía",
       "warrantyText": "Este sitio web se ofrece tal cual. Intentamos mantenerlo preciso y disponible, pero no garantizamos que vaya a estar libre de interrupciones, sin errores, o adecuado para un fin concreto, y no somos responsables de los problemas derivados de tu uso del mismo, en la medida en que la ley nos permita limitar esa responsabilidad.",
       "changesHeading": "Cambios en estos términos",
@@ -236,7 +236,7 @@
       "intro": "Este sitio no instala actualmente ninguna cookie de rastreo o publicidad. Esto es exactamente lo que almacena y las opciones que tienes.",
       "useHeading": "Qué usamos realmente",
       "useStrong": "Preferencia de consentimiento de cookies.",
-      "useText": " Cuando eliges \"Aceptar Todo\", \"Solo lo Esencial\", o guardas preferencias en el banner de cookies, esa elección se guarda en el almacenamiento local de tu navegador —no una cookie— únicamente para no volver a preguntarte en tu próxima visita. Nunca sale de tu navegador.",
+      "useText": " Cuando eliges \"Aceptar Todo\", \"Solo lo Esencial\", o guardas preferencias en el banner de cookies, esa elección se guarda en el almacenamiento local de tu navegador (no una cookie) únicamente para no volver a preguntarte en tu próxima visita. Nunca sale de tu navegador.",
       "useOnly": "Eso es lo único que este sitio almacena en tu navegador por el momento. No hay ningún script de analíticas, publicidad o rastreo de terceros en ejecución.",
       "changeHeading": "Si eso cambia",
       "changeText": "Las opciones \"Aceptar Todo\" y \"Preferencias\" del banner existen para que, si en el futuro añadimos una herramienta de analíticas (para entender el tráfico y mejorar el sitio), esta solo se active para los visitantes que hayan dado su consentimiento, nunca por defecto. Esta página se actualizará para nombrar la herramienta y lo que almacena antes de que eso ocurra.",

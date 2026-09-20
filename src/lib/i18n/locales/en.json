@@ -1,7 +1,7 @@
 {
   "meta": { "name": "English", "short": "EN" },
   "hero": {
-    "subtitle": "Smart Marketing Infrastructure. We build high-converting digital storefronts and automated lead systems that turn your traffic into high-ticket clients—while you sleep.",
+    "subtitle": "We build high-converting websites and automated lead systems that turn your traffic into paying clients, even while you're offline.",
     "chips": {
       "digitalPresence": "Conversion Web Design",
       "bookingSystems": "Automated Booking",
@@ -12,7 +12,7 @@
   "servicesIndex": {
     "digitalStorefronts": {
       "heading": "High-Conversion Digital Storefronts",
-      "body": "Your website is often the first thing a potential client sees. We build it fast, clean, and easy to use, so people trust you right away instead of clicking back to Google."
+      "body": "Your website is often the first thing a potential client sees. We build it fast and easy to use, so people trust you right away instead of clicking back to Google."
     },
     "automatedBooking": {
       "heading": "Automated Booking Systems",
@@ -33,19 +33,19 @@
     "items": [
       {
         "title": "High-Conversion Digital Storefronts",
-        "description": "Stop losing clients to outdated websites. We engineer premium, blazing-fast web experiences that build instant trust and position you as the undisputed authority in your market."
+        "description": "Outdated websites cost you clients before they even pick up the phone. We build fast, polished sites that earn trust the moment someone lands on them."
       },
       {
         "title": "Automated Booking Systems",
-        "description": "Eliminate the endless back-and-forth emails. We integrate seamless scheduling tools so qualified prospects can book consultations straight into your calendar, 24/7."
+        "description": "No more back-and-forth emails trying to find a time that works. We connect your site to scheduling tools so prospects can book a consultation straight into your calendar, any time of day."
       },
       {
         "title": "Zero-Leak Lead Routing",
-        "description": "Never let a hot lead go cold. We connect your site to automated pipelines that instantly notify you via SMS and log inquiries into your CRM the second a prospect reaches out."
+        "description": "A hot lead that waits too long goes cold. We connect your site to automated pipelines that text you the moment someone reaches out and log every inquiry straight into your CRM."
       },
       {
         "title": "Global Market Expansion",
-        "description": "Dominate local and international markets. We deploy flawless, SEO-optimized multi-language architectures (English, Spanish, Catalan, Romanian) to instantly multiply your reach."
+        "description": "We build your site in English, Spanish, Catalan, and Romanian, each one optimized for search, so you can reach local and international customers from day one."
       }
     ]
   },
@@ -68,7 +68,7 @@
       },
       {
         "label": "Connect Your Calendar",
-        "detail": "We set up seamless scheduling integration so people can book time with you straight from your website. They pick a slot that works for them, and it lands on your calendar automatically. No emails back and forth."
+        "detail": "We connect a booking tool to your website so people can grab time with you directly. They pick a slot that works for them, and it lands on your calendar automatically. No emails back and forth."
       },
       {
         "label": "Route Every Lead",
@@ -93,7 +93,7 @@
         "buildPrice": "€950",
         "monthlyPrice": "€49/mo",
         "yearlyPrice": "€490/yr",
-        "description": "A bespoke, blazing-fast digital presence designed to establish instant market dominance and capture leads.",
+        "description": "A custom, fast-loading website built to help you stand out and start capturing leads right away.",
         "features": [
           "Premium UX/UI Design",
           "Next.js High-Speed Architecture",
@@ -106,7 +106,7 @@
         "buildPrice": "€1,450",
         "monthlyPrice": "€89/mo",
         "yearlyPrice": "€890/yr",
-        "description": "The complete hands-off acquisition system. The premium digital presence, plus automated calendar booking and instant lead routing.",
+        "description": "A hands-off system for winning new clients: everything in the Foundation tier, plus automated calendar booking and instant lead routing.",
         "features": [
           "Everything in Foundation",
           "Automated Calendar Integration",
@@ -119,7 +119,7 @@
         "buildPrice": "€2,450",
         "monthlyPrice": "€149/mo",
         "yearlyPrice": "€1,490/yr",
-        "description": "The ultimate scalable asset. Supercharged with multi-language global architecture to capture local and international market share.",
+        "description": "A scalable, multi-language site built to help you compete in local and international markets at once.",
         "features": [
           "Everything in Conversion Engine",
           "Full Multi-Language (EN/ES/CAT/RO) Architecture",
@@ -131,7 +131,7 @@
   },
   "bridge": {
     "heading": "A beautiful website that doesn't answer the phone is just digital art.",
-    "body": "We build the art, but we engineer the infrastructure. Capture the lead, book the table, secure the review. Automatically."
+    "body": "We build the art and engineer the infrastructure behind it: the systems that capture the lead, book the table, and get the review, automatically."
   },
   "contact": {
     "heading": "Project Inquiry",
@@ -203,7 +203,7 @@
       ],
       "rightsOutro": "Send that request through the contact form on the homepage, including enough detail (like the email address you used) for us to find your record.",
       "securityHeading": "Security",
-      "securityText": "This site is served entirely over HTTPS. We don't operate our own database of visitor data — the only place inquiry details live is in the inbox they're delivered to and, briefly, in Web3Forms' systems while delivering them.",
+      "securityText": "This site is served entirely over HTTPS. We don't operate our own database of visitor data: the only place inquiry details live is in the inbox they're delivered to and, briefly, in Web3Forms' systems while delivering them.",
       "changesHeading": "Changes to this policy",
       "changesText": "If we materially change what we collect or why, we'll update the date at the top of this page.",
       "contactHeading": "Contact",
@@ -214,13 +214,13 @@
     "terms": {
       "title": "Terms of Service",
       "date": "September 2026",
-      "intro": "These terms cover two things: using this website, and, at a high level, engaging PeakLogic Digital for work. The specifics of any actual project — scope, price, timeline — are agreed separately in writing before work begins; nothing here overrides that agreement.",
+      "intro": "These terms cover two things: using this website, and, at a high level, engaging PeakLogic Digital for work. The specifics of any actual project (scope, price, timeline) are agreed separately in writing before work begins; nothing here overrides that agreement.",
       "usingHeading": "Using this website",
       "usingText": "You're welcome to browse, read, and reach out through the contact form. You agree not to use the site to do anything unlawful, to attempt to disrupt or gain unauthorized access to it or the systems behind it, or to scrape or harvest it at scale without our permission.",
       "offerHeading": "What we offer",
       "offerText": "PeakLogic Digital designs and builds websites, and layers on supporting systems, digital presence management, booking integrations, brand and print work, and lead-response automation, as described elsewhere on this site. Pricing shown on the site is indicative and can change; the price for actual work is whatever is confirmed in writing before that work starts.",
       "ipHeading": "Intellectual property",
-      "ipText": "The design, code, and content of this website belong to PeakLogic Digital unless stated otherwise. Deliverables produced for a client project — the client's own site, brand assets, and similar — are governed by the ownership terms in that project's agreement, not by this page.",
+      "ipText": "The design, code, and content of this website belong to PeakLogic Digital unless stated otherwise. Deliverables produced for a client project (the client's own site, brand assets, and similar) are governed by the ownership terms in that project's agreement, not by this page.",
       "warrantyHeading": "No warranty",
       "warrantyText": "This website is provided as-is. We try to keep it accurate and available, but we don't guarantee it will be uninterrupted, error-free, or fit for a particular purpose, and we're not liable for issues arising from your use of it, to the extent the law allows us to limit that liability.",
       "changesHeading": "Changes to these terms",
@@ -236,10 +236,10 @@
       "intro": "This site doesn't set any tracking or advertising cookies today. Here's exactly what it does store, and the choices you have.",
       "useHeading": "What we actually use",
       "useStrong": "Cookie consent preference.",
-      "useText": " When you choose \"Accept All\", \"Essential Only\", or save preferences in the cookie banner, that choice is saved in your browser's local storage — not a cookie — purely so we don't ask again on your next visit. It never leaves your browser.",
+      "useText": " When you choose \"Accept All\", \"Essential Only\", or save preferences in the cookie banner, that choice is saved in your browser's local storage (not a cookie) purely so we don't ask again on your next visit. It never leaves your browser.",
       "useOnly": "That's the only thing this site stores in your browser right now. There is no analytics, advertising, or third-party tracking script running.",
       "changeHeading": "If that changes",
-      "changeText": "The \"Accept All\" and \"Preferences\" options in the banner exist so that if we add an analytics tool in the future (to understand traffic and improve the site), it will only run for visitors who've opted in — never by default. This page will be updated to name the tool and what it stores before that happens.",
+      "changeText": "The \"Accept All\" and \"Preferences\" options in the banner exist so that if we add an analytics tool in the future (to understand traffic and improve the site), it will only run for visitors who've opted in, never by default. This page will be updated to name the tool and what it stores before that happens.",
       "thirdPartyHeading": "Third-party cookies",
       "thirdPartyPre": "Submitting the contact form sends your details to ",
       "thirdPartyLink": "Web3Forms",
