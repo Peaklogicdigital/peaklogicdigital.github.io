@@ -13,25 +13,6 @@ import { useLanguage } from "@/lib/i18n/LanguageContext";
 const TIER_COUNT = 3;
 const HIGHLIGHTED_TIER_INDEX = 1;
 
-function CheckIcon() {
-  return (
-    <svg
-      viewBox="0 0 20 20"
-      fill="none"
-      className="w-5 h-5 shrink-0 mt-0.5 text-cyan-400"
-      aria-hidden="true"
-    >
-      <path
-        d="M4 10.5L8 14.5L16 5.5"
-        stroke="currentColor"
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
-      />
-    </svg>
-  );
-}
-
 export default function Pricing() {
   const sectionRef = useRef<HTMLDivElement>(null);
   const { t, dict } = useLanguage();
@@ -135,9 +116,9 @@ export default function Pricing() {
                     {features.map((feature) => (
                       <li
                         key={feature}
-                        className="flex items-start gap-2 font-body text-white/60 text-sm leading-snug"
+                        className="flex items-start gap-3 font-body text-white/60 text-sm leading-snug"
                       >
-                        <CheckIcon />
+                        <div className="w-3 h-[2px] bg-cyan-400/80 mt-2 shrink-0 rounded-full" />
                         <span>{feature}</span>
                       </li>
                     ))}
